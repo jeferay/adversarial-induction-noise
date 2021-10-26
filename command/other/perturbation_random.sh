@@ -1,0 +1,12 @@
+python3 perturbation.py --config_path             configs/cifar10                \
+                        --exp_name                /data/yfwang/Unlearnable/logs/random \
+                        --version                 resnet18                       \
+                        --train_data_type         CIFAR10                       \
+                        --noise_shape             50000 3 32 32                  \
+                        --epsilon                 8                              \
+                        --num_steps               20                             \
+                        --step_size               0.8                            \
+                        --attack_type             min-max                        \
+                        --perturb_type            samplewise                      \
+                        --universal_stop_error    0.01                            \
+                        --random_start

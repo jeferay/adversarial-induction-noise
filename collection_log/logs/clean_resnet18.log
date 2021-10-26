@@ -1,0 +1,656 @@
+2021-09-17 04:04:14,336 PyTorch Version: 1.7.1
+2021-09-17 04:04:14,366 GPU List: ['GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti']
+2021-09-17 04:04:14,371 num_classes: 10
+2021-09-17 04:04:14,372 epochs: 60
+2021-09-17 04:04:14,372 grad_clip: 5.0
+2021-09-17 04:04:14,372 log_frequency: 100
+2021-09-17 04:04:14,372 model: {'name': 'ResNet18', 'num_classes': 10}
+2021-09-17 04:04:14,372 criterion: {'name': 'CrossEntropyLoss'}
+2021-09-17 04:04:14,372 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2021-09-17 04:04:14,372 scheduler: {'name': 'CosineAnnealingLR', 'T_max': 60, 'eta_min': 0.0}
+2021-09-17 04:04:14,372 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2021-09-17 04:04:14,373 seed: 0
+2021-09-17 04:04:14,373 version: resnet18
+2021-09-17 04:04:14,373 exp_name: ../experiments/clean/cifar10/main
+2021-09-17 04:04:14,373 config_path: ../configs/cifar10
+2021-09-17 04:04:14,373 load_model: False
+2021-09-17 04:04:14,373 data_parallel: False
+2021-09-17 04:04:14,373 train: True
+2021-09-17 04:04:14,373 eval: True
+2021-09-17 04:04:14,373 eval_bias: False
+2021-09-17 04:04:14,373 save_frequency: -1
+2021-09-17 04:04:14,374 epochs: 60
+2021-09-17 04:04:14,374 train_face: False
+2021-09-17 04:04:14,374 train_portion: 1.0
+2021-09-17 04:04:14,374 train_batch_size: 128
+2021-09-17 04:04:14,374 eval_batch_size: 256
+2021-09-17 04:04:14,374 num_of_workers: 8
+2021-09-17 04:04:14,374 train_data_type: CIFAR10
+2021-09-17 04:04:14,374 test_data_type: CIFAR10
+2021-09-17 04:04:14,374 train_data_path: ../datasets
+2021-09-17 04:04:14,374 test_data_path: ../datasets
+2021-09-17 04:04:14,374 perturb_type: classwise
+2021-09-17 04:04:14,374 patch_location: center
+2021-09-17 04:04:14,374 poison_rate: 1.0
+2021-09-17 04:04:14,375 perturb_tensor_filepath: None
+2021-09-17 04:04:14,375 mask_rate: 1.0
+2021-09-17 04:04:14,375 output_confusion: False
+2021-09-17 04:04:14,375 attack_type: pgd20
+2021-09-17 04:04:19,749 Training Dataset: Dataset CIFAR10
+    Number of datapoints: 50000
+    Root location: ../datasets
+    Split: Train
+    StandardTransform
+Transform: Compose(
+               RandomCrop(size=(32, 32), padding=4)
+               RandomHorizontalFlip(p=0.5)
+               ToTensor()
+           )
+2021-09-17 04:04:19,749 Test Dataset: Dataset CIFAR10
+    Number of datapoints: 10000
+    Root location: ../datasets
+    Split: Test
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+           )
+2021-09-17 04:04:19,752 param size = 11.173962MB
+2021-09-17 04:04:19,755 
+2021-09-17 04:04:19,755 ====================Training Epoch 0====================
+2021-09-17 04:04:21,201 epoch=0	global_step=0	acc=0.1406	acc_avg=0.1406	loss=2.3183	loss_avg=2.3183	lr=0.1000	|gn|=6.7512	time=0.89it/s
+2021-09-17 04:04:27,836 epoch=0	global_step=100	acc=0.3359	acc_avg=0.2450	loss=1.9048	loss_avg=2.1124	lr=0.1000	|gn|=0.8324	time=15.42it/s
+2021-09-17 04:04:34,476 epoch=0	global_step=200	acc=0.3750	acc_avg=0.3037	loss=1.6800	loss_avg=1.9037	lr=0.1000	|gn|=0.9417	time=14.52it/s
+2021-09-17 04:04:41,091 epoch=0	global_step=300	acc=0.4531	acc_avg=0.3431	loss=1.5250	loss_avg=1.7879	lr=0.1000	|gn|=1.0750	time=14.73it/s
+2021-09-17 04:04:47,136 ====================Eval Epoch 0====================
+2021-09-17 04:06:18,860 epoch=0	global_step=39	acc=0.5625	acc_avg=0.4517	acc5=1.0000	acc5_avg=0.9163	loss=1.1370	loss_avg=1.5423	_acc=0.5625	_acc_avg=0.4517	pgd20=0.0625	pgd20_avg=0.0475	time=1.60it/s
+2021-09-17 04:06:18,861 Eval Loss:1.5423	Eval acc: 45.17
+2021-09-17 04:06:19,086 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:06:19,086 
+2021-09-17 04:06:19,086 ====================Training Epoch 1====================
+2021-09-17 04:06:20,286 epoch=1	global_step=400	acc=0.4609	acc_avg=0.5036	loss=1.4831	loss_avg=1.3602	lr=0.0999	|gn|=1.1231	time=13.62it/s
+2021-09-17 04:06:27,517 epoch=1	global_step=500	acc=0.6016	acc_avg=0.5210	loss=1.1862	loss_avg=1.3241	lr=0.0999	|gn|=1.1465	time=14.72it/s
+2021-09-17 04:06:34,505 epoch=1	global_step=600	acc=0.5312	acc_avg=0.5377	loss=1.1525	loss_avg=1.2838	lr=0.0999	|gn|=1.0631	time=14.63it/s
+2021-09-17 04:06:41,389 epoch=1	global_step=700	acc=0.5312	acc_avg=0.5532	loss=1.1835	loss_avg=1.2400	lr=0.0999	|gn|=1.2231	time=15.11it/s
+2021-09-17 04:06:47,006 ====================Eval Epoch 1====================
+2021-09-17 04:08:20,401 epoch=1	global_step=39	acc=0.6875	acc_avg=0.5746	acc5=1.0000	acc5_avg=0.9571	loss=0.8916	loss_avg=1.2046	_acc=0.6875	_acc_avg=0.5746	pgd20=0.0000	pgd20_avg=0.0052	time=3.57it/s
+2021-09-17 04:08:20,402 Eval Loss:1.2046	Eval acc: 57.46
+2021-09-17 04:08:20,643 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:08:20,643 
+2021-09-17 04:08:20,643 ====================Training Epoch 2====================
+2021-09-17 04:08:22,610 epoch=2	global_step=800	acc=0.6016	acc_avg=0.6324	loss=1.1441	loss_avg=1.0377	lr=0.0997	|gn|=1.1325	time=14.16it/s
+2021-09-17 04:08:29,424 epoch=2	global_step=900	acc=0.6953	acc_avg=0.6440	loss=0.8896	loss_avg=1.0095	lr=0.0997	|gn|=1.0408	time=14.83it/s
+2021-09-17 04:08:36,295 epoch=2	global_step=1000	acc=0.7422	acc_avg=0.6509	loss=0.8791	loss_avg=0.9859	lr=0.0997	|gn|=1.1835	time=15.24it/s
+2021-09-17 04:08:43,168 epoch=2	global_step=1100	acc=0.7500	acc_avg=0.6594	loss=0.8036	loss_avg=0.9637	lr=0.0997	|gn|=0.9938	time=15.02it/s
+2021-09-17 04:08:47,943 ====================Eval Epoch 2====================
+2021-09-17 04:10:21,435 epoch=2	global_step=39	acc=0.6875	acc_avg=0.6599	acc5=1.0000	acc5_avg=0.9671	loss=1.0907	loss_avg=0.9859	_acc=0.6875	_acc_avg=0.6599	pgd20=0.0000	pgd20_avg=0.0018	time=3.54it/s
+2021-09-17 04:10:21,436 Eval Loss:0.9859	Eval acc: 65.99
+2021-09-17 04:10:21,678 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:10:21,678 
+2021-09-17 04:10:21,678 ====================Training Epoch 3====================
+2021-09-17 04:10:24,231 epoch=3	global_step=1200	acc=0.6562	acc_avg=0.6941	loss=0.8738	loss_avg=0.8557	lr=0.0994	|gn|=1.1452	time=13.82it/s
+2021-09-17 04:10:31,476 epoch=3	global_step=1300	acc=0.7578	acc_avg=0.7165	loss=0.8124	loss_avg=0.8124	lr=0.0994	|gn|=1.0839	time=13.27it/s
+2021-09-17 04:10:38,712 epoch=3	global_step=1400	acc=0.7656	acc_avg=0.7246	loss=0.6805	loss_avg=0.7895	lr=0.0994	|gn|=1.0835	time=14.71it/s
+2021-09-17 04:10:45,730 epoch=3	global_step=1500	acc=0.7109	acc_avg=0.7289	loss=0.7378	loss_avg=0.7774	lr=0.0994	|gn|=1.2187	time=14.53it/s
+2021-09-17 04:10:49,877 ====================Eval Epoch 3====================
+2021-09-17 04:12:22,564 epoch=3	global_step=39	acc=0.6875	acc_avg=0.7494	acc5=1.0000	acc5_avg=0.9821	loss=0.8784	loss_avg=0.7311	_acc=0.6875	_acc_avg=0.7494	pgd20=0.0000	pgd20_avg=0.0002	time=3.70it/s
+2021-09-17 04:12:22,565 Eval Loss:0.7311	Eval acc: 74.94
+2021-09-17 04:12:22,809 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:12:22,809 
+2021-09-17 04:12:22,809 ====================Training Epoch 4====================
+2021-09-17 04:12:26,123 epoch=4	global_step=1600	acc=0.7422	acc_avg=0.7630	loss=0.7324	loss_avg=0.6752	lr=0.0989	|gn|=1.0544	time=14.07it/s
+2021-09-17 04:12:33,149 epoch=4	global_step=1700	acc=0.7656	acc_avg=0.7587	loss=0.6775	loss_avg=0.6839	lr=0.0989	|gn|=1.2713	time=14.42it/s
+2021-09-17 04:12:40,161 epoch=4	global_step=1800	acc=0.7734	acc_avg=0.7639	loss=0.6254	loss_avg=0.6780	lr=0.0989	|gn|=1.0893	time=15.15it/s
+2021-09-17 04:12:47,043 epoch=4	global_step=1900	acc=0.8125	acc_avg=0.7686	loss=0.5429	loss_avg=0.6661	lr=0.0989	|gn|=0.9909	time=14.69it/s
+2021-09-17 04:12:50,471 ====================Eval Epoch 4====================
+2021-09-17 04:14:23,498 epoch=4	global_step=39	acc=0.6875	acc_avg=0.7328	acc5=1.0000	acc5_avg=0.9838	loss=0.5451	loss_avg=0.7759	_acc=0.6875	_acc_avg=0.7328	pgd20=0.0000	pgd20_avg=0.0000	time=3.71it/s
+2021-09-17 04:14:23,498 Eval Loss:0.7759	Eval acc: 73.28
+2021-09-17 04:14:23,822 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:14:23,823 
+2021-09-17 04:14:23,823 ====================Training Epoch 5====================
+2021-09-17 04:14:28,049 epoch=5	global_step=2000	acc=0.8047	acc_avg=0.8013	loss=0.6730	loss_avg=0.5848	lr=0.0983	|gn|=1.0998	time=12.77it/s
+2021-09-17 04:14:35,227 epoch=5	global_step=2100	acc=0.7812	acc_avg=0.7954	loss=0.6135	loss_avg=0.5893	lr=0.0983	|gn|=1.1907	time=14.22it/s
+2021-09-17 04:14:42,222 epoch=5	global_step=2200	acc=0.7656	acc_avg=0.7950	loss=0.6308	loss_avg=0.5930	lr=0.0983	|gn|=1.4233	time=14.03it/s
+2021-09-17 04:14:49,181 epoch=5	global_step=2300	acc=0.8281	acc_avg=0.7964	loss=0.4520	loss_avg=0.5922	lr=0.0983	|gn|=1.1292	time=14.79it/s
+2021-09-17 04:14:51,887 ====================Eval Epoch 5====================
+2021-09-17 04:16:25,452 epoch=5	global_step=39	acc=0.8750	acc_avg=0.7806	acc5=1.0000	acc5_avg=0.9874	loss=0.6223	loss_avg=0.6346	_acc=0.8750	_acc_avg=0.7806	pgd20=0.0000	pgd20_avg=0.0000	time=3.70it/s
+2021-09-17 04:16:25,453 Eval Loss:0.6346	Eval acc: 78.06
+2021-09-17 04:16:25,771 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:16:25,772 
+2021-09-17 04:16:25,772 ====================Training Epoch 6====================
+2021-09-17 04:16:30,652 epoch=6	global_step=2400	acc=0.7734	acc_avg=0.8035	loss=0.6292	loss_avg=0.5580	lr=0.0976	|gn|=1.2337	time=14.72it/s
+2021-09-17 04:16:37,806 epoch=6	global_step=2500	acc=0.8359	acc_avg=0.8076	loss=0.4813	loss_avg=0.5560	lr=0.0976	|gn|=1.0919	time=14.74it/s
+2021-09-17 04:16:44,911 epoch=6	global_step=2600	acc=0.7500	acc_avg=0.8111	loss=0.6594	loss_avg=0.5498	lr=0.0976	|gn|=1.4074	time=14.99it/s
+2021-09-17 04:16:51,912 epoch=6	global_step=2700	acc=0.8359	acc_avg=0.8121	loss=0.4893	loss_avg=0.5473	lr=0.0976	|gn|=1.1812	time=15.18it/s
+2021-09-17 04:16:53,939 ====================Eval Epoch 6====================
+2021-09-17 04:18:26,744 epoch=6	global_step=39	acc=0.6250	acc_avg=0.6389	acc5=0.9375	acc5_avg=0.9584	loss=0.9289	loss_avg=1.1801	_acc=0.6250	_acc_avg=0.6389	pgd20=0.0000	pgd20_avg=0.0000	time=3.54it/s
+2021-09-17 04:18:26,744 Eval Loss:1.1801	Eval acc: 63.89
+2021-09-17 04:18:27,046 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:18:27,047 
+2021-09-17 04:18:27,047 ====================Training Epoch 7====================
+2021-09-17 04:18:32,290 epoch=7	global_step=2800	acc=0.7891	acc_avg=0.8216	loss=0.6187	loss_avg=0.5170	lr=0.0967	|gn|=1.3003	time=15.25it/s
+2021-09-17 04:18:39,195 epoch=7	global_step=2900	acc=0.8594	acc_avg=0.8237	loss=0.5172	loss_avg=0.5103	lr=0.0967	|gn|=1.3139	time=14.73it/s
+2021-09-17 04:18:46,157 epoch=7	global_step=3000	acc=0.8672	acc_avg=0.8221	loss=0.3964	loss_avg=0.5172	lr=0.0967	|gn|=0.9358	time=14.26it/s
+2021-09-17 04:18:53,230 epoch=7	global_step=3100	acc=0.8203	acc_avg=0.8235	loss=0.5623	loss_avg=0.5154	lr=0.0967	|gn|=1.1878	time=14.27it/s
+2021-09-17 04:18:54,595 ====================Eval Epoch 7====================
+2021-09-17 04:20:28,031 epoch=7	global_step=39	acc=0.8125	acc_avg=0.7360	acc5=1.0000	acc5_avg=0.9821	loss=0.5758	loss_avg=0.7971	_acc=0.8125	_acc_avg=0.7360	pgd20=0.0000	pgd20_avg=0.0000	time=3.35it/s
+2021-09-17 04:20:28,031 Eval Loss:0.7971	Eval acc: 73.60
+2021-09-17 04:20:28,350 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:20:28,351 
+2021-09-17 04:20:28,351 ====================Training Epoch 8====================
+2021-09-17 04:20:34,554 epoch=8	global_step=3200	acc=0.8203	acc_avg=0.8368	loss=0.4980	loss_avg=0.4814	lr=0.0957	|gn|=1.2792	time=13.84it/s
+2021-09-17 04:20:41,371 epoch=8	global_step=3300	acc=0.8281	acc_avg=0.8308	loss=0.5025	loss_avg=0.4917	lr=0.0957	|gn|=1.2140	time=13.79it/s
+2021-09-17 04:20:48,179 epoch=8	global_step=3400	acc=0.8047	acc_avg=0.8298	loss=0.4706	loss_avg=0.4926	lr=0.0957	|gn|=1.2449	time=14.37it/s
+2021-09-17 04:20:55,147 epoch=8	global_step=3500	acc=0.8516	acc_avg=0.8307	loss=0.5445	loss_avg=0.4910	lr=0.0957	|gn|=1.3794	time=15.09it/s
+2021-09-17 04:20:55,830 ====================Eval Epoch 8====================
+2021-09-17 04:22:29,011 epoch=8	global_step=39	acc=0.6250	acc_avg=0.7784	acc5=1.0000	acc5_avg=0.9855	loss=0.8624	loss_avg=0.6817	_acc=0.6250	_acc_avg=0.7784	pgd20=0.0000	pgd20_avg=0.0000	time=3.63it/s
+2021-09-17 04:22:29,012 Eval Loss:0.6817	Eval acc: 77.84
+2021-09-17 04:22:29,334 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:22:29,334 
+2021-09-17 04:22:29,334 ====================Training Epoch 9====================
+2021-09-17 04:22:36,400 epoch=9	global_step=3600	acc=0.8516	acc_avg=0.8407	loss=0.5316	loss_avg=0.4621	lr=0.0946	|gn|=1.3374	time=13.97it/s
+2021-09-17 04:22:43,660 epoch=9	global_step=3700	acc=0.8359	acc_avg=0.8413	loss=0.4435	loss_avg=0.4608	lr=0.0946	|gn|=1.2406	time=13.20it/s
+2021-09-17 04:22:51,021 epoch=9	global_step=3800	acc=0.8359	acc_avg=0.8402	loss=0.4655	loss_avg=0.4642	lr=0.0946	|gn|=1.1676	time=14.27it/s
+2021-09-17 04:22:58,168 ====================Eval Epoch 9====================
+2021-09-17 04:24:31,471 epoch=9	global_step=39	acc=0.6250	acc_avg=0.7754	acc5=1.0000	acc5_avg=0.9894	loss=0.6968	loss_avg=0.6571	_acc=0.6250	_acc_avg=0.7754	pgd20=0.0000	pgd20_avg=0.0000	time=3.40it/s
+2021-09-17 04:24:31,471 Eval Loss:0.6571	Eval acc: 77.54
+2021-09-17 04:24:31,772 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:24:31,772 
+2021-09-17 04:24:31,772 ====================Training Epoch 10====================
+2021-09-17 04:24:32,219 epoch=10	global_step=3900	acc=0.8906	acc_avg=0.8906	loss=0.3021	loss_avg=0.3021	lr=0.0933	|gn|=0.9201	time=12.68it/s
+2021-09-17 04:24:39,068 epoch=10	global_step=4000	acc=0.8672	acc_avg=0.8519	loss=0.4410	loss_avg=0.4372	lr=0.0933	|gn|=1.2180	time=14.36it/s
+2021-09-17 04:24:45,927 epoch=10	global_step=4100	acc=0.8984	acc_avg=0.8512	loss=0.3300	loss_avg=0.4365	lr=0.0933	|gn|=1.0739	time=14.89it/s
+2021-09-17 04:24:52,807 epoch=10	global_step=4200	acc=0.7656	acc_avg=0.8481	loss=0.5217	loss_avg=0.4432	lr=0.0933	|gn|=1.4600	time=14.31it/s
+2021-09-17 04:24:59,012 ====================Eval Epoch 10====================
+2021-09-17 04:26:32,657 epoch=10	global_step=39	acc=0.8125	acc_avg=0.7393	acc5=1.0000	acc5_avg=0.9796	loss=0.3829	loss_avg=0.8097	_acc=0.8125	_acc_avg=0.7393	pgd20=0.0000	pgd20_avg=0.0000	time=3.52it/s
+2021-09-17 04:26:32,658 Eval Loss:0.8097	Eval acc: 73.93
+2021-09-17 04:26:32,951 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:26:32,952 
+2021-09-17 04:26:32,952 ====================Training Epoch 11====================
+2021-09-17 04:26:34,138 epoch=11	global_step=4300	acc=0.8672	acc_avg=0.8636	loss=0.4109	loss_avg=0.4029	lr=0.0919	|gn|=1.3048	time=13.58it/s
+2021-09-17 04:26:41,296 epoch=11	global_step=4400	acc=0.8125	acc_avg=0.8566	loss=0.4950	loss_avg=0.4199	lr=0.0919	|gn|=1.4570	time=14.91it/s
+2021-09-17 04:26:48,381 epoch=11	global_step=4500	acc=0.8359	acc_avg=0.8529	loss=0.4824	loss_avg=0.4293	lr=0.0919	|gn|=1.2901	time=13.90it/s
+2021-09-17 04:26:55,568 epoch=11	global_step=4600	acc=0.8359	acc_avg=0.8510	loss=0.4877	loss_avg=0.4330	lr=0.0919	|gn|=1.3599	time=14.05it/s
+2021-09-17 04:27:01,156 ====================Eval Epoch 11====================
+2021-09-17 04:28:34,677 epoch=11	global_step=39	acc=0.9375	acc_avg=0.7707	acc5=1.0000	acc5_avg=0.9759	loss=0.3848	loss_avg=0.7492	_acc=0.9375	_acc_avg=0.7707	pgd20=0.0000	pgd20_avg=0.0000	time=3.39it/s
+2021-09-17 04:28:34,677 Eval Loss:0.7492	Eval acc: 77.07
+2021-09-17 04:28:34,978 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:28:34,978 
+2021-09-17 04:28:34,978 ====================Training Epoch 12====================
+2021-09-17 04:28:37,024 epoch=12	global_step=4700	acc=0.8594	acc_avg=0.8702	loss=0.4725	loss_avg=0.4045	lr=0.0905	|gn|=1.5092	time=12.42it/s
+2021-09-17 04:28:44,316 epoch=12	global_step=4800	acc=0.8438	acc_avg=0.8574	loss=0.4685	loss_avg=0.4219	lr=0.0905	|gn|=1.4039	time=14.06it/s
+2021-09-17 04:28:51,346 epoch=12	global_step=4900	acc=0.8516	acc_avg=0.8584	loss=0.4384	loss_avg=0.4191	lr=0.0905	|gn|=1.3183	time=15.12it/s
+2021-09-17 04:28:58,184 epoch=12	global_step=5000	acc=0.8672	acc_avg=0.8550	loss=0.3772	loss_avg=0.4247	lr=0.0905	|gn|=1.3009	time=15.15it/s
+2021-09-17 04:29:02,985 ====================Eval Epoch 12====================
+2021-09-17 04:30:36,330 epoch=12	global_step=39	acc=0.7500	acc_avg=0.7476	acc5=0.9375	acc5_avg=0.9794	loss=1.0128	loss_avg=0.7869	_acc=0.7500	_acc_avg=0.7476	pgd20=0.0000	pgd20_avg=0.0000	time=3.39it/s
+2021-09-17 04:30:36,330 Eval Loss:0.7869	Eval acc: 74.76
+2021-09-17 04:30:36,615 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:30:36,615 
+2021-09-17 04:30:36,615 ====================Training Epoch 13====================
+2021-09-17 04:30:39,246 epoch=13	global_step=5100	acc=0.8906	acc_avg=0.8735	loss=0.3211	loss_avg=0.3774	lr=0.0889	|gn|=1.0778	time=13.49it/s
+2021-09-17 04:30:46,442 epoch=13	global_step=5200	acc=0.8516	acc_avg=0.8701	loss=0.4685	loss_avg=0.3834	lr=0.0889	|gn|=1.5839	time=14.29it/s
+2021-09-17 04:30:53,624 epoch=13	global_step=5300	acc=0.8906	acc_avg=0.8665	loss=0.3219	loss_avg=0.3917	lr=0.0889	|gn|=1.2444	time=14.95it/s
+2021-09-17 04:31:00,501 epoch=13	global_step=5400	acc=0.8438	acc_avg=0.8647	loss=0.4931	loss_avg=0.3979	lr=0.0889	|gn|=1.4957	time=14.81it/s
+2021-09-17 04:31:04,528 ====================Eval Epoch 13====================
+2021-09-17 04:32:37,081 epoch=13	global_step=39	acc=0.7500	acc_avg=0.8077	acc5=1.0000	acc5_avg=0.9850	loss=0.7209	loss_avg=0.5902	_acc=0.7500	_acc_avg=0.8077	pgd20=0.0000	pgd20_avg=0.0000	time=3.70it/s
+2021-09-17 04:32:37,082 Eval Loss:0.5902	Eval acc: 80.77
+2021-09-17 04:32:37,383 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:32:37,384 
+2021-09-17 04:32:37,384 ====================Training Epoch 14====================
+2021-09-17 04:32:40,639 epoch=14	global_step=5500	acc=0.8906	acc_avg=0.8714	loss=0.3837	loss_avg=0.3759	lr=0.0872	|gn|=1.2052	time=14.76it/s
+2021-09-17 04:32:47,553 epoch=14	global_step=5600	acc=0.8828	acc_avg=0.8708	loss=0.3067	loss_avg=0.3806	lr=0.0872	|gn|=1.1534	time=14.44it/s
+2021-09-17 04:32:54,585 epoch=14	global_step=5700	acc=0.8125	acc_avg=0.8681	loss=0.4779	loss_avg=0.3874	lr=0.0872	|gn|=1.5454	time=14.43it/s
+2021-09-17 04:33:01,486 epoch=14	global_step=5800	acc=0.8672	acc_avg=0.8668	loss=0.4323	loss_avg=0.3896	lr=0.0872	|gn|=1.3670	time=14.74it/s
+2021-09-17 04:33:04,959 ====================Eval Epoch 14====================
+2021-09-17 04:34:38,124 epoch=14	global_step=39	acc=0.7500	acc_avg=0.8106	acc5=0.9375	acc5_avg=0.9907	loss=0.7433	loss_avg=0.5757	_acc=0.7500	_acc_avg=0.8106	pgd20=0.0000	pgd20_avg=0.0000	time=3.56it/s
+2021-09-17 04:34:38,124 Eval Loss:0.5757	Eval acc: 81.06
+2021-09-17 04:34:38,434 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:34:38,434 
+2021-09-17 04:34:38,434 ====================Training Epoch 15====================
+2021-09-17 04:34:42,461 epoch=15	global_step=5900	acc=0.8984	acc_avg=0.8732	loss=0.3330	loss_avg=0.3744	lr=0.0854	|gn|=1.3139	time=13.83it/s
+2021-09-17 04:34:49,811 epoch=15	global_step=6000	acc=0.8828	acc_avg=0.8726	loss=0.3759	loss_avg=0.3718	lr=0.0854	|gn|=1.1766	time=14.26it/s
+2021-09-17 04:34:57,075 epoch=15	global_step=6100	acc=0.8828	acc_avg=0.8696	loss=0.3548	loss_avg=0.3812	lr=0.0854	|gn|=1.3395	time=13.17it/s
+2021-09-17 04:35:04,125 epoch=15	global_step=6200	acc=0.8828	acc_avg=0.8681	loss=0.3555	loss_avg=0.3865	lr=0.0854	|gn|=1.4715	time=14.34it/s
+2021-09-17 04:35:06,853 ====================Eval Epoch 15====================
+2021-09-17 04:36:39,849 epoch=15	global_step=39	acc=0.8750	acc_avg=0.8243	acc5=1.0000	acc5_avg=0.9927	loss=0.3903	loss_avg=0.5376	_acc=0.8750	_acc_avg=0.8243	pgd20=0.0000	pgd20_avg=0.0000	time=3.61it/s
+2021-09-17 04:36:39,849 Eval Loss:0.5376	Eval acc: 82.43
+2021-09-17 04:36:40,117 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:36:40,117 
+2021-09-17 04:36:40,117 ====================Training Epoch 16====================
+2021-09-17 04:36:44,848 epoch=16	global_step=6300	acc=0.8516	acc_avg=0.8759	loss=0.3793	loss_avg=0.3583	lr=0.0835	|gn|=1.5574	time=14.69it/s
+2021-09-17 04:36:51,801 epoch=16	global_step=6400	acc=0.8438	acc_avg=0.8761	loss=0.4113	loss_avg=0.3626	lr=0.0835	|gn|=1.5489	time=15.16it/s
+2021-09-17 04:36:58,789 epoch=16	global_step=6500	acc=0.8750	acc_avg=0.8751	loss=0.3693	loss_avg=0.3655	lr=0.0835	|gn|=1.4178	time=15.00it/s
+2021-09-17 04:37:05,754 epoch=16	global_step=6600	acc=0.8047	acc_avg=0.8742	loss=0.5297	loss_avg=0.3675	lr=0.0835	|gn|=1.7802	time=14.40it/s
+2021-09-17 04:37:07,827 ====================Eval Epoch 16====================
+2021-09-17 04:38:41,409 epoch=16	global_step=39	acc=0.9375	acc_avg=0.8404	acc5=1.0000	acc5_avg=0.9919	loss=0.2829	loss_avg=0.4778	_acc=0.9375	_acc_avg=0.8404	pgd20=0.0000	pgd20_avg=0.0000	time=3.70it/s
+2021-09-17 04:38:41,410 Eval Loss:0.4778	Eval acc: 84.04
+2021-09-17 04:38:41,708 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:38:41,708 
+2021-09-17 04:38:41,709 ====================Training Epoch 17====================
+2021-09-17 04:38:47,106 epoch=17	global_step=6700	acc=0.9062	acc_avg=0.8850	loss=0.2114	loss_avg=0.3310	lr=0.0815	|gn|=1.1671	time=14.23it/s
+2021-09-17 04:38:54,090 epoch=17	global_step=6800	acc=0.8906	acc_avg=0.8820	loss=0.3161	loss_avg=0.3433	lr=0.0815	|gn|=1.3476	time=13.86it/s
+2021-09-17 04:39:00,999 epoch=17	global_step=6900	acc=0.8828	acc_avg=0.8785	loss=0.3880	loss_avg=0.3547	lr=0.0815	|gn|=1.5857	time=14.42it/s
+2021-09-17 04:39:07,942 epoch=17	global_step=7000	acc=0.8984	acc_avg=0.8768	loss=0.3318	loss_avg=0.3608	lr=0.0815	|gn|=1.2209	time=15.09it/s
+2021-09-17 04:39:09,301 ====================Eval Epoch 17====================
+2021-09-17 04:40:42,373 epoch=17	global_step=39	acc=0.8125	acc_avg=0.8485	acc5=1.0000	acc5_avg=0.9940	loss=0.5655	loss_avg=0.4485	_acc=0.8125	_acc_avg=0.8485	pgd20=0.0000	pgd20_avg=0.0000	time=3.67it/s
+2021-09-17 04:40:42,373 Eval Loss:0.4485	Eval acc: 84.85
+2021-09-17 04:40:42,668 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:40:42,669 
+2021-09-17 04:40:42,669 ====================Training Epoch 18====================
+2021-09-17 04:40:48,844 epoch=18	global_step=7100	acc=0.9219	acc_avg=0.8910	loss=0.2512	loss_avg=0.3301	lr=0.0794	|gn|=1.2091	time=13.19it/s
+2021-09-17 04:40:56,089 epoch=18	global_step=7200	acc=0.8594	acc_avg=0.8863	loss=0.3925	loss_avg=0.3348	lr=0.0794	|gn|=1.4521	time=13.82it/s
+2021-09-17 04:41:02,983 epoch=18	global_step=7300	acc=0.8750	acc_avg=0.8835	loss=0.2840	loss_avg=0.3402	lr=0.0794	|gn|=1.3544	time=14.42it/s
+2021-09-17 04:41:10,003 epoch=18	global_step=7400	acc=0.8828	acc_avg=0.8813	loss=0.3339	loss_avg=0.3455	lr=0.0794	|gn|=1.3885	time=14.97it/s
+2021-09-17 04:41:10,680 ====================Eval Epoch 18====================
+2021-09-17 04:42:44,006 epoch=18	global_step=39	acc=0.6875	acc_avg=0.7863	acc5=1.0000	acc5_avg=0.9879	loss=0.7579	loss_avg=0.6728	_acc=0.6875	_acc_avg=0.7863	pgd20=0.0000	pgd20_avg=0.0000	time=3.72it/s
+2021-09-17 04:42:44,007 Eval Loss:0.6728	Eval acc: 78.63
+2021-09-17 04:42:44,316 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:42:44,316 
+2021-09-17 04:42:44,316 ====================Training Epoch 19====================
+2021-09-17 04:42:51,230 epoch=19	global_step=7500	acc=0.9141	acc_avg=0.8919	loss=0.2282	loss_avg=0.3186	lr=0.0772	|gn|=1.2238	time=13.20it/s
+2021-09-17 04:42:58,251 epoch=19	global_step=7600	acc=0.9453	acc_avg=0.8898	loss=0.1615	loss_avg=0.3222	lr=0.0772	|gn|=0.9158	time=14.99it/s
+2021-09-17 04:43:05,296 epoch=19	global_step=7700	acc=0.8438	acc_avg=0.8862	loss=0.3987	loss_avg=0.3311	lr=0.0772	|gn|=1.6415	time=15.19it/s
+2021-09-17 04:43:12,302 ====================Eval Epoch 19====================
+2021-09-17 04:44:45,451 epoch=19	global_step=39	acc=1.0000	acc_avg=0.8187	acc5=1.0000	acc5_avg=0.9880	loss=0.1136	loss_avg=0.5726	_acc=1.0000	_acc_avg=0.8187	pgd20=0.0000	pgd20_avg=0.0000	time=3.42it/s
+2021-09-17 04:44:45,451 Eval Loss:0.5726	Eval acc: 81.87
+2021-09-17 04:44:45,737 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:44:45,738 
+2021-09-17 04:44:45,738 ====================Training Epoch 20====================
+2021-09-17 04:44:46,173 epoch=20	global_step=7800	acc=0.8984	acc_avg=0.8984	loss=0.3194	loss_avg=0.3194	lr=0.0750	|gn|=1.4459	time=12.75it/s
+2021-09-17 04:44:53,053 epoch=20	global_step=7900	acc=0.8516	acc_avg=0.8957	loss=0.4324	loss_avg=0.3073	lr=0.0750	|gn|=1.8657	time=14.73it/s
+2021-09-17 04:44:59,910 epoch=20	global_step=8000	acc=0.9141	acc_avg=0.8935	loss=0.2468	loss_avg=0.3181	lr=0.0750	|gn|=1.2195	time=15.10it/s
+2021-09-17 04:45:06,822 epoch=20	global_step=8100	acc=0.9062	acc_avg=0.8904	loss=0.3107	loss_avg=0.3247	lr=0.0750	|gn|=1.2941	time=14.09it/s
+2021-09-17 04:45:13,006 ====================Eval Epoch 20====================
+2021-09-17 04:46:46,308 epoch=20	global_step=39	acc=0.7500	acc_avg=0.7461	acc5=1.0000	acc5_avg=0.9693	loss=0.5565	loss_avg=0.8748	_acc=0.7500	_acc_avg=0.7461	pgd20=0.0000	pgd20_avg=0.0000	time=3.22it/s
+2021-09-17 04:46:46,309 Eval Loss:0.8748	Eval acc: 74.61
+2021-09-17 04:46:46,589 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:46:46,589 
+2021-09-17 04:46:46,589 ====================Training Epoch 21====================
+2021-09-17 04:46:47,779 epoch=21	global_step=8200	acc=0.8516	acc_avg=0.8842	loss=0.4103	loss_avg=0.3216	lr=0.0727	|gn|=1.7528	time=14.55it/s
+2021-09-17 04:46:55,025 epoch=21	global_step=8300	acc=0.9375	acc_avg=0.8967	loss=0.2117	loss_avg=0.3070	lr=0.0727	|gn|=1.2958	time=14.55it/s
+2021-09-17 04:47:02,271 epoch=21	global_step=8400	acc=0.8984	acc_avg=0.8950	loss=0.3213	loss_avg=0.3108	lr=0.0727	|gn|=1.5315	time=14.32it/s
+2021-09-17 04:47:09,523 epoch=21	global_step=8500	acc=0.8984	acc_avg=0.8910	loss=0.2390	loss_avg=0.3175	lr=0.0727	|gn|=1.3742	time=14.68it/s
+2021-09-17 04:47:15,377 ====================Eval Epoch 21====================
+2021-09-17 04:48:48,700 epoch=21	global_step=39	acc=0.8125	acc_avg=0.8310	acc5=1.0000	acc5_avg=0.9929	loss=0.4192	loss_avg=0.5174	_acc=0.8125	_acc_avg=0.8310	pgd20=0.0000	pgd20_avg=0.0000	time=3.56it/s
+2021-09-17 04:48:48,701 Eval Loss:0.5174	Eval acc: 83.10
+2021-09-17 04:48:48,945 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:48:48,945 
+2021-09-17 04:48:48,945 ====================Training Epoch 22====================
+2021-09-17 04:48:50,822 epoch=22	global_step=8600	acc=0.8828	acc_avg=0.8914	loss=0.3094	loss_avg=0.3202	lr=0.0703	|gn|=1.5472	time=12.91it/s
+2021-09-17 04:48:57,921 epoch=22	global_step=8700	acc=0.8594	acc_avg=0.8973	loss=0.3591	loss_avg=0.3021	lr=0.0703	|gn|=1.6242	time=13.63it/s
+2021-09-17 04:49:05,175 epoch=22	global_step=8800	acc=0.8828	acc_avg=0.8935	loss=0.3152	loss_avg=0.3114	lr=0.0703	|gn|=1.4892	time=13.38it/s
+2021-09-17 04:49:12,307 epoch=22	global_step=8900	acc=0.9141	acc_avg=0.8949	loss=0.2168	loss_avg=0.3096	lr=0.0703	|gn|=1.1021	time=14.24it/s
+2021-09-17 04:49:17,152 ====================Eval Epoch 22====================
+2021-09-17 04:50:50,288 epoch=22	global_step=39	acc=0.9375	acc_avg=0.8576	acc5=1.0000	acc5_avg=0.9953	loss=0.3175	loss_avg=0.4286	_acc=0.9375	_acc_avg=0.8576	pgd20=0.0000	pgd20_avg=0.0000	time=3.59it/s
+2021-09-17 04:50:50,289 Eval Loss:0.4286	Eval acc: 85.76
+2021-09-17 04:50:50,638 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:50:50,639 
+2021-09-17 04:50:50,639 ====================Training Epoch 23====================
+2021-09-17 04:50:53,277 epoch=23	global_step=9000	acc=0.9141	acc_avg=0.9065	loss=0.2786	loss_avg=0.2687	lr=0.0679	|gn|=1.3817	time=15.02it/s
+2021-09-17 04:51:00,328 epoch=23	global_step=9100	acc=0.8906	acc_avg=0.9018	loss=0.4154	loss_avg=0.2824	lr=0.0679	|gn|=1.6538	time=13.57it/s
+2021-09-17 04:51:07,484 epoch=23	global_step=9200	acc=0.8594	acc_avg=0.8992	loss=0.3853	loss_avg=0.2939	lr=0.0679	|gn|=1.9743	time=14.76it/s
+2021-09-17 04:51:14,678 epoch=23	global_step=9300	acc=0.9453	acc_avg=0.8967	loss=0.2217	loss_avg=0.3006	lr=0.0679	|gn|=1.1762	time=14.74it/s
+2021-09-17 04:51:18,800 ====================Eval Epoch 23====================
+2021-09-17 04:52:52,104 epoch=23	global_step=39	acc=0.9375	acc_avg=0.8385	acc5=1.0000	acc5_avg=0.9934	loss=0.3205	loss_avg=0.5041	_acc=0.9375	_acc_avg=0.8385	pgd20=0.0000	pgd20_avg=0.0000	time=3.63it/s
+2021-09-17 04:52:52,105 Eval Loss:0.5041	Eval acc: 83.85
+2021-09-17 04:52:52,404 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:52:52,404 
+2021-09-17 04:52:52,404 ====================Training Epoch 24====================
+2021-09-17 04:52:55,698 epoch=24	global_step=9400	acc=0.9062	acc_avg=0.9074	loss=0.3864	loss_avg=0.2701	lr=0.0655	|gn|=1.7220	time=14.18it/s
+2021-09-17 04:53:02,724 epoch=24	global_step=9500	acc=0.8984	acc_avg=0.8998	loss=0.3190	loss_avg=0.2913	lr=0.0655	|gn|=1.4369	time=14.90it/s
+2021-09-17 04:53:09,636 epoch=24	global_step=9600	acc=0.9375	acc_avg=0.8992	loss=0.2467	loss_avg=0.2920	lr=0.0655	|gn|=1.3331	time=14.39it/s
+2021-09-17 04:53:16,637 epoch=24	global_step=9700	acc=0.9375	acc_avg=0.8981	loss=0.2381	loss_avg=0.2947	lr=0.0655	|gn|=1.3987	time=13.69it/s
+2021-09-17 04:53:20,119 ====================Eval Epoch 24====================
+2021-09-17 04:54:53,309 epoch=24	global_step=39	acc=0.6250	acc_avg=0.8332	acc5=1.0000	acc5_avg=0.9919	loss=0.6803	loss_avg=0.5393	_acc=0.6250	_acc_avg=0.8332	pgd20=0.0000	pgd20_avg=0.0000	time=3.44it/s
+2021-09-17 04:54:53,310 Eval Loss:0.5393	Eval acc: 83.32
+2021-09-17 04:54:53,646 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:54:53,646 
+2021-09-17 04:54:53,646 ====================Training Epoch 25====================
+2021-09-17 04:54:57,770 epoch=25	global_step=9800	acc=0.9141	acc_avg=0.9050	loss=0.2080	loss_avg=0.2739	lr=0.0629	|gn|=1.6397	time=14.49it/s
+2021-09-17 04:55:04,654 epoch=25	global_step=9900	acc=0.9375	acc_avg=0.9048	loss=0.2194	loss_avg=0.2778	lr=0.0629	|gn|=1.4455	time=15.07it/s
+2021-09-17 04:55:11,558 epoch=25	global_step=10000	acc=0.9062	acc_avg=0.9050	loss=0.2246	loss_avg=0.2799	lr=0.0629	|gn|=1.5096	time=14.63it/s
+2021-09-17 04:55:18,560 epoch=25	global_step=10100	acc=0.9375	acc_avg=0.9032	loss=0.1669	loss_avg=0.2841	lr=0.0629	|gn|=1.2292	time=13.83it/s
+2021-09-17 04:55:21,320 ====================Eval Epoch 25====================
+2021-09-17 04:56:54,637 epoch=25	global_step=39	acc=0.9375	acc_avg=0.8592	acc5=1.0000	acc5_avg=0.9936	loss=0.2758	loss_avg=0.4261	_acc=0.9375	_acc_avg=0.8592	pgd20=0.0000	pgd20_avg=0.0000	time=3.61it/s
+2021-09-17 04:56:54,638 Eval Loss:0.4261	Eval acc: 85.92
+2021-09-17 04:56:54,955 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:56:54,956 
+2021-09-17 04:56:54,956 ====================Training Epoch 26====================
+2021-09-17 04:56:59,769 epoch=26	global_step=10200	acc=0.9141	acc_avg=0.9178	loss=0.2868	loss_avg=0.2448	lr=0.0604	|gn|=1.8152	time=14.04it/s
+2021-09-17 04:57:07,003 epoch=26	global_step=10300	acc=0.9375	acc_avg=0.9107	loss=0.1741	loss_avg=0.2622	lr=0.0604	|gn|=1.1976	time=14.09it/s
+2021-09-17 04:57:14,148 epoch=26	global_step=10400	acc=0.8672	acc_avg=0.9099	loss=0.4037	loss_avg=0.2654	lr=0.0604	|gn|=1.9170	time=13.70it/s
+2021-09-17 04:57:21,333 epoch=26	global_step=10500	acc=0.8984	acc_avg=0.9087	loss=0.2563	loss_avg=0.2686	lr=0.0604	|gn|=1.6962	time=14.20it/s
+2021-09-17 04:57:23,441 ====================Eval Epoch 26====================
+2021-09-17 04:58:57,143 epoch=26	global_step=39	acc=0.8750	acc_avg=0.8657	acc5=1.0000	acc5_avg=0.9964	loss=0.4188	loss_avg=0.4006	_acc=0.8750	_acc_avg=0.8657	pgd20=0.0000	pgd20_avg=0.0000	time=3.65it/s
+2021-09-17 04:58:57,144 Eval Loss:0.4006	Eval acc: 86.57
+2021-09-17 04:58:57,422 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 04:58:57,422 
+2021-09-17 04:58:57,422 ====================Training Epoch 27====================
+2021-09-17 04:59:03,002 epoch=27	global_step=10600	acc=0.9297	acc_avg=0.9197	loss=0.2749	loss_avg=0.2369	lr=0.0578	|gn|=1.5887	time=14.16it/s
+2021-09-17 04:59:10,076 epoch=27	global_step=10700	acc=0.9062	acc_avg=0.9131	loss=0.2167	loss_avg=0.2569	lr=0.0578	|gn|=1.3370	time=14.53it/s
+2021-09-17 04:59:17,095 epoch=27	global_step=10800	acc=0.9609	acc_avg=0.9125	loss=0.1666	loss_avg=0.2596	lr=0.0578	|gn|=1.1111	time=14.20it/s
+2021-09-17 04:59:24,176 epoch=27	global_step=10900	acc=0.9062	acc_avg=0.9101	loss=0.2527	loss_avg=0.2648	lr=0.0578	|gn|=1.3377	time=13.53it/s
+2021-09-17 04:59:25,576 ====================Eval Epoch 27====================
+2021-09-17 05:00:58,910 epoch=27	global_step=39	acc=0.8125	acc_avg=0.8430	acc5=1.0000	acc5_avg=0.9938	loss=0.7527	loss_avg=0.4757	_acc=0.8125	_acc_avg=0.8430	pgd20=0.0000	pgd20_avg=0.0000	time=3.60it/s
+2021-09-17 05:00:58,911 Eval Loss:0.4757	Eval acc: 84.30
+2021-09-17 05:00:59,211 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:00:59,211 
+2021-09-17 05:00:59,211 ====================Training Epoch 28====================
+2021-09-17 05:01:05,243 epoch=28	global_step=11000	acc=0.9141	acc_avg=0.9191	loss=0.1747	loss_avg=0.2353	lr=0.0552	|gn|=1.5714	time=15.19it/s
+2021-09-17 05:01:12,104 epoch=28	global_step=11100	acc=0.9219	acc_avg=0.9181	loss=0.2044	loss_avg=0.2401	lr=0.0552	|gn|=1.7032	time=14.32it/s
+2021-09-17 05:01:19,090 epoch=28	global_step=11200	acc=0.9062	acc_avg=0.9151	loss=0.2522	loss_avg=0.2482	lr=0.0552	|gn|=1.4057	time=14.89it/s
+2021-09-17 05:01:25,919 epoch=28	global_step=11300	acc=0.8984	acc_avg=0.9146	loss=0.2912	loss_avg=0.2515	lr=0.0552	|gn|=1.6274	time=14.70it/s
+2021-09-17 05:01:26,588 ====================Eval Epoch 28====================
+2021-09-17 05:03:00,733 epoch=28	global_step=39	acc=0.8750	acc_avg=0.8681	acc5=1.0000	acc5_avg=0.9946	loss=0.5891	loss_avg=0.4090	_acc=0.8750	_acc_avg=0.8681	pgd20=0.0000	pgd20_avg=0.0000	time=3.51it/s
+2021-09-17 05:03:00,734 Eval Loss:0.4090	Eval acc: 86.81
+2021-09-17 05:03:01,090 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:03:01,090 
+2021-09-17 05:03:01,090 ====================Training Epoch 29====================
+2021-09-17 05:03:08,007 epoch=29	global_step=11400	acc=0.9531	acc_avg=0.9247	loss=0.1512	loss_avg=0.2197	lr=0.0526	|gn|=1.3379	time=14.19it/s
+2021-09-17 05:03:14,961 epoch=29	global_step=11500	acc=0.8828	acc_avg=0.9212	loss=0.3103	loss_avg=0.2338	lr=0.0526	|gn|=1.9836	time=13.58it/s
+2021-09-17 05:03:21,836 epoch=29	global_step=11600	acc=0.8984	acc_avg=0.9198	loss=0.2890	loss_avg=0.2373	lr=0.0526	|gn|=1.7207	time=15.22it/s
+2021-09-17 05:03:28,714 ====================Eval Epoch 29====================
+2021-09-17 05:05:01,608 epoch=29	global_step=39	acc=0.8125	acc_avg=0.8580	acc5=1.0000	acc5_avg=0.9953	loss=0.5592	loss_avg=0.4384	_acc=0.8125	_acc_avg=0.8580	pgd20=0.0000	pgd20_avg=0.0000	time=3.50it/s
+2021-09-17 05:05:01,609 Eval Loss:0.4384	Eval acc: 85.80
+2021-09-17 05:05:01,901 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:05:01,901 
+2021-09-17 05:05:01,901 ====================Training Epoch 30====================
+2021-09-17 05:05:02,435 epoch=30	global_step=11700	acc=0.9375	acc_avg=0.9375	loss=0.1914	loss_avg=0.1914	lr=0.0500	|gn|=1.4443	time=13.08it/s
+2021-09-17 05:05:09,569 epoch=30	global_step=11800	acc=0.9453	acc_avg=0.9271	loss=0.2105	loss_avg=0.2110	lr=0.0500	|gn|=1.5916	time=14.52it/s
+2021-09-17 05:05:16,535 epoch=30	global_step=11900	acc=0.9141	acc_avg=0.9239	loss=0.2423	loss_avg=0.2176	lr=0.0500	|gn|=1.6270	time=13.86it/s
+2021-09-17 05:05:23,356 epoch=30	global_step=12000	acc=0.9062	acc_avg=0.9213	loss=0.2932	loss_avg=0.2258	lr=0.0500	|gn|=1.8463	time=14.68it/s
+2021-09-17 05:05:29,575 ====================Eval Epoch 30====================
+2021-09-17 05:07:02,770 epoch=30	global_step=39	acc=0.8750	acc_avg=0.8426	acc5=1.0000	acc5_avg=0.9922	loss=0.2704	loss_avg=0.5061	_acc=0.8750	_acc_avg=0.8426	pgd20=0.0000	pgd20_avg=0.0000	time=3.54it/s
+2021-09-17 05:07:02,771 Eval Loss:0.5061	Eval acc: 84.26
+2021-09-17 05:07:03,040 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:07:03,040 
+2021-09-17 05:07:03,041 ====================Training Epoch 31====================
+2021-09-17 05:07:04,232 epoch=31	global_step=12100	acc=0.9219	acc_avg=0.9290	loss=0.2187	loss_avg=0.2086	lr=0.0474	|gn|=1.5592	time=13.74it/s
+2021-09-17 05:07:11,136 epoch=31	global_step=12200	acc=0.8984	acc_avg=0.9299	loss=0.2331	loss_avg=0.1999	lr=0.0474	|gn|=1.8178	time=14.79it/s
+2021-09-17 05:07:18,086 epoch=31	global_step=12300	acc=0.8984	acc_avg=0.9278	loss=0.2752	loss_avg=0.2054	lr=0.0474	|gn|=1.9301	time=14.52it/s
+2021-09-17 05:07:24,934 epoch=31	global_step=12400	acc=0.8750	acc_avg=0.9232	loss=0.3496	loss_avg=0.2201	lr=0.0474	|gn|=2.0268	time=14.11it/s
+2021-09-17 05:07:30,396 ====================Eval Epoch 31====================
+2021-09-17 05:09:04,085 epoch=31	global_step=39	acc=0.9375	acc_avg=0.8781	acc5=1.0000	acc5_avg=0.9962	loss=0.1220	loss_avg=0.3860	_acc=0.9375	_acc_avg=0.8781	pgd20=0.0000	pgd20_avg=0.0000	time=3.58it/s
+2021-09-17 05:09:04,086 Eval Loss:0.3860	Eval acc: 87.81
+2021-09-17 05:09:04,394 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:09:04,394 
+2021-09-17 05:09:04,394 ====================Training Epoch 32====================
+2021-09-17 05:09:06,252 epoch=32	global_step=12500	acc=0.9531	acc_avg=0.9353	loss=0.1283	loss_avg=0.1919	lr=0.0448	|gn|=1.2297	time=14.39it/s
+2021-09-17 05:09:13,433 epoch=32	global_step=12600	acc=0.8984	acc_avg=0.9342	loss=0.2628	loss_avg=0.1924	lr=0.0448	|gn|=2.0845	time=13.79it/s
+2021-09-17 05:09:20,458 epoch=32	global_step=12700	acc=0.9219	acc_avg=0.9313	loss=0.1916	loss_avg=0.1995	lr=0.0448	|gn|=1.4447	time=15.14it/s
+2021-09-17 05:09:27,338 epoch=32	global_step=12800	acc=0.9219	acc_avg=0.9309	loss=0.2554	loss_avg=0.2007	lr=0.0448	|gn|=1.9801	time=13.57it/s
+2021-09-17 05:09:32,180 ====================Eval Epoch 32====================
+2021-09-17 05:11:05,545 epoch=32	global_step=39	acc=0.8750	acc_avg=0.8797	acc5=0.9375	acc5_avg=0.9950	loss=0.5090	loss_avg=0.3870	_acc=0.8750	_acc_avg=0.8797	pgd20=0.0000	pgd20_avg=0.0000	time=3.65it/s
+2021-09-17 05:11:05,546 Eval Loss:0.3870	Eval acc: 87.97
+2021-09-17 05:11:05,824 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:11:05,824 
+2021-09-17 05:11:05,824 ====================Training Epoch 33====================
+2021-09-17 05:11:08,416 epoch=33	global_step=12900	acc=0.9531	acc_avg=0.9347	loss=0.1636	loss_avg=0.1930	lr=0.0422	|gn|=1.4302	time=14.20it/s
+2021-09-17 05:11:15,438 epoch=33	global_step=13000	acc=0.9531	acc_avg=0.9361	loss=0.1437	loss_avg=0.1902	lr=0.0422	|gn|=1.4260	time=14.43it/s
+2021-09-17 05:11:22,309 epoch=33	global_step=13100	acc=0.9688	acc_avg=0.9328	loss=0.1121	loss_avg=0.1977	lr=0.0422	|gn|=1.2712	time=15.19it/s
+2021-09-17 05:11:29,154 epoch=33	global_step=13200	acc=0.8906	acc_avg=0.9300	loss=0.2766	loss_avg=0.2026	lr=0.0422	|gn|=1.9165	time=14.83it/s
+2021-09-17 05:11:33,245 ====================Eval Epoch 33====================
+2021-09-17 05:13:06,734 epoch=33	global_step=39	acc=0.8750	acc_avg=0.8367	acc5=1.0000	acc5_avg=0.9916	loss=0.2961	loss_avg=0.5193	_acc=0.8750	_acc_avg=0.8367	pgd20=0.0000	pgd20_avg=0.0000	time=3.58it/s
+2021-09-17 05:13:06,734 Eval Loss:0.5193	Eval acc: 83.67
+2021-09-17 05:13:07,057 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:13:07,057 
+2021-09-17 05:13:07,057 ====================Training Epoch 34====================
+2021-09-17 05:13:10,283 epoch=34	global_step=13300	acc=0.9062	acc_avg=0.9390	loss=0.2397	loss_avg=0.1744	lr=0.0396	|gn|=2.1075	time=13.35it/s
+2021-09-17 05:13:17,436 epoch=34	global_step=13400	acc=0.9453	acc_avg=0.9328	loss=0.1632	loss_avg=0.1853	lr=0.0396	|gn|=1.5742	time=14.86it/s
+2021-09-17 05:13:24,596 epoch=34	global_step=13500	acc=0.9531	acc_avg=0.9325	loss=0.1308	loss_avg=0.1914	lr=0.0396	|gn|=1.4680	time=11.10it/s
+2021-09-17 05:13:31,826 epoch=34	global_step=13600	acc=0.8828	acc_avg=0.9322	loss=0.2818	loss_avg=0.1941	lr=0.0396	|gn|=2.2940	time=14.44it/s
+2021-09-17 05:13:35,358 ====================Eval Epoch 34====================
+2021-09-17 05:15:08,643 epoch=34	global_step=39	acc=0.9375	acc_avg=0.8897	acc5=1.0000	acc5_avg=0.9975	loss=0.2627	loss_avg=0.3391	_acc=0.9375	_acc_avg=0.8897	pgd20=0.0000	pgd20_avg=0.0000	time=3.60it/s
+2021-09-17 05:15:08,644 Eval Loss:0.3391	Eval acc: 88.97
+2021-09-17 05:15:08,935 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:15:08,935 
+2021-09-17 05:15:08,935 ====================Training Epoch 35====================
+2021-09-17 05:15:13,049 epoch=35	global_step=13700	acc=0.9297	acc_avg=0.9456	loss=0.2015	loss_avg=0.1607	lr=0.0371	|gn|=1.9005	time=14.36it/s
+2021-09-17 05:15:20,336 epoch=35	global_step=13800	acc=0.9688	acc_avg=0.9409	loss=0.1185	loss_avg=0.1754	lr=0.0371	|gn|=1.3471	time=13.25it/s
+2021-09-17 05:15:27,419 epoch=35	global_step=13900	acc=0.9766	acc_avg=0.9402	loss=0.1196	loss_avg=0.1755	lr=0.0371	|gn|=1.2640	time=14.54it/s
+2021-09-17 05:15:34,286 epoch=35	global_step=14000	acc=0.9062	acc_avg=0.9399	loss=0.2963	loss_avg=0.1778	lr=0.0371	|gn|=2.3231	time=14.24it/s
+2021-09-17 05:15:37,031 ====================Eval Epoch 35====================
+2021-09-17 05:17:10,327 epoch=35	global_step=39	acc=0.9375	acc_avg=0.8792	acc5=1.0000	acc5_avg=0.9954	loss=0.2399	loss_avg=0.3891	_acc=0.9375	_acc_avg=0.8792	pgd20=0.0000	pgd20_avg=0.0000	time=3.50it/s
+2021-09-17 05:17:10,328 Eval Loss:0.3891	Eval acc: 87.92
+2021-09-17 05:17:10,599 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:17:10,600 
+2021-09-17 05:17:10,600 ====================Training Epoch 36====================
+2021-09-17 05:17:15,188 epoch=36	global_step=14100	acc=0.9219	acc_avg=0.9458	loss=0.2379	loss_avg=0.1658	lr=0.0345	|gn|=2.2991	time=14.57it/s
+2021-09-17 05:17:22,032 epoch=36	global_step=14200	acc=0.9531	acc_avg=0.9458	loss=0.1631	loss_avg=0.1621	lr=0.0345	|gn|=1.5909	time=15.00it/s
+2021-09-17 05:17:28,969 epoch=36	global_step=14300	acc=0.9844	acc_avg=0.9451	loss=0.0619	loss_avg=0.1624	lr=0.0345	|gn|=1.2584	time=15.25it/s
+2021-09-17 05:17:35,834 epoch=36	global_step=14400	acc=0.9531	acc_avg=0.9426	loss=0.1547	loss_avg=0.1677	lr=0.0345	|gn|=1.5181	time=14.45it/s
+2021-09-17 05:17:37,872 ====================Eval Epoch 36====================
+2021-09-17 05:19:10,505 epoch=36	global_step=39	acc=0.9375	acc_avg=0.8927	acc5=1.0000	acc5_avg=0.9965	loss=0.1342	loss_avg=0.3303	_acc=0.9375	_acc_avg=0.8927	pgd20=0.0000	pgd20_avg=0.0000	time=3.69it/s
+2021-09-17 05:19:10,506 Eval Loss:0.3303	Eval acc: 89.27
+2021-09-17 05:19:10,786 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:19:10,786 
+2021-09-17 05:19:10,786 ====================Training Epoch 37====================
+2021-09-17 05:19:16,098 epoch=37	global_step=14500	acc=0.9453	acc_avg=0.9454	loss=0.1863	loss_avg=0.1546	lr=0.0321	|gn|=1.7225	time=14.53it/s
+2021-09-17 05:19:22,930 epoch=37	global_step=14600	acc=0.9609	acc_avg=0.9476	loss=0.1066	loss_avg=0.1501	lr=0.0321	|gn|=1.7200	time=14.83it/s
+2021-09-17 05:19:29,738 epoch=37	global_step=14700	acc=0.9688	acc_avg=0.9472	loss=0.1660	loss_avg=0.1541	lr=0.0321	|gn|=1.6411	time=15.13it/s
+2021-09-17 05:19:36,639 epoch=37	global_step=14800	acc=0.9297	acc_avg=0.9465	loss=0.1654	loss_avg=0.1559	lr=0.0321	|gn|=1.9798	time=15.15it/s
+2021-09-17 05:19:37,981 ====================Eval Epoch 37====================
+2021-09-17 05:21:10,935 epoch=37	global_step=39	acc=0.8750	acc_avg=0.8984	acc5=1.0000	acc5_avg=0.9964	loss=0.8250	loss_avg=0.3142	_acc=0.8750	_acc_avg=0.8984	pgd20=0.0000	pgd20_avg=0.0000	time=3.55it/s
+2021-09-17 05:21:10,936 Eval Loss:0.3142	Eval acc: 89.84
+2021-09-17 05:21:11,261 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:21:11,261 
+2021-09-17 05:21:11,261 ====================Training Epoch 38====================
+2021-09-17 05:21:17,206 epoch=38	global_step=14900	acc=0.9766	acc_avg=0.9565	loss=0.0860	loss_avg=0.1278	lr=0.0297	|gn|=1.4504	time=15.01it/s
+2021-09-17 05:21:24,090 epoch=38	global_step=15000	acc=0.9766	acc_avg=0.9527	loss=0.0935	loss_avg=0.1332	lr=0.0297	|gn|=1.2349	time=15.11it/s
+2021-09-17 05:21:30,945 epoch=38	global_step=15100	acc=0.9453	acc_avg=0.9511	loss=0.1897	loss_avg=0.1398	lr=0.0297	|gn|=1.6672	time=14.06it/s
+2021-09-17 05:21:37,853 epoch=38	global_step=15200	acc=0.9531	acc_avg=0.9506	loss=0.1511	loss_avg=0.1410	lr=0.0297	|gn|=1.9994	time=14.80it/s
+2021-09-17 05:21:38,514 ====================Eval Epoch 38====================
+2021-09-17 05:23:11,353 epoch=38	global_step=39	acc=0.9375	acc_avg=0.9035	acc5=1.0000	acc5_avg=0.9968	loss=0.2144	loss_avg=0.3145	_acc=0.9375	_acc_avg=0.9035	pgd20=0.0000	pgd20_avg=0.0000	time=3.43it/s
+2021-09-17 05:23:11,354 Eval Loss:0.3145	Eval acc: 90.35
+2021-09-17 05:23:11,632 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:23:11,633 
+2021-09-17 05:23:11,633 ====================Training Epoch 39====================
+2021-09-17 05:23:18,247 epoch=39	global_step=15300	acc=0.9141	acc_avg=0.9568	loss=0.2312	loss_avg=0.1239	lr=0.0273	|gn|=2.7215	time=14.96it/s
+2021-09-17 05:23:25,211 epoch=39	global_step=15400	acc=0.9531	acc_avg=0.9552	loss=0.1449	loss_avg=0.1284	lr=0.0273	|gn|=2.0889	time=14.87it/s
+2021-09-17 05:23:32,169 epoch=39	global_step=15500	acc=0.9453	acc_avg=0.9552	loss=0.1458	loss_avg=0.1281	lr=0.0273	|gn|=1.8555	time=13.51it/s
+2021-09-17 05:23:38,995 ====================Eval Epoch 39====================
+2021-09-17 05:25:12,408 epoch=39	global_step=39	acc=0.8125	acc_avg=0.8878	acc5=1.0000	acc5_avg=0.9957	loss=0.4634	loss_avg=0.3737	_acc=0.8125	_acc_avg=0.8878	pgd20=0.0000	pgd20_avg=0.0000	time=3.54it/s
+2021-09-17 05:25:12,408 Eval Loss:0.3737	Eval acc: 88.78
+2021-09-17 05:25:12,696 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:25:12,696 
+2021-09-17 05:25:12,696 ====================Training Epoch 40====================
+2021-09-17 05:25:13,143 epoch=40	global_step=15600	acc=0.9453	acc_avg=0.9453	loss=0.1719	loss_avg=0.1719	lr=0.0250	|gn|=2.4496	time=11.93it/s
+2021-09-17 05:25:19,957 epoch=40	global_step=15700	acc=0.9453	acc_avg=0.9616	loss=0.1264	loss_avg=0.1148	lr=0.0250	|gn|=2.1361	time=15.25it/s
+2021-09-17 05:25:26,773 epoch=40	global_step=15800	acc=0.9297	acc_avg=0.9601	loss=0.1590	loss_avg=0.1168	lr=0.0250	|gn|=2.3612	time=14.74it/s
+2021-09-17 05:25:33,634 epoch=40	global_step=15900	acc=0.9922	acc_avg=0.9589	loss=0.0452	loss_avg=0.1193	lr=0.0250	|gn|=1.1288	time=15.00it/s
+2021-09-17 05:25:39,768 ====================Eval Epoch 40====================
+2021-09-17 05:27:13,106 epoch=40	global_step=39	acc=0.8125	acc_avg=0.9110	acc5=1.0000	acc5_avg=0.9978	loss=0.2392	loss_avg=0.2858	_acc=0.8125	_acc_avg=0.9110	pgd20=0.0000	pgd20_avg=0.0000	time=3.54it/s
+2021-09-17 05:27:13,106 Eval Loss:0.2858	Eval acc: 91.10
+2021-09-17 05:27:13,383 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:27:13,384 
+2021-09-17 05:27:13,384 ====================Training Epoch 41====================
+2021-09-17 05:27:14,631 epoch=41	global_step=16000	acc=0.9688	acc_avg=0.9680	loss=0.0822	loss_avg=0.1011	lr=0.0228	|gn|=1.6016	time=13.00it/s
+2021-09-17 05:27:21,752 epoch=41	global_step=16100	acc=0.9844	acc_avg=0.9683	loss=0.0658	loss_avg=0.0978	lr=0.0228	|gn|=1.2012	time=14.68it/s
+2021-09-17 05:27:28,602 epoch=41	global_step=16200	acc=0.9844	acc_avg=0.9670	loss=0.0563	loss_avg=0.0969	lr=0.0228	|gn|=1.1844	time=15.06it/s
+2021-09-17 05:27:35,485 epoch=41	global_step=16300	acc=0.9531	acc_avg=0.9661	loss=0.1210	loss_avg=0.1009	lr=0.0228	|gn|=2.1715	time=15.19it/s
+2021-09-17 05:27:41,041 ====================Eval Epoch 41====================
+2021-09-17 05:29:14,666 epoch=41	global_step=39	acc=0.9375	acc_avg=0.9100	acc5=1.0000	acc5_avg=0.9966	loss=0.0973	loss_avg=0.2933	_acc=0.9375	_acc_avg=0.9100	pgd20=0.0000	pgd20_avg=0.0000	time=3.45it/s
+2021-09-17 05:29:14,667 Eval Loss:0.2933	Eval acc: 91.00
+2021-09-17 05:29:14,957 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:29:14,957 
+2021-09-17 05:29:14,957 ====================Training Epoch 42====================
+2021-09-17 05:29:16,785 epoch=42	global_step=16400	acc=0.9609	acc_avg=0.9706	loss=0.0915	loss_avg=0.0894	lr=0.0206	|gn|=1.9864	time=14.82it/s
+2021-09-17 05:29:23,530 epoch=42	global_step=16500	acc=0.9531	acc_avg=0.9726	loss=0.0934	loss_avg=0.0846	lr=0.0206	|gn|=1.9863	time=14.64it/s
+2021-09-17 05:29:30,391 epoch=42	global_step=16600	acc=0.9688	acc_avg=0.9706	loss=0.0862	loss_avg=0.0888	lr=0.0206	|gn|=1.6890	time=14.47it/s
+2021-09-17 05:29:37,410 epoch=42	global_step=16700	acc=0.9766	acc_avg=0.9688	loss=0.0907	loss_avg=0.0920	lr=0.0206	|gn|=1.5169	time=14.94it/s
+2021-09-17 05:29:42,191 ====================Eval Epoch 42====================
+2021-09-17 05:31:15,515 epoch=42	global_step=39	acc=0.8750	acc_avg=0.9140	acc5=1.0000	acc5_avg=0.9982	loss=0.4381	loss_avg=0.2891	_acc=0.8750	_acc_avg=0.9140	pgd20=0.0000	pgd20_avg=0.0000	time=3.42it/s
+2021-09-17 05:31:15,516 Eval Loss:0.2891	Eval acc: 91.40
+2021-09-17 05:31:15,820 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:31:15,821 
+2021-09-17 05:31:15,821 ====================Training Epoch 43====================
+2021-09-17 05:31:18,438 epoch=43	global_step=16800	acc=0.9609	acc_avg=0.9690	loss=0.1118	loss_avg=0.0961	lr=0.0185	|gn|=2.3611	time=14.04it/s
+2021-09-17 05:31:25,553 epoch=43	global_step=16900	acc=0.9609	acc_avg=0.9733	loss=0.1060	loss_avg=0.0784	lr=0.0185	|gn|=1.9237	time=14.89it/s
+2021-09-17 05:31:32,465 epoch=43	global_step=17000	acc=0.9688	acc_avg=0.9730	loss=0.0575	loss_avg=0.0795	lr=0.0185	|gn|=1.5077	time=13.50it/s
+2021-09-17 05:31:39,488 epoch=43	global_step=17100	acc=0.9766	acc_avg=0.9716	loss=0.0774	loss_avg=0.0832	lr=0.0185	|gn|=2.2001	time=13.85it/s
+2021-09-17 05:31:43,571 ====================Eval Epoch 43====================
+2021-09-17 05:33:16,752 epoch=43	global_step=39	acc=0.8125	acc_avg=0.9168	acc5=1.0000	acc5_avg=0.9978	loss=0.3847	loss_avg=0.2710	_acc=0.8125	_acc_avg=0.9168	pgd20=0.0000	pgd20_avg=0.0000	time=3.41it/s
+2021-09-17 05:33:16,753 Eval Loss:0.2710	Eval acc: 91.68
+2021-09-17 05:33:17,069 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:33:17,069 
+2021-09-17 05:33:17,069 ====================Training Epoch 44====================
+2021-09-17 05:33:20,462 epoch=44	global_step=17200	acc=0.9609	acc_avg=0.9752	loss=0.1014	loss_avg=0.0706	lr=0.0165	|gn|=2.0716	time=13.83it/s
+2021-09-17 05:33:27,682 epoch=44	global_step=17300	acc=0.9844	acc_avg=0.9771	loss=0.0591	loss_avg=0.0676	lr=0.0165	|gn|=1.3633	time=14.75it/s
+2021-09-17 05:33:34,843 epoch=44	global_step=17400	acc=0.9922	acc_avg=0.9759	loss=0.0263	loss_avg=0.0693	lr=0.0165	|gn|=0.9722	time=13.51it/s
+2021-09-17 05:33:41,904 epoch=44	global_step=17500	acc=0.9766	acc_avg=0.9751	loss=0.0591	loss_avg=0.0723	lr=0.0165	|gn|=1.5700	time=14.75it/s
+2021-09-17 05:33:45,473 ====================Eval Epoch 44====================
+2021-09-17 05:35:18,982 epoch=44	global_step=39	acc=0.9375	acc_avg=0.9215	acc5=1.0000	acc5_avg=0.9984	loss=0.3398	loss_avg=0.2540	_acc=0.9375	_acc_avg=0.9215	pgd20=0.0000	pgd20_avg=0.0000	time=3.59it/s
+2021-09-17 05:35:18,983 Eval Loss:0.2540	Eval acc: 92.15
+2021-09-17 05:35:19,278 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:35:19,278 
+2021-09-17 05:35:19,278 ====================Training Epoch 45====================
+2021-09-17 05:35:23,339 epoch=45	global_step=17600	acc=0.9922	acc_avg=0.9841	loss=0.0294	loss_avg=0.0537	lr=0.0146	|gn|=1.2939	time=14.83it/s
+2021-09-17 05:35:30,294 epoch=45	global_step=17700	acc=0.9609	acc_avg=0.9825	loss=0.1014	loss_avg=0.0549	lr=0.0146	|gn|=2.2501	time=14.56it/s
+2021-09-17 05:35:37,226 epoch=45	global_step=17800	acc=0.9844	acc_avg=0.9810	loss=0.0291	loss_avg=0.0568	lr=0.0146	|gn|=1.2242	time=14.46it/s
+2021-09-17 05:35:44,252 epoch=45	global_step=17900	acc=0.9844	acc_avg=0.9800	loss=0.0510	loss_avg=0.0597	lr=0.0146	|gn|=1.6764	time=14.32it/s
+2021-09-17 05:35:47,032 ====================Eval Epoch 45====================
+2021-09-17 05:37:20,057 epoch=45	global_step=39	acc=0.9375	acc_avg=0.9288	acc5=1.0000	acc5_avg=0.9972	loss=0.4278	loss_avg=0.2370	_acc=0.9375	_acc_avg=0.9288	pgd20=0.0000	pgd20_avg=0.0000	time=3.60it/s
+2021-09-17 05:37:20,058 Eval Loss:0.2370	Eval acc: 92.88
+2021-09-17 05:37:20,330 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:37:20,330 
+2021-09-17 05:37:20,330 ====================Training Epoch 46====================
+2021-09-17 05:37:25,189 epoch=46	global_step=18000	acc=0.9844	acc_avg=0.9857	loss=0.0464	loss_avg=0.0474	lr=0.0128	|gn|=1.8216	time=14.22it/s
+2021-09-17 05:37:32,248 epoch=46	global_step=18100	acc=1.0000	acc_avg=0.9855	loss=0.0099	loss_avg=0.0453	lr=0.0128	|gn|=0.5544	time=14.80it/s
+2021-09-17 05:37:39,269 epoch=46	global_step=18200	acc=0.9609	acc_avg=0.9856	loss=0.0839	loss_avg=0.0439	lr=0.0128	|gn|=2.8971	time=14.81it/s
+2021-09-17 05:37:46,287 epoch=46	global_step=18300	acc=0.9766	acc_avg=0.9855	loss=0.0529	loss_avg=0.0448	lr=0.0128	|gn|=1.8717	time=14.05it/s
+2021-09-17 05:37:48,389 ====================Eval Epoch 46====================
+2021-09-17 05:39:21,820 epoch=46	global_step=39	acc=0.9375	acc_avg=0.9262	acc5=1.0000	acc5_avg=0.9984	loss=0.6182	loss_avg=0.2467	_acc=0.9375	_acc_avg=0.9262	pgd20=0.0000	pgd20_avg=0.0000	time=3.65it/s
+2021-09-17 05:39:21,820 Eval Loss:0.2467	Eval acc: 92.62
+2021-09-17 05:39:22,126 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:39:22,126 
+2021-09-17 05:39:22,127 ====================Training Epoch 47====================
+2021-09-17 05:39:27,583 epoch=47	global_step=18400	acc=0.9531	acc_avg=0.9865	loss=0.0856	loss_avg=0.0416	lr=0.0111	|gn|=2.6572	time=14.64it/s
+2021-09-17 05:39:34,463 epoch=47	global_step=18500	acc=1.0000	acc_avg=0.9869	loss=0.0103	loss_avg=0.0387	lr=0.0111	|gn|=0.9185	time=14.49it/s
+2021-09-17 05:39:41,519 epoch=47	global_step=18600	acc=0.9922	acc_avg=0.9874	loss=0.0426	loss_avg=0.0382	lr=0.0111	|gn|=1.5350	time=14.80it/s
+2021-09-17 05:39:48,425 epoch=47	global_step=18700	acc=0.9688	acc_avg=0.9871	loss=0.0848	loss_avg=0.0392	lr=0.0111	|gn|=2.9758	time=14.77it/s
+2021-09-17 05:39:49,800 ====================Eval Epoch 47====================
+2021-09-17 05:41:23,400 epoch=47	global_step=39	acc=0.9375	acc_avg=0.9330	acc5=1.0000	acc5_avg=0.9980	loss=0.5327	loss_avg=0.2348	_acc=0.9375	_acc_avg=0.9330	pgd20=0.0000	pgd20_avg=0.0000	time=3.67it/s
+2021-09-17 05:41:23,400 Eval Loss:0.2348	Eval acc: 93.30
+2021-09-17 05:41:23,686 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:41:23,686 
+2021-09-17 05:41:23,687 ====================Training Epoch 48====================
+2021-09-17 05:41:29,976 epoch=48	global_step=18800	acc=0.9922	acc_avg=0.9880	loss=0.0291	loss_avg=0.0356	lr=0.0095	|gn|=1.5799	time=12.64it/s
+2021-09-17 05:41:37,281 epoch=48	global_step=18900	acc=0.9922	acc_avg=0.9902	loss=0.0274	loss_avg=0.0308	lr=0.0095	|gn|=1.5370	time=13.67it/s
+2021-09-17 05:41:44,297 epoch=48	global_step=19000	acc=0.9922	acc_avg=0.9903	loss=0.0440	loss_avg=0.0310	lr=0.0095	|gn|=1.5226	time=14.41it/s
+2021-09-17 05:41:51,357 epoch=48	global_step=19100	acc=0.9844	acc_avg=0.9903	loss=0.0277	loss_avg=0.0308	lr=0.0095	|gn|=1.4247	time=14.93it/s
+2021-09-17 05:41:52,014 ====================Eval Epoch 48====================
+2021-09-17 05:43:24,828 epoch=48	global_step=39	acc=0.9375	acc_avg=0.9332	acc5=1.0000	acc5_avg=0.9982	loss=0.4362	loss_avg=0.2359	_acc=0.9375	_acc_avg=0.9332	pgd20=0.0000	pgd20_avg=0.0000	time=3.68it/s
+2021-09-17 05:43:24,829 Eval Loss:0.2359	Eval acc: 93.32
+2021-09-17 05:43:25,125 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:43:25,125 
+2021-09-17 05:43:25,125 ====================Training Epoch 49====================
+2021-09-17 05:43:31,777 epoch=49	global_step=19200	acc=1.0000	acc_avg=0.9935	loss=0.0166	loss_avg=0.0242	lr=0.0081	|gn|=0.9636	time=14.06it/s
+2021-09-17 05:43:38,634 epoch=49	global_step=19300	acc=0.9922	acc_avg=0.9932	loss=0.0185	loss_avg=0.0243	lr=0.0081	|gn|=1.5324	time=14.46it/s
+2021-09-17 05:43:45,653 epoch=49	global_step=19400	acc=0.9922	acc_avg=0.9931	loss=0.0214	loss_avg=0.0244	lr=0.0081	|gn|=1.3572	time=14.81it/s
+2021-09-17 05:43:52,746 ====================Eval Epoch 49====================
+2021-09-17 05:45:25,430 epoch=49	global_step=39	acc=0.9375	acc_avg=0.9368	acc5=1.0000	acc5_avg=0.9982	loss=0.3379	loss_avg=0.2323	_acc=0.9375	_acc_avg=0.9368	pgd20=0.0000	pgd20_avg=0.0000	time=3.68it/s
+2021-09-17 05:45:25,430 Eval Loss:0.2323	Eval acc: 93.68
+2021-09-17 05:45:25,768 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:45:25,768 
+2021-09-17 05:45:25,768 ====================Training Epoch 50====================
+2021-09-17 05:45:26,217 epoch=50	global_step=19500	acc=0.9922	acc_avg=0.9922	loss=0.0115	loss_avg=0.0115	lr=0.0067	|gn|=1.0723	time=13.44it/s
+2021-09-17 05:45:33,382 epoch=50	global_step=19600	acc=0.9922	acc_avg=0.9950	loss=0.0126	loss_avg=0.0187	lr=0.0067	|gn|=1.0956	time=13.62it/s
+2021-09-17 05:45:40,452 epoch=50	global_step=19700	acc=0.9844	acc_avg=0.9947	loss=0.0408	loss_avg=0.0187	lr=0.0067	|gn|=2.0319	time=14.19it/s
+2021-09-17 05:45:47,432 epoch=50	global_step=19800	acc=1.0000	acc_avg=0.9948	loss=0.0118	loss_avg=0.0179	lr=0.0067	|gn|=0.8046	time=15.17it/s
+2021-09-17 05:45:53,651 ====================Eval Epoch 50====================
+2021-09-17 05:47:26,716 epoch=50	global_step=39	acc=0.9375	acc_avg=0.9403	acc5=1.0000	acc5_avg=0.9982	loss=0.2122	loss_avg=0.2226	_acc=0.9375	_acc_avg=0.9403	pgd20=0.0000	pgd20_avg=0.0000	time=3.66it/s
+2021-09-17 05:47:26,717 Eval Loss:0.2226	Eval acc: 94.03
+2021-09-17 05:47:27,011 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:47:27,012 
+2021-09-17 05:47:27,012 ====================Training Epoch 51====================
+2021-09-17 05:47:28,262 epoch=51	global_step=19900	acc=0.9844	acc_avg=0.9950	loss=0.0359	loss_avg=0.0180	lr=0.0054	|gn|=2.9886	time=11.94it/s
+2021-09-17 05:47:35,313 epoch=51	global_step=20000	acc=1.0000	acc_avg=0.9956	loss=0.0083	loss_avg=0.0156	lr=0.0054	|gn|=0.5192	time=14.38it/s
+2021-09-17 05:47:42,334 epoch=51	global_step=20100	acc=1.0000	acc_avg=0.9962	loss=0.0103	loss_avg=0.0138	lr=0.0054	|gn|=1.0131	time=14.80it/s
+2021-09-17 05:47:49,362 epoch=51	global_step=20200	acc=0.9922	acc_avg=0.9965	loss=0.0495	loss_avg=0.0133	lr=0.0054	|gn|=1.6803	time=13.53it/s
+2021-09-17 05:47:54,784 ====================Eval Epoch 51====================
+2021-09-17 05:49:27,948 epoch=51	global_step=39	acc=0.9375	acc_avg=0.9419	acc5=1.0000	acc5_avg=0.9981	loss=0.3077	loss_avg=0.2180	_acc=0.9375	_acc_avg=0.9419	pgd20=0.0000	pgd20_avg=0.0000	time=3.72it/s
+2021-09-17 05:49:27,949 Eval Loss:0.2180	Eval acc: 94.19
+2021-09-17 05:49:28,262 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:49:28,262 
+2021-09-17 05:49:28,262 ====================Training Epoch 52====================
+2021-09-17 05:49:30,150 epoch=52	global_step=20300	acc=1.0000	acc_avg=0.9970	loss=0.0105	loss_avg=0.0104	lr=0.0043	|gn|=0.8263	time=13.37it/s
+2021-09-17 05:49:37,320 epoch=52	global_step=20400	acc=1.0000	acc_avg=0.9975	loss=0.0033	loss_avg=0.0112	lr=0.0043	|gn|=0.1367	time=14.74it/s
+2021-09-17 05:49:44,388 epoch=52	global_step=20500	acc=1.0000	acc_avg=0.9974	loss=0.0094	loss_avg=0.0107	lr=0.0043	|gn|=0.6517	time=13.18it/s
+2021-09-17 05:49:51,446 epoch=52	global_step=20600	acc=0.9922	acc_avg=0.9975	loss=0.0139	loss_avg=0.0104	lr=0.0043	|gn|=1.2855	time=14.64it/s
+2021-09-17 05:49:56,244 ====================Eval Epoch 52====================
+2021-09-17 05:51:28,753 epoch=52	global_step=39	acc=0.9375	acc_avg=0.9441	acc5=1.0000	acc5_avg=0.9983	loss=0.3614	loss_avg=0.2126	_acc=0.9375	_acc_avg=0.9441	pgd20=0.0000	pgd20_avg=0.0000	time=3.43it/s
+2021-09-17 05:51:28,754 Eval Loss:0.2126	Eval acc: 94.41
+2021-09-17 05:51:29,035 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:51:29,036 
+2021-09-17 05:51:29,036 ====================Training Epoch 53====================
+2021-09-17 05:51:31,749 epoch=53	global_step=20700	acc=1.0000	acc_avg=0.9985	loss=0.0057	loss_avg=0.0088	lr=0.0033	|gn|=0.4184	time=13.59it/s
+2021-09-17 05:51:39,035 epoch=53	global_step=20800	acc=1.0000	acc_avg=0.9984	loss=0.0048	loss_avg=0.0084	lr=0.0033	|gn|=0.3834	time=14.27it/s
+2021-09-17 05:51:46,154 epoch=53	global_step=20900	acc=1.0000	acc_avg=0.9983	loss=0.0052	loss_avg=0.0086	lr=0.0033	|gn|=0.3973	time=13.59it/s
+2021-09-17 05:51:53,213 epoch=53	global_step=21000	acc=0.9922	acc_avg=0.9983	loss=0.0099	loss_avg=0.0084	lr=0.0033	|gn|=0.7339	time=14.63it/s
+2021-09-17 05:51:57,472 ====================Eval Epoch 53====================
+2021-09-17 05:53:30,446 epoch=53	global_step=39	acc=0.9375	acc_avg=0.9458	acc5=1.0000	acc5_avg=0.9987	loss=0.4088	loss_avg=0.2074	_acc=0.9375	_acc_avg=0.9458	pgd20=0.0000	pgd20_avg=0.0000	time=3.63it/s
+2021-09-17 05:53:30,447 Eval Loss:0.2074	Eval acc: 94.58
+2021-09-17 05:53:30,737 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:53:30,738 
+2021-09-17 05:53:30,738 ====================Training Epoch 54====================
+2021-09-17 05:53:34,130 epoch=54	global_step=21100	acc=1.0000	acc_avg=0.9985	loss=0.0023	loss_avg=0.0073	lr=0.0024	|gn|=0.1553	time=14.03it/s
+2021-09-17 05:53:41,259 epoch=54	global_step=21200	acc=1.0000	acc_avg=0.9984	loss=0.0015	loss_avg=0.0075	lr=0.0024	|gn|=0.1407	time=14.48it/s
+2021-09-17 05:53:48,354 epoch=54	global_step=21300	acc=1.0000	acc_avg=0.9984	loss=0.0027	loss_avg=0.0073	lr=0.0024	|gn|=0.1676	time=14.28it/s
+2021-09-17 05:53:55,201 epoch=54	global_step=21400	acc=1.0000	acc_avg=0.9985	loss=0.0073	loss_avg=0.0072	lr=0.0024	|gn|=0.6398	time=14.74it/s
+2021-09-17 05:53:58,656 ====================Eval Epoch 54====================
+2021-09-17 05:55:31,872 epoch=54	global_step=39	acc=0.9375	acc_avg=0.9465	acc5=1.0000	acc5_avg=0.9986	loss=0.3525	loss_avg=0.2041	_acc=0.9375	_acc_avg=0.9465	pgd20=0.0000	pgd20_avg=0.0000	time=3.51it/s
+2021-09-17 05:55:31,872 Eval Loss:0.2041	Eval acc: 94.65
+2021-09-17 05:55:32,168 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:55:32,169 
+2021-09-17 05:55:32,169 ====================Training Epoch 55====================
+2021-09-17 05:55:36,190 epoch=55	global_step=21500	acc=1.0000	acc_avg=0.9994	loss=0.0052	loss_avg=0.0059	lr=0.0017	|gn|=0.5003	time=14.92it/s
+2021-09-17 05:55:43,146 epoch=55	global_step=21600	acc=1.0000	acc_avg=0.9989	loss=0.0056	loss_avg=0.0062	lr=0.0017	|gn|=0.4505	time=14.45it/s
+2021-09-17 05:55:49,967 epoch=55	global_step=21700	acc=1.0000	acc_avg=0.9991	loss=0.0075	loss_avg=0.0058	lr=0.0017	|gn|=0.7370	time=15.00it/s
+2021-09-17 05:55:56,942 epoch=55	global_step=21800	acc=1.0000	acc_avg=0.9991	loss=0.0022	loss_avg=0.0059	lr=0.0017	|gn|=0.1344	time=14.78it/s
+2021-09-17 05:55:59,732 ====================Eval Epoch 55====================
+2021-09-17 05:57:32,407 epoch=55	global_step=39	acc=0.9375	acc_avg=0.9464	acc5=1.0000	acc5_avg=0.9987	loss=0.4032	loss_avg=0.2042	_acc=0.9375	_acc_avg=0.9464	pgd20=0.0000	pgd20_avg=0.0000	time=3.56it/s
+2021-09-17 05:57:32,407 Eval Loss:0.2042	Eval acc: 94.64
+2021-09-17 05:57:32,700 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:57:32,700 
+2021-09-17 05:57:32,700 ====================Training Epoch 56====================
+2021-09-17 05:57:37,574 epoch=56	global_step=21900	acc=1.0000	acc_avg=0.9991	loss=0.0054	loss_avg=0.0051	lr=0.0011	|gn|=0.7207	time=13.96it/s
+2021-09-17 05:57:44,725 epoch=56	global_step=22000	acc=0.9922	acc_avg=0.9989	loss=0.0097	loss_avg=0.0057	lr=0.0011	|gn|=1.1825	time=13.83it/s
+2021-09-17 05:57:51,776 epoch=56	global_step=22100	acc=1.0000	acc_avg=0.9989	loss=0.0033	loss_avg=0.0056	lr=0.0011	|gn|=0.1908	time=14.92it/s
+2021-09-17 05:57:58,715 epoch=56	global_step=22200	acc=1.0000	acc_avg=0.9990	loss=0.0036	loss_avg=0.0056	lr=0.0011	|gn|=0.2941	time=14.70it/s
+2021-09-17 05:58:00,758 ====================Eval Epoch 56====================
+2021-09-17 05:59:34,155 epoch=56	global_step=39	acc=0.9375	acc_avg=0.9453	acc5=1.0000	acc5_avg=0.9987	loss=0.3736	loss_avg=0.2054	_acc=0.9375	_acc_avg=0.9453	pgd20=0.0000	pgd20_avg=0.0001	time=3.41it/s
+2021-09-17 05:59:34,155 Eval Loss:0.2054	Eval acc: 94.53
+2021-09-17 05:59:34,502 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 05:59:34,502 
+2021-09-17 05:59:34,502 ====================Training Epoch 57====================
+2021-09-17 05:59:39,970 epoch=57	global_step=22300	acc=1.0000	acc_avg=0.9992	loss=0.0063	loss_avg=0.0051	lr=0.0006	|gn|=0.5990	time=14.60it/s
+2021-09-17 05:59:47,016 epoch=57	global_step=22400	acc=1.0000	acc_avg=0.9992	loss=0.0019	loss_avg=0.0051	lr=0.0006	|gn|=0.0907	time=13.61it/s
+2021-09-17 05:59:54,033 epoch=57	global_step=22500	acc=1.0000	acc_avg=0.9992	loss=0.0018	loss_avg=0.0050	lr=0.0006	|gn|=0.0766	time=15.05it/s
+2021-09-17 06:00:00,880 epoch=57	global_step=22600	acc=1.0000	acc_avg=0.9991	loss=0.0088	loss_avg=0.0053	lr=0.0006	|gn|=1.0445	time=14.89it/s
+2021-09-17 06:00:02,289 ====================Eval Epoch 57====================
+2021-09-17 06:01:35,588 epoch=57	global_step=39	acc=0.9375	acc_avg=0.9463	acc5=1.0000	acc5_avg=0.9985	loss=0.3488	loss_avg=0.2051	_acc=0.9375	_acc_avg=0.9463	pgd20=0.0000	pgd20_avg=0.0000	time=3.68it/s
+2021-09-17 06:01:35,588 Eval Loss:0.2051	Eval acc: 94.63
+2021-09-17 06:01:35,846 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 06:01:35,846 
+2021-09-17 06:01:35,846 ====================Training Epoch 58====================
+2021-09-17 06:01:41,805 epoch=58	global_step=22700	acc=1.0000	acc_avg=0.9991	loss=0.0029	loss_avg=0.0051	lr=0.0003	|gn|=0.1158	time=14.78it/s
+2021-09-17 06:01:48,841 epoch=58	global_step=22800	acc=0.9922	acc_avg=0.9992	loss=0.0252	loss_avg=0.0055	lr=0.0003	|gn|=1.8624	time=13.49it/s
+2021-09-17 06:01:55,737 epoch=58	global_step=22900	acc=1.0000	acc_avg=0.9992	loss=0.0039	loss_avg=0.0053	lr=0.0003	|gn|=0.2544	time=14.81it/s
+2021-09-17 06:02:02,634 epoch=58	global_step=23000	acc=1.0000	acc_avg=0.9992	loss=0.0045	loss_avg=0.0052	lr=0.0003	|gn|=0.5242	time=15.14it/s
+2021-09-17 06:02:03,287 ====================Eval Epoch 58====================
+2021-09-17 06:03:36,649 epoch=58	global_step=39	acc=0.9375	acc_avg=0.9470	acc5=1.0000	acc5_avg=0.9986	loss=0.3664	loss_avg=0.2043	_acc=0.9375	_acc_avg=0.9470	pgd20=0.0000	pgd20_avg=0.0000	time=3.45it/s
+2021-09-17 06:03:36,649 Eval Loss:0.2043	Eval acc: 94.70
+2021-09-17 06:03:36,929 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 06:03:36,929 
+2021-09-17 06:03:36,930 ====================Training Epoch 59====================
+2021-09-17 06:03:43,579 epoch=59	global_step=23100	acc=1.0000	acc_avg=0.9996	loss=0.0029	loss_avg=0.0044	lr=0.0001	|gn|=0.2673	time=14.96it/s
+2021-09-17 06:03:50,564 epoch=59	global_step=23200	acc=1.0000	acc_avg=0.9995	loss=0.0054	loss_avg=0.0047	lr=0.0001	|gn|=0.4003	time=14.70it/s
+2021-09-17 06:03:57,451 epoch=59	global_step=23300	acc=1.0000	acc_avg=0.9994	loss=0.0037	loss_avg=0.0046	lr=0.0001	|gn|=0.1978	time=14.71it/s
+2021-09-17 06:04:04,313 ====================Eval Epoch 59====================
+2021-09-17 06:05:37,893 epoch=59	global_step=39	acc=0.9375	acc_avg=0.9460	acc5=1.0000	acc5_avg=0.9986	loss=0.3400	loss_avg=0.2045	_acc=0.9375	_acc_avg=0.9460	pgd20=0.0000	pgd20_avg=0.0001	time=3.50it/s
+2021-09-17 06:05:37,894 Eval Loss:0.2045	Eval acc: 94.60
+2021-09-17 06:05:38,186 Model Saved at ../experiments/clean/cifar10/main/resnet18/checkpoints/resnet18
+2021-09-17 06:05:38,186 ====================Eval on original lables====================
+2021-09-17 06:05:38,186 ====================Eval Epoch 60====================
+2021-09-17 06:07:10,798 epoch=60	global_step=39	acc=0.9375	acc_avg=0.9460	acc5=1.0000	acc5_avg=0.9986	loss=0.3400	loss_avg=0.2045	_acc=0.9375	_acc_avg=0.9460	pgd20=0.0000	pgd20_avg=0.0000	time=3.63it/s
+2021-09-17 06:07:10,814 Running Cost 0.09 Days 
+

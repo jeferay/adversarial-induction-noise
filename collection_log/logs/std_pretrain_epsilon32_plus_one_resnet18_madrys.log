@@ -1,0 +1,1253 @@
+2021-09-26 10:39:04,483 PyTorch Version: 1.7.1
+2021-09-26 10:39:04,498 GPU List: ['GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti', 'GeForce GTX 1080 Ti']
+2021-09-26 10:39:04,501 num_classes: 10
+2021-09-26 10:39:04,501 epochs: 120
+2021-09-26 10:39:04,502 grad_clip: 5.0
+2021-09-26 10:39:04,502 log_frequency: 100
+2021-09-26 10:39:04,502 model: {'name': 'ResNet18', 'num_classes': 10}
+2021-09-26 10:39:04,502 criterion: {'name': 'MadrysLoss', 'epsilon': 0.0313725490196078, 'perturb_steps': 10, 'step_size': 0.00784313725490196}
+2021-09-26 10:39:04,502 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2021-09-26 10:39:04,502 scheduler: {'name': 'MultiStepLR', 'milestones': [75, 90, 100], 'gamma': 0.1}
+2021-09-26 10:39:04,502 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2021-09-26 10:39:04,502 seed: 0
+2021-09-26 10:39:04,502 version: resnet18_madrys
+2021-09-26 10:39:04,502 exp_name: ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main
+2021-09-26 10:39:04,502 config_path: ../configs/cifar10
+2021-09-26 10:39:04,502 load_model: False
+2021-09-26 10:39:04,502 data_parallel: False
+2021-09-26 10:39:04,502 train: True
+2021-09-26 10:39:04,502 eval: False
+2021-09-26 10:39:04,502 eval_bias: False
+2021-09-26 10:39:04,502 save_frequency: -1
+2021-09-26 10:39:04,503 epochs: 120
+2021-09-26 10:39:04,503 train_face: False
+2021-09-26 10:39:04,503 train_portion: 1.0
+2021-09-26 10:39:04,503 train_batch_size: 128
+2021-09-26 10:39:04,503 eval_batch_size: 256
+2021-09-26 10:39:04,503 num_of_workers: 8
+2021-09-26 10:39:04,503 train_data_type: PoisonCIFAR10
+2021-09-26 10:39:04,503 test_data_type: CIFAR10
+2021-09-26 10:39:04,503 train_data_path: ../datasets
+2021-09-26 10:39:04,503 test_data_path: ../datasets
+2021-09-26 10:39:04,503 perturb_type: samplewise
+2021-09-26 10:39:04,503 patch_location: center
+2021-09-26 10:39:04,503 poison_rate: 1.0
+2021-09-26 10:39:04,503 perturb_tensor_filepath: ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/perturbation/resnet18/perturbation.pt
+2021-09-26 10:39:04,503 mask_rate: 1.0
+2021-09-26 10:39:04,503 output_confusion: False
+2021-09-26 10:39:04,503 attack_type: pgd20
+2021-09-26 10:39:04,503 res_save_type: None
+2021-09-26 10:39:04,503 device: 5
+2021-09-26 10:39:17,908 Training Dataset: Dataset PoisonCIFAR10
+    Number of datapoints: 50000
+    Root location: ../datasets
+    Split: Train
+    StandardTransform
+Transform: Compose(
+               RandomCrop(size=(32, 32), padding=4)
+               RandomHorizontalFlip(p=0.5)
+               ToTensor()
+           )
+2021-09-26 10:39:17,908 Test Dataset: Dataset CIFAR10
+    Number of datapoints: 10000
+    Root location: ../datasets
+    Split: Test
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+           )
+2021-09-26 10:39:17,927 [    0     1     2 ... 49997 49998 49999]
+2021-09-26 10:39:17,927 Poisoned: 50000/50000
+2021-09-26 10:39:17,928 Poisoned samples idx saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/poison_targets
+2021-09-26 10:39:17,928 Poisoned Class []
+2021-09-26 10:39:17,931 param size = 11.173962MB
+2021-09-26 10:39:17,933 
+2021-09-26 10:39:17,933 ====================Training Epoch 0====================
+2021-09-26 10:39:19,818 epoch=0	global_step=0	acc=0.1250	acc_avg=0.1250	loss=2.3412	loss_avg=2.3412	lr=0.1000	|gn|=6.7993	time=0.71it/s
+2021-09-26 10:40:07,020 epoch=0	global_step=100	acc=0.1719	acc_avg=0.1982	loss=2.2130	loss_avg=2.2770	lr=0.1000	|gn|=0.4373	time=2.13it/s
+2021-09-26 10:40:54,922 epoch=0	global_step=200	acc=0.1875	acc_avg=0.2026	loss=2.1667	loss_avg=2.1965	lr=0.1000	|gn|=0.7284	time=2.09it/s
+2021-09-26 10:41:43,099 epoch=0	global_step=300	acc=0.2344	acc_avg=0.2110	loss=2.0462	loss_avg=2.1521	lr=0.1000	|gn|=0.5541	time=2.07it/s
+2021-09-26 10:42:26,620 ====================Eval Epoch 0====================
+2021-09-26 10:43:58,539 epoch=0	global_step=39	acc=0.2500	acc_avg=0.3363	acc5=0.8125	acc5_avg=0.8269	loss=1.9012	loss_avg=1.8408	_acc=0.2500	_acc_avg=0.3363	pgd20=0.1875	pgd20_avg=0.2321	time=1.83it/s
+2021-09-26 10:43:58,539 Eval Loss:1.8408	Eval acc: 33.63
+2021-09-26 10:43:58,731 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 10:43:58,731 
+2021-09-26 10:43:58,731 ====================Training Epoch 1====================
+2021-09-26 10:44:04,552 epoch=1	global_step=400	acc=0.2578	acc_avg=0.2479	loss=2.0452	loss_avg=2.0228	lr=0.1000	|gn|=0.6342	time=2.07it/s
+2021-09-26 10:44:53,797 epoch=1	global_step=500	acc=0.2344	acc_avg=0.2476	loss=1.9654	loss_avg=2.0113	lr=0.1000	|gn|=0.4925	time=2.08it/s
+2021-09-26 10:45:43,195 epoch=1	global_step=600	acc=0.2734	acc_avg=0.2557	loss=2.0417	loss_avg=1.9932	lr=0.1000	|gn|=0.5960	time=2.00it/s
+2021-09-26 10:46:32,445 epoch=1	global_step=700	acc=0.2188	acc_avg=0.2596	loss=1.9738	loss_avg=1.9834	lr=0.1000	|gn|=0.5439	time=1.99it/s
+2021-09-26 10:47:11,711 ====================Eval Epoch 1====================
+2021-09-26 10:48:43,834 epoch=1	global_step=39	acc=0.2500	acc_avg=0.4459	acc5=0.9375	acc5_avg=0.9061	loss=1.6854	loss_avg=1.6239	_acc=0.2500	_acc_avg=0.4459	pgd20=0.1875	pgd20_avg=0.2877	time=3.81it/s
+2021-09-26 10:48:43,835 Eval Loss:1.6239	Eval acc: 44.59
+2021-09-26 10:48:44,055 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 10:48:44,055 
+2021-09-26 10:48:44,055 ====================Training Epoch 2====================
+2021-09-26 10:48:54,812 epoch=2	global_step=800	acc=0.3047	acc_avg=0.2809	loss=1.8876	loss_avg=1.8809	lr=0.1000	|gn|=0.7430	time=2.06it/s
+2021-09-26 10:49:44,480 epoch=2	global_step=900	acc=0.2734	acc_avg=0.2800	loss=1.9490	loss_avg=1.9066	lr=0.1000	|gn|=0.7319	time=1.91it/s
+2021-09-26 10:50:33,832 epoch=2	global_step=1000	acc=0.2734	acc_avg=0.2821	loss=1.8748	loss_avg=1.9105	lr=0.1000	|gn|=0.5821	time=2.08it/s
+2021-09-26 10:51:23,205 epoch=2	global_step=1100	acc=0.3047	acc_avg=0.2861	loss=1.8754	loss_avg=1.9026	lr=0.1000	|gn|=0.6431	time=1.95it/s
+2021-09-26 10:51:57,273 ====================Eval Epoch 2====================
+2021-09-26 10:53:28,828 epoch=2	global_step=39	acc=0.4375	acc_avg=0.4683	acc5=0.9375	acc5_avg=0.9227	loss=1.4170	loss_avg=1.5442	_acc=0.4375	_acc_avg=0.4683	pgd20=0.1875	pgd20_avg=0.3005	time=3.84it/s
+2021-09-26 10:53:28,829 Eval Loss:1.5442	Eval acc: 46.83
+2021-09-26 10:53:29,067 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 10:53:29,067 
+2021-09-26 10:53:29,067 ====================Training Epoch 3====================
+2021-09-26 10:53:44,817 epoch=3	global_step=1200	acc=0.2891	acc_avg=0.2979	loss=1.9184	loss_avg=1.8520	lr=0.1000	|gn|=0.6510	time=2.08it/s
+2021-09-26 10:54:34,262 epoch=3	global_step=1300	acc=0.2891	acc_avg=0.3061	loss=1.8614	loss_avg=1.8509	lr=0.1000	|gn|=0.8105	time=2.00it/s
+2021-09-26 10:55:23,380 epoch=3	global_step=1400	acc=0.3359	acc_avg=0.3043	loss=1.8557	loss_avg=1.8434	lr=0.1000	|gn|=0.7646	time=2.07it/s
+2021-09-26 10:56:12,599 epoch=3	global_step=1500	acc=0.3047	acc_avg=0.3081	loss=1.9469	loss_avg=1.8376	lr=0.1000	|gn|=0.8325	time=2.08it/s
+2021-09-26 10:56:41,543 ====================Eval Epoch 3====================
+2021-09-26 10:58:12,642 epoch=3	global_step=39	acc=0.3750	acc_avg=0.4930	acc5=0.9375	acc5_avg=0.9378	loss=1.4792	loss_avg=1.4239	_acc=0.3750	_acc_avg=0.4930	pgd20=0.1875	pgd20_avg=0.3200	time=3.66it/s
+2021-09-26 10:58:12,642 Eval Loss:1.4239	Eval acc: 49.30
+2021-09-26 10:58:12,905 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 10:58:12,905 
+2021-09-26 10:58:12,905 ====================Training Epoch 4====================
+2021-09-26 10:58:33,386 epoch=4	global_step=1600	acc=0.2266	acc_avg=0.3237	loss=1.8258	loss_avg=1.8046	lr=0.1000	|gn|=0.6716	time=2.06it/s
+2021-09-26 10:59:22,695 epoch=4	global_step=1700	acc=0.3516	acc_avg=0.3267	loss=1.6663	loss_avg=1.8009	lr=0.1000	|gn|=0.6861	time=2.07it/s
+2021-09-26 11:00:11,702 epoch=4	global_step=1800	acc=0.4375	acc_avg=0.3290	loss=1.6921	loss_avg=1.7943	lr=0.1000	|gn|=0.6697	time=2.06it/s
+2021-09-26 11:01:00,624 epoch=4	global_step=1900	acc=0.2969	acc_avg=0.3323	loss=1.7815	loss_avg=1.7873	lr=0.1000	|gn|=0.7356	time=2.07it/s
+2021-09-26 11:01:24,808 ====================Eval Epoch 4====================
+2021-09-26 11:02:55,779 epoch=4	global_step=39	acc=0.5000	acc_avg=0.5160	acc5=0.9375	acc5_avg=0.9445	loss=1.2777	loss_avg=1.3954	_acc=0.5000	_acc_avg=0.5160	pgd20=0.4375	pgd20_avg=0.3178	time=3.78it/s
+2021-09-26 11:02:55,779 Eval Loss:1.3954	Eval acc: 51.60
+2021-09-26 11:02:56,058 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:02:56,058 
+2021-09-26 11:02:56,058 ====================Training Epoch 5====================
+2021-09-26 11:03:21,702 epoch=5	global_step=2000	acc=0.4219	acc_avg=0.3444	loss=1.6564	loss_avg=1.7456	lr=0.1000	|gn|=0.7341	time=2.06it/s
+2021-09-26 11:04:11,254 epoch=5	global_step=2100	acc=0.3125	acc_avg=0.3442	loss=1.8890	loss_avg=1.7436	lr=0.1000	|gn|=0.8377	time=2.03it/s
+2021-09-26 11:05:00,621 epoch=5	global_step=2200	acc=0.3984	acc_avg=0.3416	loss=1.6496	loss_avg=1.7473	lr=0.1000	|gn|=0.6927	time=2.04it/s
+2021-09-26 11:05:50,132 epoch=5	global_step=2300	acc=0.3203	acc_avg=0.3451	loss=1.8147	loss_avg=1.7430	lr=0.1000	|gn|=0.7644	time=1.95it/s
+2021-09-26 11:06:09,540 ====================Eval Epoch 5====================
+2021-09-26 11:07:41,368 epoch=5	global_step=39	acc=0.4375	acc_avg=0.5439	acc5=0.9375	acc5_avg=0.9498	loss=1.2528	loss_avg=1.3397	_acc=0.4375	_acc_avg=0.5439	pgd20=0.3125	pgd20_avg=0.3406	time=3.67it/s
+2021-09-26 11:07:41,368 Eval Loss:1.3397	Eval acc: 54.39
+2021-09-26 11:07:41,650 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:07:41,650 
+2021-09-26 11:07:41,650 ====================Training Epoch 6====================
+2021-09-26 11:08:12,653 epoch=6	global_step=2400	acc=0.3516	acc_avg=0.3484	loss=1.7341	loss_avg=1.7345	lr=0.1000	|gn|=0.8033	time=2.01it/s
+2021-09-26 11:09:02,469 epoch=6	global_step=2500	acc=0.2969	acc_avg=0.3558	loss=1.7880	loss_avg=1.7103	lr=0.1000	|gn|=0.7219	time=2.07it/s
+2021-09-26 11:09:52,285 epoch=6	global_step=2600	acc=0.3828	acc_avg=0.3569	loss=1.6545	loss_avg=1.7098	lr=0.1000	|gn|=0.7453	time=2.08it/s
+2021-09-26 11:10:42,059 epoch=6	global_step=2700	acc=0.3438	acc_avg=0.3592	loss=1.7106	loss_avg=1.7037	lr=0.1000	|gn|=0.8341	time=2.04it/s
+2021-09-26 11:10:56,468 ====================Eval Epoch 6====================
+2021-09-26 11:12:28,169 epoch=6	global_step=39	acc=0.5625	acc_avg=0.5376	acc5=1.0000	acc5_avg=0.9552	loss=0.9408	loss_avg=1.2574	_acc=0.5625	_acc_avg=0.5376	pgd20=0.3750	pgd20_avg=0.3456	time=3.71it/s
+2021-09-26 11:12:28,170 Eval Loss:1.2574	Eval acc: 53.76
+2021-09-26 11:12:28,452 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:12:28,452 
+2021-09-26 11:12:28,452 ====================Training Epoch 7====================
+2021-09-26 11:13:03,976 epoch=7	global_step=2800	acc=0.3984	acc_avg=0.3651	loss=1.6650	loss_avg=1.6855	lr=0.1000	|gn|=0.7487	time=2.04it/s
+2021-09-26 11:13:53,277 epoch=7	global_step=2900	acc=0.4062	acc_avg=0.3714	loss=1.6626	loss_avg=1.6773	lr=0.1000	|gn|=0.8219	time=2.06it/s
+2021-09-26 11:14:42,358 epoch=7	global_step=3000	acc=0.3047	acc_avg=0.3745	loss=1.7465	loss_avg=1.6694	lr=0.1000	|gn|=0.8164	time=2.07it/s
+2021-09-26 11:15:31,646 epoch=7	global_step=3100	acc=0.3203	acc_avg=0.3749	loss=1.6296	loss_avg=1.6675	lr=0.1000	|gn|=0.9100	time=2.05it/s
+2021-09-26 11:15:41,062 ====================Eval Epoch 7====================
+2021-09-26 11:17:12,059 epoch=7	global_step=39	acc=0.5625	acc_avg=0.5892	acc5=1.0000	acc5_avg=0.9604	loss=1.1893	loss_avg=1.2214	_acc=0.5625	_acc_avg=0.5892	pgd20=0.3125	pgd20_avg=0.3634	time=3.72it/s
+2021-09-26 11:17:12,060 Eval Loss:1.2214	Eval acc: 58.92
+2021-09-26 11:17:12,372 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:17:12,373 
+2021-09-26 11:17:12,373 ====================Training Epoch 8====================
+2021-09-26 11:17:52,516 epoch=8	global_step=3200	acc=0.4531	acc_avg=0.3858	loss=1.6128	loss_avg=1.6353	lr=0.1000	|gn|=0.8894	time=2.08it/s
+2021-09-26 11:18:41,518 epoch=8	global_step=3300	acc=0.4375	acc_avg=0.3864	loss=1.5579	loss_avg=1.6367	lr=0.1000	|gn|=0.8770	time=2.03it/s
+2021-09-26 11:19:30,716 epoch=8	global_step=3400	acc=0.4297	acc_avg=0.3837	loss=1.6235	loss_avg=1.6387	lr=0.1000	|gn|=0.8973	time=2.08it/s
+2021-09-26 11:20:19,988 epoch=8	global_step=3500	acc=0.3906	acc_avg=0.3842	loss=1.7070	loss_avg=1.6390	lr=0.1000	|gn|=0.8560	time=1.95it/s
+2021-09-26 11:20:24,528 ====================Eval Epoch 8====================
+2021-09-26 11:21:55,325 epoch=8	global_step=39	acc=0.6250	acc_avg=0.5729	acc5=1.0000	acc5_avg=0.9586	loss=1.0317	loss_avg=1.2221	_acc=0.6250	_acc_avg=0.5729	pgd20=0.3750	pgd20_avg=0.3507	time=3.80it/s
+2021-09-26 11:21:55,326 Eval Loss:1.2221	Eval acc: 57.29
+2021-09-26 11:21:55,630 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:21:55,630 
+2021-09-26 11:21:55,630 ====================Training Epoch 9====================
+2021-09-26 11:22:40,667 epoch=9	global_step=3600	acc=0.3438	acc_avg=0.3941	loss=1.7274	loss_avg=1.6202	lr=0.1000	|gn|=0.9947	time=1.90it/s
+2021-09-26 11:23:29,974 epoch=9	global_step=3700	acc=0.4297	acc_avg=0.3918	loss=1.5701	loss_avg=1.6194	lr=0.1000	|gn|=0.8638	time=2.06it/s
+2021-09-26 11:24:18,889 epoch=9	global_step=3800	acc=0.4375	acc_avg=0.3918	loss=1.5015	loss_avg=1.6198	lr=0.1000	|gn|=0.9985	time=2.05it/s
+2021-09-26 11:25:07,988 ====================Eval Epoch 9====================
+2021-09-26 11:26:39,805 epoch=9	global_step=39	acc=0.8125	acc_avg=0.6239	acc5=1.0000	acc5_avg=0.9600	loss=0.7764	loss_avg=1.1326	_acc=0.8125	_acc_avg=0.6239	pgd20=0.4375	pgd20_avg=0.3686	time=3.79it/s
+2021-09-26 11:26:39,805 Eval Loss:1.1326	Eval acc: 62.39
+2021-09-26 11:26:40,136 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:26:40,136 
+2021-09-26 11:26:40,136 ====================Training Epoch 10====================
+2021-09-26 11:26:41,162 epoch=10	global_step=3900	acc=0.3984	acc_avg=0.3984	loss=1.5739	loss_avg=1.5739	lr=0.1000	|gn|=1.0736	time=2.06it/s
+2021-09-26 11:27:30,718 epoch=10	global_step=4000	acc=0.3750	acc_avg=0.3965	loss=1.6044	loss_avg=1.6095	lr=0.1000	|gn|=0.9074	time=2.03it/s
+2021-09-26 11:28:20,568 epoch=10	global_step=4100	acc=0.4062	acc_avg=0.3969	loss=1.5305	loss_avg=1.6062	lr=0.1000	|gn|=0.8574	time=1.87it/s
+2021-09-26 11:29:10,449 epoch=10	global_step=4200	acc=0.3828	acc_avg=0.4009	loss=1.7340	loss_avg=1.6028	lr=0.1000	|gn|=0.9795	time=2.08it/s
+2021-09-26 11:29:54,610 ====================Eval Epoch 10====================
+2021-09-26 11:31:26,295 epoch=10	global_step=39	acc=0.7500	acc_avg=0.6350	acc5=1.0000	acc5_avg=0.9677	loss=0.9048	loss_avg=1.1394	_acc=0.7500	_acc_avg=0.6350	pgd20=0.3750	pgd20_avg=0.3828	time=3.73it/s
+2021-09-26 11:31:26,296 Eval Loss:1.1394	Eval acc: 63.50
+2021-09-26 11:31:26,588 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:31:26,588 
+2021-09-26 11:31:26,588 ====================Training Epoch 11====================
+2021-09-26 11:31:32,447 epoch=11	global_step=4300	acc=0.3984	acc_avg=0.4134	loss=1.5849	loss_avg=1.5700	lr=0.1000	|gn|=0.8789	time=2.03it/s
+2021-09-26 11:32:21,816 epoch=11	global_step=4400	acc=0.3828	acc_avg=0.4091	loss=1.6113	loss_avg=1.5706	lr=0.1000	|gn|=0.8742	time=2.07it/s
+2021-09-26 11:33:11,262 epoch=11	global_step=4500	acc=0.3828	acc_avg=0.4053	loss=1.6607	loss_avg=1.5818	lr=0.1000	|gn|=1.0089	time=2.08it/s
+2021-09-26 11:34:00,806 epoch=11	global_step=4600	acc=0.4922	acc_avg=0.4036	loss=1.4859	loss_avg=1.5822	lr=0.1000	|gn|=0.9297	time=1.95it/s
+2021-09-26 11:34:39,724 ====================Eval Epoch 11====================
+2021-09-26 11:36:11,007 epoch=11	global_step=39	acc=0.6875	acc_avg=0.6168	acc5=1.0000	acc5_avg=0.9696	loss=0.8355	loss_avg=1.1116	_acc=0.6875	_acc_avg=0.6168	pgd20=0.4375	pgd20_avg=0.3733	time=3.77it/s
+2021-09-26 11:36:11,007 Eval Loss:1.1116	Eval acc: 61.68
+2021-09-26 11:36:11,291 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:36:11,291 
+2021-09-26 11:36:11,291 ====================Training Epoch 12====================
+2021-09-26 11:36:21,924 epoch=12	global_step=4700	acc=0.4062	acc_avg=0.4077	loss=1.5454	loss_avg=1.5485	lr=0.1000	|gn|=1.0064	time=2.07it/s
+2021-09-26 11:37:10,933 epoch=12	global_step=4800	acc=0.3750	acc_avg=0.4066	loss=1.6007	loss_avg=1.5709	lr=0.1000	|gn|=0.9101	time=2.10it/s
+2021-09-26 11:37:59,758 epoch=12	global_step=4900	acc=0.4141	acc_avg=0.4098	loss=1.4717	loss_avg=1.5725	lr=0.1000	|gn|=0.8839	time=2.06it/s
+2021-09-26 11:38:48,939 epoch=12	global_step=5000	acc=0.3516	acc_avg=0.4104	loss=1.6286	loss_avg=1.5728	lr=0.1000	|gn|=1.0323	time=1.96it/s
+2021-09-26 11:39:22,854 ====================Eval Epoch 12====================
+2021-09-26 11:40:53,650 epoch=12	global_step=39	acc=0.8125	acc_avg=0.6567	acc5=1.0000	acc5_avg=0.9699	loss=0.8368	loss_avg=1.0565	_acc=0.8125	_acc_avg=0.6567	pgd20=0.3125	pgd20_avg=0.3951	time=3.84it/s
+2021-09-26 11:40:53,650 Eval Loss:1.0565	Eval acc: 65.67
+2021-09-26 11:40:53,906 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:40:53,906 
+2021-09-26 11:40:53,907 ====================Training Epoch 13====================
+2021-09-26 11:41:09,346 epoch=13	global_step=5100	acc=0.3750	acc_avg=0.4211	loss=1.6689	loss_avg=1.5598	lr=0.1000	|gn|=1.0271	time=2.08it/s
+2021-09-26 11:41:58,438 epoch=13	global_step=5200	acc=0.4688	acc_avg=0.4182	loss=1.4659	loss_avg=1.5519	lr=0.1000	|gn|=1.0289	time=1.96it/s
+2021-09-26 11:42:47,241 epoch=13	global_step=5300	acc=0.4922	acc_avg=0.4141	loss=1.4489	loss_avg=1.5558	lr=0.1000	|gn|=0.9178	time=2.07it/s
+2021-09-26 11:43:36,211 epoch=13	global_step=5400	acc=0.4141	acc_avg=0.4149	loss=1.5486	loss_avg=1.5554	lr=0.1000	|gn|=1.0199	time=2.06it/s
+2021-09-26 11:44:04,945 ====================Eval Epoch 13====================
+2021-09-26 11:45:36,228 epoch=13	global_step=39	acc=0.7500	acc_avg=0.6550	acc5=1.0000	acc5_avg=0.9721	loss=0.7512	loss_avg=1.0280	_acc=0.7500	_acc_avg=0.6550	pgd20=0.4375	pgd20_avg=0.3892	time=3.86it/s
+2021-09-26 11:45:36,230 Eval Loss:1.0280	Eval acc: 65.50
+2021-09-26 11:45:36,536 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:45:36,537 
+2021-09-26 11:45:36,537 ====================Training Epoch 14====================
+2021-09-26 11:45:57,341 epoch=14	global_step=5500	acc=0.4297	acc_avg=0.4270	loss=1.5099	loss_avg=1.5176	lr=0.1000	|gn|=0.9266	time=2.08it/s
+2021-09-26 11:46:46,636 epoch=14	global_step=5600	acc=0.3438	acc_avg=0.4194	loss=1.7242	loss_avg=1.5309	lr=0.1000	|gn|=0.9499	time=2.04it/s
+2021-09-26 11:47:36,250 epoch=14	global_step=5700	acc=0.4844	acc_avg=0.4190	loss=1.4270	loss_avg=1.5390	lr=0.1000	|gn|=0.9133	time=2.08it/s
+2021-09-26 11:48:25,669 epoch=14	global_step=5800	acc=0.3516	acc_avg=0.4183	loss=1.7206	loss_avg=1.5468	lr=0.1000	|gn|=0.9897	time=1.99it/s
+2021-09-26 11:48:49,907 ====================Eval Epoch 14====================
+2021-09-26 11:50:21,557 epoch=14	global_step=39	acc=0.8125	acc_avg=0.6494	acc5=1.0000	acc5_avg=0.9655	loss=0.8590	loss_avg=1.0764	_acc=0.8125	_acc_avg=0.6494	pgd20=0.3750	pgd20_avg=0.4013	time=3.79it/s
+2021-09-26 11:50:21,558 Eval Loss:1.0764	Eval acc: 64.94
+2021-09-26 11:50:21,936 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:50:21,936 
+2021-09-26 11:50:21,936 ====================Training Epoch 15====================
+2021-09-26 11:50:47,765 epoch=15	global_step=5900	acc=0.4844	acc_avg=0.4314	loss=1.4075	loss_avg=1.5058	lr=0.1000	|gn|=0.9889	time=1.91it/s
+2021-09-26 11:51:36,909 epoch=15	global_step=6000	acc=0.4219	acc_avg=0.4237	loss=1.5617	loss_avg=1.5328	lr=0.1000	|gn|=1.0309	time=2.04it/s
+2021-09-26 11:52:26,606 epoch=15	global_step=6100	acc=0.4141	acc_avg=0.4232	loss=1.5288	loss_avg=1.5379	lr=0.1000	|gn|=0.9953	time=1.93it/s
+2021-09-26 11:53:15,887 epoch=15	global_step=6200	acc=0.3906	acc_avg=0.4225	loss=1.5952	loss_avg=1.5390	lr=0.1000	|gn|=0.9560	time=2.07it/s
+2021-09-26 11:53:34,952 ====================Eval Epoch 15====================
+2021-09-26 11:55:06,443 epoch=15	global_step=39	acc=0.6875	acc_avg=0.6479	acc5=1.0000	acc5_avg=0.9699	loss=0.8066	loss_avg=1.0064	_acc=0.6875	_acc_avg=0.6479	pgd20=0.4375	pgd20_avg=0.3973	time=3.70it/s
+2021-09-26 11:55:06,445 Eval Loss:1.0064	Eval acc: 64.79
+2021-09-26 11:55:06,797 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:55:06,797 
+2021-09-26 11:55:06,797 ====================Training Epoch 16====================
+2021-09-26 11:55:36,955 epoch=16	global_step=6300	acc=0.4375	acc_avg=0.4460	loss=1.4729	loss_avg=1.4905	lr=0.1000	|gn|=1.1542	time=2.08it/s
+2021-09-26 11:56:25,990 epoch=16	global_step=6400	acc=0.4531	acc_avg=0.4360	loss=1.3933	loss_avg=1.5135	lr=0.1000	|gn|=0.9857	time=2.07it/s
+2021-09-26 11:57:15,138 epoch=16	global_step=6500	acc=0.4141	acc_avg=0.4301	loss=1.6005	loss_avg=1.5212	lr=0.1000	|gn|=1.0030	time=2.08it/s
+2021-09-26 11:58:04,054 epoch=16	global_step=6600	acc=0.4609	acc_avg=0.4276	loss=1.4720	loss_avg=1.5261	lr=0.1000	|gn|=1.0520	time=2.01it/s
+2021-09-26 11:58:18,455 ====================Eval Epoch 16====================
+2021-09-26 11:59:49,445 epoch=16	global_step=39	acc=0.8125	acc_avg=0.6426	acc5=1.0000	acc5_avg=0.9734	loss=0.7217	loss_avg=1.0199	_acc=0.8125	_acc_avg=0.6426	pgd20=0.5625	pgd20_avg=0.4113	time=3.86it/s
+2021-09-26 11:59:49,445 Eval Loss:1.0199	Eval acc: 64.26
+2021-09-26 11:59:49,775 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 11:59:49,776 
+2021-09-26 11:59:49,776 ====================Training Epoch 17====================
+2021-09-26 12:00:24,988 epoch=17	global_step=6700	acc=0.3203	acc_avg=0.4375	loss=1.6124	loss_avg=1.4937	lr=0.1000	|gn|=1.2679	time=2.07it/s
+2021-09-26 12:01:13,982 epoch=17	global_step=6800	acc=0.3594	acc_avg=0.4305	loss=1.4925	loss_avg=1.5142	lr=0.1000	|gn|=0.9119	time=2.07it/s
+2021-09-26 12:02:03,071 epoch=17	global_step=6900	acc=0.4141	acc_avg=0.4293	loss=1.5449	loss_avg=1.5194	lr=0.1000	|gn|=1.0113	time=2.08it/s
+2021-09-26 12:02:52,227 epoch=17	global_step=7000	acc=0.4453	acc_avg=0.4308	loss=1.5821	loss_avg=1.5165	lr=0.1000	|gn|=1.0850	time=2.08it/s
+2021-09-26 12:03:01,696 ====================Eval Epoch 17====================
+2021-09-26 12:04:33,055 epoch=17	global_step=39	acc=0.8125	acc_avg=0.6616	acc5=1.0000	acc5_avg=0.9683	loss=0.8257	loss_avg=1.0541	_acc=0.8125	_acc_avg=0.6616	pgd20=0.4375	pgd20_avg=0.4211	time=3.55it/s
+2021-09-26 12:04:33,056 Eval Loss:1.0541	Eval acc: 66.16
+2021-09-26 12:04:33,319 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:04:33,319 
+2021-09-26 12:04:33,319 ====================Training Epoch 18====================
+2021-09-26 12:05:13,812 epoch=18	global_step=7100	acc=0.4688	acc_avg=0.4332	loss=1.3867	loss_avg=1.5071	lr=0.1000	|gn|=0.9952	time=2.06it/s
+2021-09-26 12:06:03,040 epoch=18	global_step=7200	acc=0.4453	acc_avg=0.4352	loss=1.5796	loss_avg=1.5053	lr=0.1000	|gn|=1.0746	time=2.02it/s
+2021-09-26 12:06:52,185 epoch=18	global_step=7300	acc=0.4609	acc_avg=0.4325	loss=1.4733	loss_avg=1.5123	lr=0.1000	|gn|=0.8603	time=2.08it/s
+2021-09-26 12:07:41,036 epoch=18	global_step=7400	acc=0.3438	acc_avg=0.4346	loss=1.5682	loss_avg=1.5090	lr=0.1000	|gn|=1.0485	time=2.04it/s
+2021-09-26 12:07:45,574 ====================Eval Epoch 18====================
+2021-09-26 12:09:16,729 epoch=18	global_step=39	acc=0.8125	acc_avg=0.6628	acc5=1.0000	acc5_avg=0.9750	loss=0.8194	loss_avg=1.0118	_acc=0.8125	_acc_avg=0.6628	pgd20=0.4375	pgd20_avg=0.4217	time=3.75it/s
+2021-09-26 12:09:16,730 Eval Loss:1.0118	Eval acc: 66.28
+2021-09-26 12:09:17,025 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:09:17,025 
+2021-09-26 12:09:17,025 ====================Training Epoch 19====================
+2021-09-26 12:10:02,138 epoch=19	global_step=7500	acc=0.3750	acc_avg=0.4378	loss=1.6145	loss_avg=1.5007	lr=0.1000	|gn|=1.0912	time=2.03it/s
+2021-09-26 12:10:51,250 epoch=19	global_step=7600	acc=0.4844	acc_avg=0.4408	loss=1.4661	loss_avg=1.4959	lr=0.1000	|gn|=1.0563	time=2.07it/s
+2021-09-26 12:11:40,644 epoch=19	global_step=7700	acc=0.4688	acc_avg=0.4372	loss=1.4134	loss_avg=1.5001	lr=0.1000	|gn|=0.9100	time=2.07it/s
+2021-09-26 12:12:29,292 ====================Eval Epoch 19====================
+2021-09-26 12:14:00,442 epoch=19	global_step=39	acc=0.7500	acc_avg=0.6685	acc5=1.0000	acc5_avg=0.9734	loss=0.7704	loss_avg=0.9820	_acc=0.7500	_acc_avg=0.6685	pgd20=0.5000	pgd20_avg=0.4130	time=3.61it/s
+2021-09-26 12:14:00,443 Eval Loss:0.9820	Eval acc: 66.85
+2021-09-26 12:14:00,726 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:14:00,726 
+2021-09-26 12:14:00,726 ====================Training Epoch 20====================
+2021-09-26 12:14:01,723 epoch=20	global_step=7800	acc=0.4609	acc_avg=0.4609	loss=1.4465	loss_avg=1.4465	lr=0.1000	|gn|=1.0052	time=2.08it/s
+2021-09-26 12:14:50,980 epoch=20	global_step=7900	acc=0.5156	acc_avg=0.4332	loss=1.2915	loss_avg=1.4994	lr=0.1000	|gn|=0.9287	time=2.07it/s
+2021-09-26 12:15:40,133 epoch=20	global_step=8000	acc=0.4062	acc_avg=0.4378	loss=1.5830	loss_avg=1.4946	lr=0.1000	|gn|=1.1348	time=2.07it/s
+2021-09-26 12:16:28,927 epoch=20	global_step=8100	acc=0.3984	acc_avg=0.4370	loss=1.5604	loss_avg=1.4963	lr=0.1000	|gn|=1.1711	time=2.08it/s
+2021-09-26 12:17:12,764 ====================Eval Epoch 20====================
+2021-09-26 12:18:43,606 epoch=20	global_step=39	acc=0.7500	acc_avg=0.6695	acc5=1.0000	acc5_avg=0.9764	loss=0.8128	loss_avg=0.9591	_acc=0.7500	_acc_avg=0.6695	pgd20=0.4375	pgd20_avg=0.4267	time=3.75it/s
+2021-09-26 12:18:43,606 Eval Loss:0.9591	Eval acc: 66.95
+2021-09-26 12:18:43,871 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:18:43,871 
+2021-09-26 12:18:43,871 ====================Training Epoch 21====================
+2021-09-26 12:18:49,705 epoch=21	global_step=8200	acc=0.4219	acc_avg=0.4474	loss=1.6224	loss_avg=1.5233	lr=0.1000	|gn|=1.0525	time=2.06it/s
+2021-09-26 12:19:38,908 epoch=21	global_step=8300	acc=0.4453	acc_avg=0.4536	loss=1.4470	loss_avg=1.4693	lr=0.1000	|gn|=1.0991	time=2.07it/s
+2021-09-26 12:20:28,007 epoch=21	global_step=8400	acc=0.3984	acc_avg=0.4469	loss=1.6751	loss_avg=1.4806	lr=0.1000	|gn|=1.2822	time=2.05it/s
+2021-09-26 12:21:17,263 epoch=21	global_step=8500	acc=0.4141	acc_avg=0.4433	loss=1.5817	loss_avg=1.4883	lr=0.1000	|gn|=1.1661	time=2.07it/s
+2021-09-26 12:21:56,085 ====================Eval Epoch 21====================
+2021-09-26 12:23:27,623 epoch=21	global_step=39	acc=0.8750	acc_avg=0.6858	acc5=1.0000	acc5_avg=0.9765	loss=0.6290	loss_avg=0.9645	_acc=0.8750	_acc_avg=0.6858	pgd20=0.3125	pgd20_avg=0.4135	time=3.65it/s
+2021-09-26 12:23:27,623 Eval Loss:0.9645	Eval acc: 68.58
+2021-09-26 12:23:27,940 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:23:27,940 
+2021-09-26 12:23:27,940 ====================Training Epoch 22====================
+2021-09-26 12:23:38,999 epoch=22	global_step=8600	acc=0.4688	acc_avg=0.4520	loss=1.4561	loss_avg=1.4648	lr=0.1000	|gn|=1.3005	time=1.87it/s
+2021-09-26 12:24:28,685 epoch=22	global_step=8700	acc=0.3906	acc_avg=0.4456	loss=1.6021	loss_avg=1.4679	lr=0.1000	|gn|=1.1104	time=1.99it/s
+2021-09-26 12:25:17,879 epoch=22	global_step=8800	acc=0.3984	acc_avg=0.4446	loss=1.5849	loss_avg=1.4740	lr=0.1000	|gn|=1.0004	time=2.00it/s
+2021-09-26 12:26:07,366 epoch=22	global_step=8900	acc=0.4766	acc_avg=0.4442	loss=1.5192	loss_avg=1.4818	lr=0.1000	|gn|=1.0188	time=2.00it/s
+2021-09-26 12:26:41,233 ====================Eval Epoch 22====================
+2021-09-26 12:28:12,543 epoch=22	global_step=39	acc=0.8750	acc_avg=0.6622	acc5=1.0000	acc5_avg=0.9740	loss=0.8040	loss_avg=1.0143	_acc=0.8750	_acc_avg=0.6622	pgd20=0.5000	pgd20_avg=0.4069	time=3.80it/s
+2021-09-26 12:28:12,544 Eval Loss:1.0143	Eval acc: 66.22
+2021-09-26 12:28:12,841 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:28:12,842 
+2021-09-26 12:28:12,842 ====================Training Epoch 23====================
+2021-09-26 12:28:28,412 epoch=23	global_step=9000	acc=0.5469	acc_avg=0.4614	loss=1.3114	loss_avg=1.4581	lr=0.1000	|gn|=0.9706	time=2.04it/s
+2021-09-26 12:29:18,211 epoch=23	global_step=9100	acc=0.4688	acc_avg=0.4426	loss=1.3512	loss_avg=1.4797	lr=0.1000	|gn|=0.9603	time=2.04it/s
+2021-09-26 12:30:07,256 epoch=23	global_step=9200	acc=0.4453	acc_avg=0.4431	loss=1.5811	loss_avg=1.4753	lr=0.1000	|gn|=1.0943	time=1.98it/s
+2021-09-26 12:30:56,521 epoch=23	global_step=9300	acc=0.3984	acc_avg=0.4440	loss=1.6138	loss_avg=1.4767	lr=0.1000	|gn|=1.1389	time=2.01it/s
+2021-09-26 12:31:25,419 ====================Eval Epoch 23====================
+2021-09-26 12:32:56,549 epoch=23	global_step=39	acc=0.8125	acc_avg=0.6973	acc5=1.0000	acc5_avg=0.9776	loss=0.6474	loss_avg=0.9377	_acc=0.8125	_acc_avg=0.6973	pgd20=0.4375	pgd20_avg=0.4289	time=3.76it/s
+2021-09-26 12:32:56,550 Eval Loss:0.9377	Eval acc: 69.73
+2021-09-26 12:32:56,862 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:32:56,862 
+2021-09-26 12:32:56,862 ====================Training Epoch 24====================
+2021-09-26 12:33:17,570 epoch=24	global_step=9400	acc=0.4766	acc_avg=0.4474	loss=1.4116	loss_avg=1.4731	lr=0.1000	|gn|=1.1534	time=2.05it/s
+2021-09-26 12:34:06,621 epoch=24	global_step=9500	acc=0.4375	acc_avg=0.4468	loss=1.6255	loss_avg=1.4719	lr=0.1000	|gn|=1.2402	time=1.92it/s
+2021-09-26 12:34:55,700 epoch=24	global_step=9600	acc=0.4609	acc_avg=0.4473	loss=1.3704	loss_avg=1.4750	lr=0.1000	|gn|=1.1066	time=2.08it/s
+2021-09-26 12:35:44,684 epoch=24	global_step=9700	acc=0.4141	acc_avg=0.4458	loss=1.4678	loss_avg=1.4760	lr=0.1000	|gn|=1.0627	time=2.03it/s
+2021-09-26 12:36:08,472 ====================Eval Epoch 24====================
+2021-09-26 12:37:39,138 epoch=24	global_step=39	acc=0.7500	acc_avg=0.6476	acc5=1.0000	acc5_avg=0.9708	loss=0.7599	loss_avg=1.0154	_acc=0.7500	_acc_avg=0.6476	pgd20=0.5000	pgd20_avg=0.3935	time=3.80it/s
+2021-09-26 12:37:39,139 Eval Loss:1.0154	Eval acc: 64.76
+2021-09-26 12:37:39,469 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:37:39,469 
+2021-09-26 12:37:39,469 ====================Training Epoch 25====================
+2021-09-26 12:38:05,173 epoch=25	global_step=9800	acc=0.4375	acc_avg=0.4563	loss=1.4390	loss_avg=1.4433	lr=0.1000	|gn|=1.1795	time=2.07it/s
+2021-09-26 12:38:54,820 epoch=25	global_step=9900	acc=0.4531	acc_avg=0.4570	loss=1.5040	loss_avg=1.4491	lr=0.1000	|gn|=1.1978	time=2.05it/s
+2021-09-26 12:39:44,386 epoch=25	global_step=10000	acc=0.4844	acc_avg=0.4548	loss=1.4721	loss_avg=1.4556	lr=0.1000	|gn|=1.1207	time=1.89it/s
+2021-09-26 12:40:33,940 epoch=25	global_step=10100	acc=0.4609	acc_avg=0.4509	loss=1.4816	loss_avg=1.4630	lr=0.1000	|gn|=1.1167	time=2.03it/s
+2021-09-26 12:40:53,247 ====================Eval Epoch 25====================
+2021-09-26 12:42:24,682 epoch=25	global_step=39	acc=0.7500	acc_avg=0.6691	acc5=1.0000	acc5_avg=0.9746	loss=0.7659	loss_avg=1.0003	_acc=0.7500	_acc_avg=0.6691	pgd20=0.3750	pgd20_avg=0.4172	time=3.76it/s
+2021-09-26 12:42:24,683 Eval Loss:1.0003	Eval acc: 66.91
+2021-09-26 12:42:24,968 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:42:24,968 
+2021-09-26 12:42:24,968 ====================Training Epoch 26====================
+2021-09-26 12:42:55,713 epoch=26	global_step=10200	acc=0.4844	acc_avg=0.4541	loss=1.4218	loss_avg=1.4444	lr=0.1000	|gn|=1.0585	time=2.07it/s
+2021-09-26 12:43:45,002 epoch=26	global_step=10300	acc=0.4609	acc_avg=0.4535	loss=1.4559	loss_avg=1.4567	lr=0.1000	|gn|=1.0544	time=2.07it/s
+2021-09-26 12:44:34,358 epoch=26	global_step=10400	acc=0.4062	acc_avg=0.4504	loss=1.5321	loss_avg=1.4626	lr=0.1000	|gn|=1.1396	time=1.98it/s
+2021-09-26 12:45:23,262 epoch=26	global_step=10500	acc=0.4609	acc_avg=0.4491	loss=1.4516	loss_avg=1.4657	lr=0.1000	|gn|=1.1450	time=2.01it/s
+2021-09-26 12:45:37,506 ====================Eval Epoch 26====================
+2021-09-26 12:47:08,919 epoch=26	global_step=39	acc=0.8125	acc_avg=0.6840	acc5=1.0000	acc5_avg=0.9760	loss=0.6738	loss_avg=0.9060	_acc=0.8125	_acc_avg=0.6840	pgd20=0.5625	pgd20_avg=0.3902	time=3.74it/s
+2021-09-26 12:47:08,920 Eval Loss:0.9060	Eval acc: 68.40
+2021-09-26 12:47:09,221 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:47:09,222 
+2021-09-26 12:47:09,222 ====================Training Epoch 27====================
+2021-09-26 12:47:44,836 epoch=27	global_step=10600	acc=0.4297	acc_avg=0.4573	loss=1.4348	loss_avg=1.4500	lr=0.1000	|gn|=1.0729	time=1.89it/s
+2021-09-26 12:48:34,303 epoch=27	global_step=10700	acc=0.5625	acc_avg=0.4536	loss=1.2764	loss_avg=1.4542	lr=0.1000	|gn|=0.9201	time=1.93it/s
+2021-09-26 12:49:23,585 epoch=27	global_step=10800	acc=0.3516	acc_avg=0.4522	loss=1.8102	loss_avg=1.4604	lr=0.1000	|gn|=1.3045	time=2.02it/s
+2021-09-26 12:50:12,480 epoch=27	global_step=10900	acc=0.4531	acc_avg=0.4520	loss=1.4483	loss_avg=1.4602	lr=0.1000	|gn|=1.0834	time=1.96it/s
+2021-09-26 12:50:21,860 ====================Eval Epoch 27====================
+2021-09-26 12:51:52,845 epoch=27	global_step=39	acc=0.8125	acc_avg=0.7142	acc5=1.0000	acc5_avg=0.9811	loss=0.6215	loss_avg=0.9260	_acc=0.8125	_acc_avg=0.7142	pgd20=0.5000	pgd20_avg=0.4369	time=3.78it/s
+2021-09-26 12:51:52,846 Eval Loss:0.9260	Eval acc: 71.42
+2021-09-26 12:51:53,105 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:51:53,105 
+2021-09-26 12:51:53,105 ====================Training Epoch 28====================
+2021-09-26 12:52:33,074 epoch=28	global_step=11000	acc=0.3906	acc_avg=0.4568	loss=1.4599	loss_avg=1.4385	lr=0.1000	|gn|=1.1956	time=2.08it/s
+2021-09-26 12:53:22,182 epoch=28	global_step=11100	acc=0.4922	acc_avg=0.4543	loss=1.4852	loss_avg=1.4490	lr=0.1000	|gn|=1.1612	time=2.07it/s
+2021-09-26 12:54:11,101 epoch=28	global_step=11200	acc=0.4375	acc_avg=0.4525	loss=1.4619	loss_avg=1.4529	lr=0.1000	|gn|=1.1270	time=2.07it/s
+2021-09-26 12:55:00,278 epoch=28	global_step=11300	acc=0.4844	acc_avg=0.4511	loss=1.3160	loss_avg=1.4576	lr=0.1000	|gn|=1.0836	time=1.93it/s
+2021-09-26 12:55:04,712 ====================Eval Epoch 28====================
+2021-09-26 12:56:35,529 epoch=28	global_step=39	acc=0.6875	acc_avg=0.6833	acc5=1.0000	acc5_avg=0.9673	loss=0.8363	loss_avg=0.9752	_acc=0.6875	_acc_avg=0.6833	pgd20=0.2500	pgd20_avg=0.4006	time=3.70it/s
+2021-09-26 12:56:35,529 Eval Loss:0.9752	Eval acc: 68.33
+2021-09-26 12:56:35,788 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 12:56:35,788 
+2021-09-26 12:56:35,788 ====================Training Epoch 29====================
+2021-09-26 12:57:20,759 epoch=29	global_step=11400	acc=0.4141	acc_avg=0.4501	loss=1.4720	loss_avg=1.4558	lr=0.1000	|gn|=1.2130	time=2.07it/s
+2021-09-26 12:58:09,642 epoch=29	global_step=11500	acc=0.4062	acc_avg=0.4512	loss=1.4021	loss_avg=1.4476	lr=0.1000	|gn|=1.2556	time=2.02it/s
+2021-09-26 12:58:58,378 epoch=29	global_step=11600	acc=0.4766	acc_avg=0.4509	loss=1.4234	loss_avg=1.4535	lr=0.1000	|gn|=0.9696	time=2.07it/s
+2021-09-26 12:59:46,883 ====================Eval Epoch 29====================
+2021-09-26 13:01:17,832 epoch=29	global_step=39	acc=0.6875	acc_avg=0.6727	acc5=1.0000	acc5_avg=0.9740	loss=0.8160	loss_avg=1.0133	_acc=0.6875	_acc_avg=0.6727	pgd20=0.3125	pgd20_avg=0.4060	time=3.52it/s
+2021-09-26 13:01:17,833 Eval Loss:1.0133	Eval acc: 67.27
+2021-09-26 13:01:18,155 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:01:18,155 
+2021-09-26 13:01:18,155 ====================Training Epoch 30====================
+2021-09-26 13:01:19,155 epoch=30	global_step=11700	acc=0.4375	acc_avg=0.4375	loss=1.5114	loss_avg=1.5114	lr=0.1000	|gn|=0.9748	time=2.06it/s
+2021-09-26 13:02:08,367 epoch=30	global_step=11800	acc=0.5391	acc_avg=0.4532	loss=1.2841	loss_avg=1.4470	lr=0.1000	|gn|=0.9465	time=2.07it/s
+2021-09-26 13:02:57,988 epoch=30	global_step=11900	acc=0.5469	acc_avg=0.4527	loss=1.2445	loss_avg=1.4469	lr=0.1000	|gn|=0.9219	time=2.07it/s
+2021-09-26 13:03:47,035 epoch=30	global_step=12000	acc=0.5078	acc_avg=0.4548	loss=1.3521	loss_avg=1.4429	lr=0.1000	|gn|=1.1064	time=2.04it/s
+2021-09-26 13:04:30,935 ====================Eval Epoch 30====================
+2021-09-26 13:06:02,299 epoch=30	global_step=39	acc=0.5625	acc_avg=0.6705	acc5=1.0000	acc5_avg=0.9764	loss=0.8401	loss_avg=0.9617	_acc=0.5625	_acc_avg=0.6705	pgd20=0.3750	pgd20_avg=0.4353	time=3.87it/s
+2021-09-26 13:06:02,300 Eval Loss:0.9617	Eval acc: 67.05
+2021-09-26 13:06:02,571 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:06:02,571 
+2021-09-26 13:06:02,571 ====================Training Epoch 31====================
+2021-09-26 13:06:08,469 epoch=31	global_step=12100	acc=0.4375	acc_avg=0.4901	loss=1.5175	loss_avg=1.3741	lr=0.1000	|gn|=1.2696	time=2.07it/s
+2021-09-26 13:06:57,847 epoch=31	global_step=12200	acc=0.3672	acc_avg=0.4562	loss=1.5548	loss_avg=1.4343	lr=0.1000	|gn|=1.2009	time=2.05it/s
+2021-09-26 13:07:47,160 epoch=31	global_step=12300	acc=0.4453	acc_avg=0.4563	loss=1.4385	loss_avg=1.4427	lr=0.1000	|gn|=1.0327	time=1.94it/s
+2021-09-26 13:08:35,981 epoch=31	global_step=12400	acc=0.3125	acc_avg=0.4576	loss=1.6271	loss_avg=1.4451	lr=0.1000	|gn|=1.2989	time=1.96it/s
+2021-09-26 13:09:14,989 ====================Eval Epoch 31====================
+2021-09-26 13:10:45,502 epoch=31	global_step=39	acc=0.6875	acc_avg=0.6817	acc5=1.0000	acc5_avg=0.9772	loss=0.7362	loss_avg=0.9656	_acc=0.6875	_acc_avg=0.6817	pgd20=0.5000	pgd20_avg=0.4084	time=3.55it/s
+2021-09-26 13:10:45,502 Eval Loss:0.9656	Eval acc: 68.17
+2021-09-26 13:10:45,795 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:10:45,795 
+2021-09-26 13:10:45,795 ====================Training Epoch 32====================
+2021-09-26 13:10:56,570 epoch=32	global_step=12500	acc=0.4688	acc_avg=0.4449	loss=1.5168	loss_avg=1.4588	lr=0.1000	|gn|=1.1545	time=2.08it/s
+2021-09-26 13:11:45,590 epoch=32	global_step=12600	acc=0.4297	acc_avg=0.4652	loss=1.4706	loss_avg=1.4308	lr=0.1000	|gn|=1.1802	time=2.04it/s
+2021-09-26 13:12:34,895 epoch=32	global_step=12700	acc=0.4609	acc_avg=0.4605	loss=1.5924	loss_avg=1.4403	lr=0.1000	|gn|=1.2750	time=2.09it/s
+2021-09-26 13:13:23,961 epoch=32	global_step=12800	acc=0.4688	acc_avg=0.4603	loss=1.4084	loss_avg=1.4407	lr=0.1000	|gn|=1.1114	time=2.07it/s
+2021-09-26 13:13:58,015 ====================Eval Epoch 32====================
+2021-09-26 13:15:29,280 epoch=32	global_step=39	acc=0.7500	acc_avg=0.7034	acc5=1.0000	acc5_avg=0.9747	loss=0.7773	loss_avg=0.9443	_acc=0.7500	_acc_avg=0.7034	pgd20=0.3750	pgd20_avg=0.4353	time=3.67it/s
+2021-09-26 13:15:29,280 Eval Loss:0.9443	Eval acc: 70.34
+2021-09-26 13:15:29,578 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:15:29,579 
+2021-09-26 13:15:29,579 ====================Training Epoch 33====================
+2021-09-26 13:15:45,394 epoch=33	global_step=12900	acc=0.4531	acc_avg=0.4723	loss=1.4352	loss_avg=1.4279	lr=0.1000	|gn|=1.2213	time=2.08it/s
+2021-09-26 13:16:34,514 epoch=33	global_step=13000	acc=0.4375	acc_avg=0.4665	loss=1.5181	loss_avg=1.4258	lr=0.1000	|gn|=1.2235	time=2.08it/s
+2021-09-26 13:17:23,796 epoch=33	global_step=13100	acc=0.3984	acc_avg=0.4623	loss=1.5723	loss_avg=1.4347	lr=0.1000	|gn|=1.1540	time=2.07it/s
+2021-09-26 13:18:12,379 epoch=33	global_step=13200	acc=0.4688	acc_avg=0.4575	loss=1.4194	loss_avg=1.4411	lr=0.1000	|gn|=1.0287	time=2.08it/s
+2021-09-26 13:18:41,512 ====================Eval Epoch 33====================
+2021-09-26 13:20:12,118 epoch=33	global_step=39	acc=0.8125	acc_avg=0.6926	acc5=1.0000	acc5_avg=0.9784	loss=0.6212	loss_avg=0.9376	_acc=0.8125	_acc_avg=0.6926	pgd20=0.4375	pgd20_avg=0.4367	time=3.79it/s
+2021-09-26 13:20:12,118 Eval Loss:0.9376	Eval acc: 69.26
+2021-09-26 13:20:12,375 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:20:12,375 
+2021-09-26 13:20:12,375 ====================Training Epoch 34====================
+2021-09-26 13:20:32,842 epoch=34	global_step=13300	acc=0.4844	acc_avg=0.4756	loss=1.3606	loss_avg=1.4027	lr=0.1000	|gn|=1.1235	time=2.08it/s
+2021-09-26 13:21:21,668 epoch=34	global_step=13400	acc=0.4688	acc_avg=0.4684	loss=1.3579	loss_avg=1.4120	lr=0.1000	|gn|=1.1930	time=2.08it/s
+2021-09-26 13:22:10,723 epoch=34	global_step=13500	acc=0.4609	acc_avg=0.4640	loss=1.4138	loss_avg=1.4277	lr=0.1000	|gn|=1.1491	time=1.99it/s
+2021-09-26 13:22:59,824 epoch=34	global_step=13600	acc=0.4531	acc_avg=0.4620	loss=1.4443	loss_avg=1.4356	lr=0.1000	|gn|=1.1763	time=2.07it/s
+2021-09-26 13:23:23,954 ====================Eval Epoch 34====================
+2021-09-26 13:24:55,354 epoch=34	global_step=39	acc=0.5000	acc_avg=0.6196	acc5=1.0000	acc5_avg=0.9552	loss=1.0324	loss_avg=1.1117	_acc=0.5000	_acc_avg=0.6196	pgd20=0.3125	pgd20_avg=0.3425	time=3.77it/s
+2021-09-26 13:24:55,355 Eval Loss:1.1117	Eval acc: 61.96
+2021-09-26 13:24:55,671 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:24:55,671 
+2021-09-26 13:24:55,671 ====================Training Epoch 35====================
+2021-09-26 13:25:21,337 epoch=35	global_step=13700	acc=0.4844	acc_avg=0.4666	loss=1.3584	loss_avg=1.4169	lr=0.1000	|gn|=1.0649	time=2.04it/s
+2021-09-26 13:26:10,714 epoch=35	global_step=13800	acc=0.4453	acc_avg=0.4619	loss=1.5233	loss_avg=1.4340	lr=0.1000	|gn|=1.1922	time=2.03it/s
+2021-09-26 13:27:00,042 epoch=35	global_step=13900	acc=0.4375	acc_avg=0.4631	loss=1.4569	loss_avg=1.4345	lr=0.1000	|gn|=1.1249	time=2.03it/s
+2021-09-26 13:27:48,965 epoch=35	global_step=14000	acc=0.4531	acc_avg=0.4614	loss=1.3527	loss_avg=1.4380	lr=0.1000	|gn|=1.0348	time=1.97it/s
+2021-09-26 13:28:08,094 ====================Eval Epoch 35====================
+2021-09-26 13:29:38,992 epoch=35	global_step=39	acc=0.7500	acc_avg=0.7054	acc5=1.0000	acc5_avg=0.9815	loss=0.7453	loss_avg=0.9092	_acc=0.7500	_acc_avg=0.7054	pgd20=0.5000	pgd20_avg=0.4302	time=3.73it/s
+2021-09-26 13:29:38,993 Eval Loss:0.9092	Eval acc: 70.54
+2021-09-26 13:29:39,299 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:29:39,299 
+2021-09-26 13:29:39,299 ====================Training Epoch 36====================
+2021-09-26 13:30:09,911 epoch=36	global_step=14100	acc=0.4219	acc_avg=0.4622	loss=1.3860	loss_avg=1.4104	lr=0.1000	|gn|=1.2187	time=2.07it/s
+2021-09-26 13:30:59,248 epoch=36	global_step=14200	acc=0.5000	acc_avg=0.4604	loss=1.3707	loss_avg=1.4272	lr=0.1000	|gn|=1.0725	time=1.94it/s
+2021-09-26 13:31:48,593 epoch=36	global_step=14300	acc=0.4766	acc_avg=0.4615	loss=1.5992	loss_avg=1.4326	lr=0.1000	|gn|=1.2843	time=2.08it/s
+2021-09-26 13:32:38,110 epoch=36	global_step=14400	acc=0.5000	acc_avg=0.4608	loss=1.3030	loss_avg=1.4323	lr=0.1000	|gn|=0.9681	time=2.08it/s
+2021-09-26 13:32:52,453 ====================Eval Epoch 36====================
+2021-09-26 13:34:23,524 epoch=36	global_step=39	acc=0.8125	acc_avg=0.6935	acc5=1.0000	acc5_avg=0.9762	loss=0.5801	loss_avg=0.9169	_acc=0.8125	_acc_avg=0.6935	pgd20=0.4375	pgd20_avg=0.4292	time=3.78it/s
+2021-09-26 13:34:23,525 Eval Loss:0.9169	Eval acc: 69.35
+2021-09-26 13:34:23,842 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:34:23,842 
+2021-09-26 13:34:23,842 ====================Training Epoch 37====================
+2021-09-26 13:34:59,031 epoch=37	global_step=14500	acc=0.4766	acc_avg=0.4651	loss=1.4644	loss_avg=1.4125	lr=0.1000	|gn|=1.2130	time=2.07it/s
+2021-09-26 13:35:47,977 epoch=37	global_step=14600	acc=0.4453	acc_avg=0.4598	loss=1.4809	loss_avg=1.4265	lr=0.1000	|gn|=1.2429	time=2.07it/s
+2021-09-26 13:36:37,196 epoch=37	global_step=14700	acc=0.4688	acc_avg=0.4621	loss=1.4105	loss_avg=1.4276	lr=0.1000	|gn|=1.2387	time=2.04it/s
+2021-09-26 13:37:26,294 epoch=37	global_step=14800	acc=0.4141	acc_avg=0.4607	loss=1.4900	loss_avg=1.4322	lr=0.1000	|gn|=1.1421	time=2.08it/s
+2021-09-26 13:37:35,787 ====================Eval Epoch 37====================
+2021-09-26 13:39:07,115 epoch=37	global_step=39	acc=0.6875	acc_avg=0.6994	acc5=1.0000	acc5_avg=0.9760	loss=0.8367	loss_avg=0.9351	_acc=0.6875	_acc_avg=0.6994	pgd20=0.5000	pgd20_avg=0.4187	time=3.81it/s
+2021-09-26 13:39:07,116 Eval Loss:0.9351	Eval acc: 69.94
+2021-09-26 13:39:07,370 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:39:07,371 
+2021-09-26 13:39:07,371 ====================Training Epoch 38====================
+2021-09-26 13:39:47,555 epoch=38	global_step=14900	acc=0.4688	acc_avg=0.4651	loss=1.4531	loss_avg=1.4152	lr=0.1000	|gn|=1.1175	time=2.09it/s
+2021-09-26 13:40:36,994 epoch=38	global_step=15000	acc=0.3281	acc_avg=0.4603	loss=1.5345	loss_avg=1.4223	lr=0.1000	|gn|=1.1029	time=1.92it/s
+2021-09-26 13:41:25,948 epoch=38	global_step=15100	acc=0.4844	acc_avg=0.4623	loss=1.4741	loss_avg=1.4266	lr=0.1000	|gn|=1.2417	time=2.05it/s
+2021-09-26 13:42:15,168 epoch=38	global_step=15200	acc=0.5078	acc_avg=0.4623	loss=1.2754	loss_avg=1.4283	lr=0.1000	|gn|=1.0659	time=2.08it/s
+2021-09-26 13:42:19,641 ====================Eval Epoch 38====================
+2021-09-26 13:43:50,944 epoch=38	global_step=39	acc=0.7500	acc_avg=0.6864	acc5=1.0000	acc5_avg=0.9763	loss=0.6580	loss_avg=0.9411	_acc=0.7500	_acc_avg=0.6864	pgd20=0.5625	pgd20_avg=0.4326	time=3.81it/s
+2021-09-26 13:43:50,945 Eval Loss:0.9411	Eval acc: 68.64
+2021-09-26 13:43:51,266 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:43:51,266 
+2021-09-26 13:43:51,267 ====================Training Epoch 39====================
+2021-09-26 13:44:36,260 epoch=39	global_step=15300	acc=0.4453	acc_avg=0.4699	loss=1.5191	loss_avg=1.4102	lr=0.1000	|gn|=1.2245	time=2.07it/s
+2021-09-26 13:45:25,012 epoch=39	global_step=15400	acc=0.4219	acc_avg=0.4640	loss=1.4770	loss_avg=1.4253	lr=0.1000	|gn|=1.1453	time=2.06it/s
+2021-09-26 13:46:14,109 epoch=39	global_step=15500	acc=0.4609	acc_avg=0.4613	loss=1.4286	loss_avg=1.4283	lr=0.1000	|gn|=1.1749	time=2.08it/s
+2021-09-26 13:47:02,966 ====================Eval Epoch 39====================
+2021-09-26 13:48:34,014 epoch=39	global_step=39	acc=0.8125	acc_avg=0.7043	acc5=1.0000	acc5_avg=0.9800	loss=0.6280	loss_avg=0.8943	_acc=0.8125	_acc_avg=0.7043	pgd20=0.4375	pgd20_avg=0.4401	time=3.86it/s
+2021-09-26 13:48:34,015 Eval Loss:0.8943	Eval acc: 70.43
+2021-09-26 13:48:34,325 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:48:34,326 
+2021-09-26 13:48:34,326 ====================Training Epoch 40====================
+2021-09-26 13:48:35,305 epoch=40	global_step=15600	acc=0.4766	acc_avg=0.4766	loss=1.4183	loss_avg=1.4183	lr=0.1000	|gn|=1.1445	time=2.01it/s
+2021-09-26 13:49:24,310 epoch=40	global_step=15700	acc=0.4844	acc_avg=0.4664	loss=1.3619	loss_avg=1.4191	lr=0.1000	|gn|=1.1188	time=2.07it/s
+2021-09-26 13:50:13,560 epoch=40	global_step=15800	acc=0.4688	acc_avg=0.4634	loss=1.4546	loss_avg=1.4275	lr=0.1000	|gn|=1.2072	time=2.05it/s
+2021-09-26 13:51:02,403 epoch=40	global_step=15900	acc=0.4766	acc_avg=0.4645	loss=1.3927	loss_avg=1.4258	lr=0.1000	|gn|=1.1293	time=2.08it/s
+2021-09-26 13:51:46,239 ====================Eval Epoch 40====================
+2021-09-26 13:53:17,060 epoch=40	global_step=39	acc=0.7500	acc_avg=0.6845	acc5=1.0000	acc5_avg=0.9792	loss=0.7424	loss_avg=0.9414	_acc=0.7500	_acc_avg=0.6845	pgd20=0.4375	pgd20_avg=0.4330	time=3.71it/s
+2021-09-26 13:53:17,061 Eval Loss:0.9414	Eval acc: 68.45
+2021-09-26 13:53:17,321 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:53:17,322 
+2021-09-26 13:53:17,322 ====================Training Epoch 41====================
+2021-09-26 13:53:23,112 epoch=41	global_step=16000	acc=0.4688	acc_avg=0.4822	loss=1.4266	loss_avg=1.3877	lr=0.1000	|gn|=1.2210	time=2.07it/s
+2021-09-26 13:54:12,323 epoch=41	global_step=16100	acc=0.4609	acc_avg=0.4684	loss=1.3054	loss_avg=1.4154	lr=0.1000	|gn|=1.1875	time=2.03it/s
+2021-09-26 13:55:01,293 epoch=41	global_step=16200	acc=0.3672	acc_avg=0.4656	loss=1.5261	loss_avg=1.4221	lr=0.1000	|gn|=1.2630	time=2.05it/s
+2021-09-26 13:55:50,544 epoch=41	global_step=16300	acc=0.5078	acc_avg=0.4646	loss=1.4285	loss_avg=1.4244	lr=0.1000	|gn|=1.1908	time=2.08it/s
+2021-09-26 13:56:29,607 ====================Eval Epoch 41====================
+2021-09-26 13:58:01,012 epoch=41	global_step=39	acc=0.8750	acc_avg=0.7152	acc5=1.0000	acc5_avg=0.9787	loss=0.5286	loss_avg=0.8893	_acc=0.8750	_acc_avg=0.7152	pgd20=0.5000	pgd20_avg=0.4074	time=3.79it/s
+2021-09-26 13:58:01,013 Eval Loss:0.8893	Eval acc: 71.52
+2021-09-26 13:58:01,278 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 13:58:01,278 
+2021-09-26 13:58:01,278 ====================Training Epoch 42====================
+2021-09-26 13:58:11,951 epoch=42	global_step=16400	acc=0.4531	acc_avg=0.4736	loss=1.4401	loss_avg=1.3736	lr=0.1000	|gn|=1.1933	time=2.07it/s
+2021-09-26 13:59:00,968 epoch=42	global_step=16500	acc=0.4141	acc_avg=0.4690	loss=1.5893	loss_avg=1.3980	lr=0.1000	|gn|=1.2052	time=2.04it/s
+2021-09-26 13:59:50,303 epoch=42	global_step=16600	acc=0.4531	acc_avg=0.4651	loss=1.4612	loss_avg=1.4139	lr=0.1000	|gn|=1.0789	time=1.97it/s
+2021-09-26 14:00:39,325 epoch=42	global_step=16700	acc=0.5312	acc_avg=0.4658	loss=1.4796	loss_avg=1.4185	lr=0.1000	|gn|=1.2570	time=2.09it/s
+2021-09-26 14:01:13,008 ====================Eval Epoch 42====================
+2021-09-26 14:02:44,138 epoch=42	global_step=39	acc=0.7500	acc_avg=0.6851	acc5=1.0000	acc5_avg=0.9762	loss=0.6152	loss_avg=0.9418	_acc=0.7500	_acc_avg=0.6851	pgd20=0.6250	pgd20_avg=0.4159	time=3.80it/s
+2021-09-26 14:02:44,139 Eval Loss:0.9418	Eval acc: 68.51
+2021-09-26 14:02:44,431 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:02:44,432 
+2021-09-26 14:02:44,432 ====================Training Epoch 43====================
+2021-09-26 14:02:59,959 epoch=43	global_step=16800	acc=0.5000	acc_avg=0.4934	loss=1.3797	loss_avg=1.3497	lr=0.1000	|gn|=1.2046	time=2.09it/s
+2021-09-26 14:03:49,055 epoch=43	global_step=16900	acc=0.4688	acc_avg=0.4723	loss=1.4229	loss_avg=1.4115	lr=0.1000	|gn|=1.1639	time=2.04it/s
+2021-09-26 14:04:37,955 epoch=43	global_step=17000	acc=0.5078	acc_avg=0.4686	loss=1.3018	loss_avg=1.4163	lr=0.1000	|gn|=1.1035	time=2.07it/s
+2021-09-26 14:05:27,089 epoch=43	global_step=17100	acc=0.4141	acc_avg=0.4674	loss=1.5798	loss_avg=1.4205	lr=0.1000	|gn|=1.2666	time=2.01it/s
+2021-09-26 14:05:56,174 ====================Eval Epoch 43====================
+2021-09-26 14:07:26,863 epoch=43	global_step=39	acc=0.8125	acc_avg=0.7310	acc5=1.0000	acc5_avg=0.9804	loss=0.6404	loss_avg=0.8548	_acc=0.8125	_acc_avg=0.7310	pgd20=0.4375	pgd20_avg=0.4238	time=3.76it/s
+2021-09-26 14:07:26,864 Eval Loss:0.8548	Eval acc: 73.10
+2021-09-26 14:07:27,159 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:07:27,159 
+2021-09-26 14:07:27,159 ====================Training Epoch 44====================
+2021-09-26 14:07:47,871 epoch=44	global_step=17200	acc=0.5859	acc_avg=0.4777	loss=1.2082	loss_avg=1.4013	lr=0.1000	|gn|=1.0036	time=1.89it/s
+2021-09-26 14:08:36,933 epoch=44	global_step=17300	acc=0.5234	acc_avg=0.4742	loss=1.3258	loss_avg=1.4095	lr=0.1000	|gn|=1.1565	time=2.07it/s
+2021-09-26 14:09:26,154 epoch=44	global_step=17400	acc=0.4766	acc_avg=0.4681	loss=1.4022	loss_avg=1.4186	lr=0.1000	|gn|=1.0781	time=2.08it/s
+2021-09-26 14:10:15,332 epoch=44	global_step=17500	acc=0.4219	acc_avg=0.4679	loss=1.5653	loss_avg=1.4178	lr=0.1000	|gn|=1.2070	time=2.06it/s
+2021-09-26 14:10:39,525 ====================Eval Epoch 44====================
+2021-09-26 14:12:10,330 epoch=44	global_step=39	acc=0.7500	acc_avg=0.6997	acc5=1.0000	acc5_avg=0.9796	loss=0.6414	loss_avg=0.8811	_acc=0.7500	_acc_avg=0.6997	pgd20=0.4375	pgd20_avg=0.4326	time=3.81it/s
+2021-09-26 14:12:10,330 Eval Loss:0.8811	Eval acc: 69.97
+2021-09-26 14:12:10,622 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:12:10,622 
+2021-09-26 14:12:10,622 ====================Training Epoch 45====================
+2021-09-26 14:12:36,308 epoch=45	global_step=17600	acc=0.4688	acc_avg=0.4809	loss=1.3489	loss_avg=1.3925	lr=0.1000	|gn|=1.1607	time=2.04it/s
+2021-09-26 14:13:26,027 epoch=45	global_step=17700	acc=0.4922	acc_avg=0.4716	loss=1.3520	loss_avg=1.4057	lr=0.1000	|gn|=1.0864	time=2.05it/s
+2021-09-26 14:14:14,859 epoch=45	global_step=17800	acc=0.5000	acc_avg=0.4702	loss=1.3603	loss_avg=1.4097	lr=0.1000	|gn|=1.2620	time=2.08it/s
+2021-09-26 14:15:04,040 epoch=45	global_step=17900	acc=0.5156	acc_avg=0.4666	loss=1.3113	loss_avg=1.4170	lr=0.1000	|gn|=1.0525	time=2.07it/s
+2021-09-26 14:15:23,482 ====================Eval Epoch 45====================
+2021-09-26 14:16:54,791 epoch=45	global_step=39	acc=0.8750	acc_avg=0.6969	acc5=1.0000	acc5_avg=0.9793	loss=0.6724	loss_avg=0.9563	_acc=0.8750	_acc_avg=0.6969	pgd20=0.5000	pgd20_avg=0.4211	time=3.58it/s
+2021-09-26 14:16:54,792 Eval Loss:0.9563	Eval acc: 69.69
+2021-09-26 14:16:55,099 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:16:55,100 
+2021-09-26 14:16:55,100 ====================Training Epoch 46====================
+2021-09-26 14:17:26,087 epoch=46	global_step=18000	acc=0.5703	acc_avg=0.4786	loss=1.2940	loss_avg=1.3878	lr=0.1000	|gn|=1.2756	time=2.02it/s
+2021-09-26 14:18:15,759 epoch=46	global_step=18100	acc=0.4688	acc_avg=0.4744	loss=1.3975	loss_avg=1.4018	lr=0.1000	|gn|=1.1893	time=2.04it/s
+2021-09-26 14:19:05,142 epoch=46	global_step=18200	acc=0.4688	acc_avg=0.4708	loss=1.4578	loss_avg=1.4127	lr=0.1000	|gn|=1.2162	time=2.08it/s
+2021-09-26 14:19:54,290 epoch=46	global_step=18300	acc=0.4062	acc_avg=0.4683	loss=1.4655	loss_avg=1.4185	lr=0.1000	|gn|=1.3618	time=2.07it/s
+2021-09-26 14:20:08,916 ====================Eval Epoch 46====================
+2021-09-26 14:21:40,226 epoch=46	global_step=39	acc=0.8125	acc_avg=0.6721	acc5=1.0000	acc5_avg=0.9782	loss=0.7561	loss_avg=0.9474	_acc=0.8125	_acc_avg=0.6721	pgd20=0.3750	pgd20_avg=0.4352	time=3.75it/s
+2021-09-26 14:21:40,226 Eval Loss:0.9474	Eval acc: 67.21
+2021-09-26 14:21:40,512 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:21:40,512 
+2021-09-26 14:21:40,513 ====================Training Epoch 47====================
+2021-09-26 14:22:16,300 epoch=47	global_step=18400	acc=0.4219	acc_avg=0.4737	loss=1.4898	loss_avg=1.3942	lr=0.1000	|gn|=1.3212	time=2.09it/s
+2021-09-26 14:23:05,774 epoch=47	global_step=18500	acc=0.4609	acc_avg=0.4680	loss=1.3462	loss_avg=1.4163	lr=0.1000	|gn|=0.9955	time=2.08it/s
+2021-09-26 14:23:55,357 epoch=47	global_step=18600	acc=0.4609	acc_avg=0.4682	loss=1.3971	loss_avg=1.4134	lr=0.1000	|gn|=1.1210	time=2.08it/s
+2021-09-26 14:24:44,337 epoch=47	global_step=18700	acc=0.4297	acc_avg=0.4674	loss=1.4610	loss_avg=1.4142	lr=0.1000	|gn|=1.2401	time=1.93it/s
+2021-09-26 14:24:53,927 ====================Eval Epoch 47====================
+2021-09-26 14:26:25,413 epoch=47	global_step=39	acc=0.6875	acc_avg=0.7014	acc5=1.0000	acc5_avg=0.9748	loss=0.7488	loss_avg=0.9171	_acc=0.6875	_acc_avg=0.7014	pgd20=0.4375	pgd20_avg=0.4269	time=3.78it/s
+2021-09-26 14:26:25,414 Eval Loss:0.9171	Eval acc: 70.14
+2021-09-26 14:26:25,724 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:26:25,724 
+2021-09-26 14:26:25,724 ====================Training Epoch 48====================
+2021-09-26 14:27:06,312 epoch=48	global_step=18800	acc=0.4219	acc_avg=0.4736	loss=1.5419	loss_avg=1.4080	lr=0.1000	|gn|=1.4518	time=1.93it/s
+2021-09-26 14:27:56,088 epoch=48	global_step=18900	acc=0.4219	acc_avg=0.4730	loss=1.4300	loss_avg=1.4041	lr=0.1000	|gn|=1.3006	time=2.08it/s
+2021-09-26 14:28:45,220 epoch=48	global_step=19000	acc=0.5156	acc_avg=0.4703	loss=1.3851	loss_avg=1.4100	lr=0.1000	|gn|=1.1565	time=2.05it/s
+2021-09-26 14:29:34,890 epoch=48	global_step=19100	acc=0.4375	acc_avg=0.4682	loss=1.5181	loss_avg=1.4141	lr=0.1000	|gn|=1.1467	time=2.07it/s
+2021-09-26 14:29:39,317 ====================Eval Epoch 48====================
+2021-09-26 14:31:10,228 epoch=48	global_step=39	acc=0.6875	acc_avg=0.7062	acc5=1.0000	acc5_avg=0.9811	loss=0.7527	loss_avg=0.9156	_acc=0.6875	_acc_avg=0.7062	pgd20=0.5000	pgd20_avg=0.4380	time=3.76it/s
+2021-09-26 14:31:10,228 Eval Loss:0.9156	Eval acc: 70.62
+2021-09-26 14:31:10,510 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:31:10,510 
+2021-09-26 14:31:10,510 ====================Training Epoch 49====================
+2021-09-26 14:31:55,433 epoch=49	global_step=19200	acc=0.5312	acc_avg=0.4765	loss=1.3784	loss_avg=1.4001	lr=0.1000	|gn|=1.1168	time=1.98it/s
+2021-09-26 14:32:44,743 epoch=49	global_step=19300	acc=0.4531	acc_avg=0.4758	loss=1.5240	loss_avg=1.3993	lr=0.1000	|gn|=1.2691	time=2.05it/s
+2021-09-26 14:33:33,863 epoch=49	global_step=19400	acc=0.5078	acc_avg=0.4705	loss=1.3546	loss_avg=1.4091	lr=0.1000	|gn|=1.0217	time=2.03it/s
+2021-09-26 14:34:22,464 ====================Eval Epoch 49====================
+2021-09-26 14:35:54,199 epoch=49	global_step=39	acc=0.8750	acc_avg=0.7304	acc5=1.0000	acc5_avg=0.9822	loss=0.6425	loss_avg=0.8745	_acc=0.8750	_acc_avg=0.7304	pgd20=0.3750	pgd20_avg=0.4268	time=3.34it/s
+2021-09-26 14:35:54,199 Eval Loss:0.8745	Eval acc: 73.04
+2021-09-26 14:35:54,483 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:35:54,483 
+2021-09-26 14:35:54,483 ====================Training Epoch 50====================
+2021-09-26 14:35:55,458 epoch=50	global_step=19500	acc=0.4844	acc_avg=0.4844	loss=1.4305	loss_avg=1.4305	lr=0.1000	|gn|=1.0348	time=2.06it/s
+2021-09-26 14:36:44,631 epoch=50	global_step=19600	acc=0.3906	acc_avg=0.4710	loss=1.4983	loss_avg=1.3990	lr=0.1000	|gn|=1.2395	time=2.07it/s
+2021-09-26 14:37:33,794 epoch=50	global_step=19700	acc=0.5000	acc_avg=0.4703	loss=1.4574	loss_avg=1.4032	lr=0.1000	|gn|=1.2824	time=1.94it/s
+2021-09-26 14:38:23,219 epoch=50	global_step=19800	acc=0.3906	acc_avg=0.4697	loss=1.5462	loss_avg=1.4060	lr=0.1000	|gn|=1.2695	time=2.00it/s
+2021-09-26 14:39:06,891 ====================Eval Epoch 50====================
+2021-09-26 14:40:38,360 epoch=50	global_step=39	acc=0.6250	acc_avg=0.6865	acc5=1.0000	acc5_avg=0.9771	loss=0.7131	loss_avg=0.9477	_acc=0.6250	_acc_avg=0.6865	pgd20=0.3750	pgd20_avg=0.4201	time=3.72it/s
+2021-09-26 14:40:38,360 Eval Loss:0.9477	Eval acc: 68.65
+2021-09-26 14:40:38,662 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:40:38,662 
+2021-09-26 14:40:38,663 ====================Training Epoch 51====================
+2021-09-26 14:40:44,478 epoch=51	global_step=19900	acc=0.4609	acc_avg=0.4766	loss=1.4712	loss_avg=1.3931	lr=0.1000	|gn|=1.1218	time=2.07it/s
+2021-09-26 14:41:33,613 epoch=51	global_step=20000	acc=0.4766	acc_avg=0.4692	loss=1.3795	loss_avg=1.4061	lr=0.1000	|gn|=1.1815	time=2.03it/s
+2021-09-26 14:42:22,654 epoch=51	global_step=20100	acc=0.5078	acc_avg=0.4707	loss=1.3660	loss_avg=1.4038	lr=0.1000	|gn|=1.1066	time=2.08it/s
+2021-09-26 14:43:11,617 epoch=51	global_step=20200	acc=0.5156	acc_avg=0.4693	loss=1.3545	loss_avg=1.4063	lr=0.1000	|gn|=1.1292	time=2.07it/s
+2021-09-26 14:43:50,685 ====================Eval Epoch 51====================
+2021-09-26 14:45:21,403 epoch=51	global_step=39	acc=0.8750	acc_avg=0.6983	acc5=1.0000	acc5_avg=0.9736	loss=0.6374	loss_avg=0.9635	_acc=0.8750	_acc_avg=0.6983	pgd20=0.5625	pgd20_avg=0.4106	time=3.70it/s
+2021-09-26 14:45:21,404 Eval Loss:0.9635	Eval acc: 69.83
+2021-09-26 14:45:21,694 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:45:21,694 
+2021-09-26 14:45:21,694 ====================Training Epoch 52====================
+2021-09-26 14:45:32,420 epoch=52	global_step=20300	acc=0.4219	acc_avg=0.4754	loss=1.5023	loss_avg=1.3861	lr=0.1000	|gn|=1.3829	time=1.96it/s
+2021-09-26 14:46:21,636 epoch=52	global_step=20400	acc=0.4609	acc_avg=0.4669	loss=1.4747	loss_avg=1.4081	lr=0.1000	|gn|=1.2621	time=2.04it/s
+2021-09-26 14:47:10,265 epoch=52	global_step=20500	acc=0.4531	acc_avg=0.4643	loss=1.4184	loss_avg=1.4113	lr=0.1000	|gn|=1.2698	time=2.08it/s
+2021-09-26 14:47:58,669 epoch=52	global_step=20600	acc=0.5078	acc_avg=0.4645	loss=1.3995	loss_avg=1.4117	lr=0.1000	|gn|=1.4044	time=2.11it/s
+2021-09-26 14:48:32,275 ====================Eval Epoch 52====================
+2021-09-26 14:50:02,401 epoch=52	global_step=39	acc=0.8750	acc_avg=0.7008	acc5=1.0000	acc5_avg=0.9814	loss=0.5781	loss_avg=0.9036	_acc=0.8750	_acc_avg=0.7008	pgd20=0.6250	pgd20_avg=0.4255	time=3.81it/s
+2021-09-26 14:50:02,401 Eval Loss:0.9036	Eval acc: 70.08
+2021-09-26 14:50:02,688 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:50:02,688 
+2021-09-26 14:50:02,688 ====================Training Epoch 53====================
+2021-09-26 14:50:18,142 epoch=53	global_step=20700	acc=0.5703	acc_avg=0.4801	loss=1.2206	loss_avg=1.3872	lr=0.1000	|gn|=0.8950	time=2.07it/s
+2021-09-26 14:51:07,077 epoch=53	global_step=20800	acc=0.4922	acc_avg=0.4751	loss=1.3622	loss_avg=1.3935	lr=0.1000	|gn|=1.1559	time=2.03it/s
+2021-09-26 14:51:56,197 epoch=53	global_step=20900	acc=0.5078	acc_avg=0.4745	loss=1.3003	loss_avg=1.3926	lr=0.1000	|gn|=1.2483	time=2.07it/s
+2021-09-26 14:52:44,949 epoch=53	global_step=21000	acc=0.5625	acc_avg=0.4687	loss=1.2404	loss_avg=1.4092	lr=0.1000	|gn|=0.9268	time=2.03it/s
+2021-09-26 14:53:13,973 ====================Eval Epoch 53====================
+2021-09-26 14:54:45,154 epoch=53	global_step=39	acc=0.8125	acc_avg=0.6999	acc5=1.0000	acc5_avg=0.9746	loss=0.6061	loss_avg=0.9201	_acc=0.8125	_acc_avg=0.6999	pgd20=0.6250	pgd20_avg=0.4227	time=3.74it/s
+2021-09-26 14:54:45,155 Eval Loss:0.9201	Eval acc: 69.99
+2021-09-26 14:54:45,444 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:54:45,444 
+2021-09-26 14:54:45,444 ====================Training Epoch 54====================
+2021-09-26 14:55:06,089 epoch=54	global_step=21100	acc=0.4609	acc_avg=0.4798	loss=1.3681	loss_avg=1.3799	lr=0.1000	|gn|=1.1615	time=1.91it/s
+2021-09-26 14:55:55,253 epoch=54	global_step=21200	acc=0.4688	acc_avg=0.4746	loss=1.3402	loss_avg=1.3876	lr=0.1000	|gn|=1.2325	time=2.04it/s
+2021-09-26 14:56:44,686 epoch=54	global_step=21300	acc=0.4141	acc_avg=0.4724	loss=1.4119	loss_avg=1.3940	lr=0.1000	|gn|=1.1715	time=2.09it/s
+2021-09-26 14:57:33,609 epoch=54	global_step=21400	acc=0.4844	acc_avg=0.4718	loss=1.3569	loss_avg=1.4005	lr=0.1000	|gn|=1.1322	time=2.02it/s
+2021-09-26 14:57:57,663 ====================Eval Epoch 54====================
+2021-09-26 14:59:28,999 epoch=54	global_step=39	acc=0.8125	acc_avg=0.7016	acc5=1.0000	acc5_avg=0.9792	loss=0.6837	loss_avg=0.9239	_acc=0.8125	_acc_avg=0.7016	pgd20=0.4375	pgd20_avg=0.4244	time=3.77it/s
+2021-09-26 14:59:29,000 Eval Loss:0.9239	Eval acc: 70.16
+2021-09-26 14:59:29,270 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 14:59:29,270 
+2021-09-26 14:59:29,270 ====================Training Epoch 55====================
+2021-09-26 14:59:54,823 epoch=55	global_step=21500	acc=0.5156	acc_avg=0.4775	loss=1.3654	loss_avg=1.3809	lr=0.1000	|gn|=1.0273	time=2.07it/s
+2021-09-26 15:00:44,088 epoch=55	global_step=21600	acc=0.4922	acc_avg=0.4744	loss=1.3036	loss_avg=1.3958	lr=0.1000	|gn|=1.1676	time=2.10it/s
+2021-09-26 15:01:33,174 epoch=55	global_step=21700	acc=0.4922	acc_avg=0.4711	loss=1.4026	loss_avg=1.3991	lr=0.1000	|gn|=1.2057	time=1.95it/s
+2021-09-26 15:02:22,083 epoch=55	global_step=21800	acc=0.4141	acc_avg=0.4699	loss=1.4550	loss_avg=1.4045	lr=0.1000	|gn|=1.1373	time=2.08it/s
+2021-09-26 15:02:41,413 ====================Eval Epoch 55====================
+2021-09-26 15:04:12,343 epoch=55	global_step=39	acc=0.8750	acc_avg=0.6886	acc5=1.0000	acc5_avg=0.9737	loss=0.7360	loss_avg=0.9395	_acc=0.8750	_acc_avg=0.6886	pgd20=0.2500	pgd20_avg=0.4208	time=3.71it/s
+2021-09-26 15:04:12,344 Eval Loss:0.9395	Eval acc: 68.86
+2021-09-26 15:04:13,728 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:04:13,728 
+2021-09-26 15:04:13,728 ====================Training Epoch 56====================
+2021-09-26 15:04:44,121 epoch=56	global_step=21900	acc=0.4453	acc_avg=0.4771	loss=1.3568	loss_avg=1.3894	lr=0.1000	|gn|=1.1842	time=2.08it/s
+2021-09-26 15:05:33,489 epoch=56	global_step=22000	acc=0.4688	acc_avg=0.4767	loss=1.3809	loss_avg=1.3992	lr=0.1000	|gn|=1.1156	time=2.03it/s
+2021-09-26 15:06:22,915 epoch=56	global_step=22100	acc=0.4766	acc_avg=0.4735	loss=1.4019	loss_avg=1.4041	lr=0.1000	|gn|=1.2303	time=1.91it/s
+2021-09-26 15:07:12,143 epoch=56	global_step=22200	acc=0.4922	acc_avg=0.4729	loss=1.2921	loss_avg=1.4046	lr=0.1000	|gn|=1.0417	time=2.08it/s
+2021-09-26 15:07:26,498 ====================Eval Epoch 56====================
+2021-09-26 15:08:58,008 epoch=56	global_step=39	acc=0.6250	acc_avg=0.6996	acc5=1.0000	acc5_avg=0.9829	loss=0.7809	loss_avg=0.8955	_acc=0.6250	_acc_avg=0.6996	pgd20=0.4375	pgd20_avg=0.4400	time=3.78it/s
+2021-09-26 15:08:58,009 Eval Loss:0.8955	Eval acc: 69.96
+2021-09-26 15:08:58,336 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:08:58,337 
+2021-09-26 15:08:58,337 ====================Training Epoch 57====================
+2021-09-26 15:09:34,070 epoch=57	global_step=22300	acc=0.4453	acc_avg=0.4759	loss=1.3363	loss_avg=1.3883	lr=0.1000	|gn|=1.1363	time=1.91it/s
+2021-09-26 15:10:23,565 epoch=57	global_step=22400	acc=0.4297	acc_avg=0.4764	loss=1.5930	loss_avg=1.3891	lr=0.1000	|gn|=1.3838	time=2.02it/s
+2021-09-26 15:11:12,903 epoch=57	global_step=22500	acc=0.4609	acc_avg=0.4726	loss=1.5023	loss_avg=1.4009	lr=0.1000	|gn|=1.1108	time=1.97it/s
+2021-09-26 15:12:02,361 epoch=57	global_step=22600	acc=0.4766	acc_avg=0.4715	loss=1.4508	loss_avg=1.4059	lr=0.1000	|gn|=1.0761	time=2.06it/s
+2021-09-26 15:12:11,678 ====================Eval Epoch 57====================
+2021-09-26 15:13:43,048 epoch=57	global_step=39	acc=0.7500	acc_avg=0.6966	acc5=1.0000	acc5_avg=0.9790	loss=0.5896	loss_avg=0.9132	_acc=0.7500	_acc_avg=0.6966	pgd20=0.4375	pgd20_avg=0.4282	time=3.09it/s
+2021-09-26 15:13:43,049 Eval Loss:0.9132	Eval acc: 69.66
+2021-09-26 15:13:43,370 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:13:43,371 
+2021-09-26 15:13:43,371 ====================Training Epoch 58====================
+2021-09-26 15:14:24,141 epoch=58	global_step=22700	acc=0.4297	acc_avg=0.4834	loss=1.3753	loss_avg=1.3763	lr=0.1000	|gn|=1.3003	time=2.03it/s
+2021-09-26 15:15:13,280 epoch=58	global_step=22800	acc=0.4297	acc_avg=0.4744	loss=1.4773	loss_avg=1.3973	lr=0.1000	|gn|=1.3831	time=2.08it/s
+2021-09-26 15:16:02,358 epoch=58	global_step=22900	acc=0.4375	acc_avg=0.4730	loss=1.4892	loss_avg=1.4011	lr=0.1000	|gn|=1.2816	time=2.04it/s
+2021-09-26 15:16:51,680 epoch=58	global_step=23000	acc=0.3672	acc_avg=0.4710	loss=1.6194	loss_avg=1.4036	lr=0.1000	|gn|=1.2925	time=2.07it/s
+2021-09-26 15:16:56,122 ====================Eval Epoch 58====================
+2021-09-26 15:18:27,455 epoch=58	global_step=39	acc=0.8750	acc_avg=0.7037	acc5=1.0000	acc5_avg=0.9798	loss=0.5539	loss_avg=0.8878	_acc=0.8750	_acc_avg=0.7037	pgd20=0.5625	pgd20_avg=0.4417	time=3.73it/s
+2021-09-26 15:18:27,456 Eval Loss:0.8878	Eval acc: 70.37
+2021-09-26 15:18:27,776 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:18:27,776 
+2021-09-26 15:18:27,777 ====================Training Epoch 59====================
+2021-09-26 15:19:13,518 epoch=59	global_step=23100	acc=0.5078	acc_avg=0.4760	loss=1.2973	loss_avg=1.3848	lr=0.1000	|gn|=1.1672	time=1.91it/s
+2021-09-26 15:20:03,463 epoch=59	global_step=23200	acc=0.5156	acc_avg=0.4749	loss=1.3399	loss_avg=1.3932	lr=0.1000	|gn|=1.0514	time=2.07it/s
+2021-09-26 15:20:52,894 epoch=59	global_step=23300	acc=0.3906	acc_avg=0.4715	loss=1.5799	loss_avg=1.3998	lr=0.1000	|gn|=1.3597	time=1.97it/s
+2021-09-26 15:21:41,824 ====================Eval Epoch 59====================
+2021-09-26 15:23:13,120 epoch=59	global_step=39	acc=0.8750	acc_avg=0.7269	acc5=1.0000	acc5_avg=0.9804	loss=0.6270	loss_avg=0.8548	_acc=0.8750	_acc_avg=0.7269	pgd20=0.5625	pgd20_avg=0.4251	time=3.72it/s
+2021-09-26 15:23:13,121 Eval Loss:0.8548	Eval acc: 72.69
+2021-09-26 15:23:13,447 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:23:13,447 
+2021-09-26 15:23:13,448 ====================Training Epoch 60====================
+2021-09-26 15:23:14,516 epoch=60	global_step=23400	acc=0.5312	acc_avg=0.5312	loss=1.2621	loss_avg=1.2621	lr=0.1000	|gn|=1.0285	time=2.06it/s
+2021-09-26 15:24:03,900 epoch=60	global_step=23500	acc=0.4922	acc_avg=0.4769	loss=1.3093	loss_avg=1.3914	lr=0.1000	|gn|=1.0560	time=2.04it/s
+2021-09-26 15:24:53,557 epoch=60	global_step=23600	acc=0.4062	acc_avg=0.4743	loss=1.3910	loss_avg=1.3895	lr=0.1000	|gn|=1.2012	time=2.08it/s
+2021-09-26 15:25:43,049 epoch=60	global_step=23700	acc=0.5547	acc_avg=0.4727	loss=1.3365	loss_avg=1.3998	lr=0.1000	|gn|=1.0270	time=2.08it/s
+2021-09-26 15:26:26,870 ====================Eval Epoch 60====================
+2021-09-26 15:27:57,835 epoch=60	global_step=39	acc=0.7500	acc_avg=0.7018	acc5=1.0000	acc5_avg=0.9791	loss=0.6459	loss_avg=0.9197	_acc=0.7500	_acc_avg=0.7018	pgd20=0.5625	pgd20_avg=0.4388	time=3.82it/s
+2021-09-26 15:27:57,836 Eval Loss:0.9197	Eval acc: 70.18
+2021-09-26 15:27:58,148 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:27:58,148 
+2021-09-26 15:27:58,148 ====================Training Epoch 61====================
+2021-09-26 15:28:04,092 epoch=61	global_step=23800	acc=0.4531	acc_avg=0.4858	loss=1.4227	loss_avg=1.3634	lr=0.1000	|gn|=1.2692	time=2.04it/s
+2021-09-26 15:28:53,466 epoch=61	global_step=23900	acc=0.4453	acc_avg=0.4748	loss=1.4508	loss_avg=1.3869	lr=0.1000	|gn|=1.0885	time=2.08it/s
+2021-09-26 15:29:42,707 epoch=61	global_step=24000	acc=0.4766	acc_avg=0.4738	loss=1.4055	loss_avg=1.3908	lr=0.1000	|gn|=1.1443	time=1.99it/s
+2021-09-26 15:30:31,898 epoch=61	global_step=24100	acc=0.5234	acc_avg=0.4722	loss=1.3650	loss_avg=1.3946	lr=0.1000	|gn|=1.2320	time=2.08it/s
+2021-09-26 15:31:11,087 ====================Eval Epoch 61====================
+2021-09-26 15:32:42,353 epoch=61	global_step=39	acc=0.8750	acc_avg=0.6721	acc5=1.0000	acc5_avg=0.9757	loss=0.6046	loss_avg=0.9547	_acc=0.8750	_acc_avg=0.6721	pgd20=0.4375	pgd20_avg=0.4037	time=3.49it/s
+2021-09-26 15:32:42,354 Eval Loss:0.9547	Eval acc: 67.21
+2021-09-26 15:32:42,675 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:32:42,675 
+2021-09-26 15:32:42,675 ====================Training Epoch 62====================
+2021-09-26 15:32:53,516 epoch=62	global_step=24200	acc=0.4609	acc_avg=0.4766	loss=1.4373	loss_avg=1.3716	lr=0.1000	|gn|=1.3078	time=2.08it/s
+2021-09-26 15:33:42,719 epoch=62	global_step=24300	acc=0.5391	acc_avg=0.4782	loss=1.2876	loss_avg=1.3764	lr=0.1000	|gn|=1.2270	time=2.09it/s
+2021-09-26 15:34:32,354 epoch=62	global_step=24400	acc=0.4609	acc_avg=0.4729	loss=1.5275	loss_avg=1.3936	lr=0.1000	|gn|=1.2773	time=2.10it/s
+2021-09-26 15:35:21,458 epoch=62	global_step=24500	acc=0.4609	acc_avg=0.4729	loss=1.3983	loss_avg=1.3965	lr=0.1000	|gn|=1.2392	time=2.05it/s
+2021-09-26 15:35:55,270 ====================Eval Epoch 62====================
+2021-09-26 15:37:26,776 epoch=62	global_step=39	acc=0.7500	acc_avg=0.6824	acc5=1.0000	acc5_avg=0.9738	loss=0.9016	loss_avg=0.9399	_acc=0.7500	_acc_avg=0.6824	pgd20=0.3750	pgd20_avg=0.4184	time=3.77it/s
+2021-09-26 15:37:26,777 Eval Loss:0.9399	Eval acc: 68.24
+2021-09-26 15:37:27,159 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:37:27,160 
+2021-09-26 15:37:27,160 ====================Training Epoch 63====================
+2021-09-26 15:37:42,818 epoch=63	global_step=24600	acc=0.4766	acc_avg=0.4793	loss=1.4573	loss_avg=1.3801	lr=0.1000	|gn|=1.2689	time=2.07it/s
+2021-09-26 15:38:32,225 epoch=63	global_step=24700	acc=0.5078	acc_avg=0.4748	loss=1.4050	loss_avg=1.3889	lr=0.1000	|gn|=1.1676	time=2.05it/s
+2021-09-26 15:39:21,244 epoch=63	global_step=24800	acc=0.4141	acc_avg=0.4714	loss=1.4348	loss_avg=1.3965	lr=0.1000	|gn|=1.1141	time=2.06it/s
+2021-09-26 15:40:10,283 epoch=63	global_step=24900	acc=0.5391	acc_avg=0.4732	loss=1.2330	loss_avg=1.3971	lr=0.1000	|gn|=1.0125	time=2.08it/s
+2021-09-26 15:40:38,991 ====================Eval Epoch 63====================
+2021-09-26 15:42:10,039 epoch=63	global_step=39	acc=0.8750	acc_avg=0.6944	acc5=1.0000	acc5_avg=0.9775	loss=0.7362	loss_avg=0.9179	_acc=0.8750	_acc_avg=0.6944	pgd20=0.4375	pgd20_avg=0.4384	time=3.85it/s
+2021-09-26 15:42:10,040 Eval Loss:0.9179	Eval acc: 69.44
+2021-09-26 15:42:10,334 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:42:10,335 
+2021-09-26 15:42:10,335 ====================Training Epoch 64====================
+2021-09-26 15:42:30,842 epoch=64	global_step=25000	acc=0.4609	acc_avg=0.4708	loss=1.3328	loss_avg=1.3961	lr=0.1000	|gn|=1.0863	time=2.09it/s
+2021-09-26 15:43:20,064 epoch=64	global_step=25100	acc=0.4453	acc_avg=0.4748	loss=1.3657	loss_avg=1.3953	lr=0.1000	|gn|=1.1518	time=2.08it/s
+2021-09-26 15:44:08,814 epoch=64	global_step=25200	acc=0.4844	acc_avg=0.4747	loss=1.3920	loss_avg=1.3942	lr=0.1000	|gn|=1.2312	time=2.08it/s
+2021-09-26 15:44:57,893 epoch=64	global_step=25300	acc=0.4609	acc_avg=0.4750	loss=1.3745	loss_avg=1.3980	lr=0.1000	|gn|=1.1452	time=2.08it/s
+2021-09-26 15:45:21,951 ====================Eval Epoch 64====================
+2021-09-26 15:46:53,101 epoch=64	global_step=39	acc=0.8125	acc_avg=0.7140	acc5=1.0000	acc5_avg=0.9822	loss=0.6686	loss_avg=0.8785	_acc=0.8125	_acc_avg=0.7140	pgd20=0.5625	pgd20_avg=0.4271	time=3.74it/s
+2021-09-26 15:46:53,101 Eval Loss:0.8785	Eval acc: 71.40
+2021-09-26 15:46:53,432 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:46:53,432 
+2021-09-26 15:46:53,433 ====================Training Epoch 65====================
+2021-09-26 15:47:18,899 epoch=65	global_step=25400	acc=0.5000	acc_avg=0.4738	loss=1.2838	loss_avg=1.3871	lr=0.1000	|gn|=1.2288	time=1.99it/s
+2021-09-26 15:48:08,049 epoch=65	global_step=25500	acc=0.5000	acc_avg=0.4718	loss=1.4601	loss_avg=1.3865	lr=0.1000	|gn|=1.2305	time=2.07it/s
+2021-09-26 15:48:57,310 epoch=65	global_step=25600	acc=0.4766	acc_avg=0.4739	loss=1.3507	loss_avg=1.3923	lr=0.1000	|gn|=1.1650	time=1.98it/s
+2021-09-26 15:49:46,410 epoch=65	global_step=25700	acc=0.4766	acc_avg=0.4726	loss=1.4220	loss_avg=1.3967	lr=0.1000	|gn|=1.2384	time=2.08it/s
+2021-09-26 15:50:05,919 ====================Eval Epoch 65====================
+2021-09-26 15:51:37,592 epoch=65	global_step=39	acc=0.9375	acc_avg=0.7382	acc5=1.0000	acc5_avg=0.9801	loss=0.4458	loss_avg=0.8450	_acc=0.9375	_acc_avg=0.7382	pgd20=0.6875	pgd20_avg=0.4139	time=3.54it/s
+2021-09-26 15:51:37,592 Eval Loss:0.8450	Eval acc: 73.82
+2021-09-26 15:51:37,942 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:51:37,942 
+2021-09-26 15:51:37,943 ====================Training Epoch 66====================
+2021-09-26 15:52:08,603 epoch=66	global_step=25800	acc=0.5391	acc_avg=0.4758	loss=1.2616	loss_avg=1.3847	lr=0.1000	|gn|=1.0048	time=2.10it/s
+2021-09-26 15:52:58,021 epoch=66	global_step=25900	acc=0.4141	acc_avg=0.4723	loss=1.6074	loss_avg=1.3953	lr=0.1000	|gn|=1.2607	time=2.09it/s
+2021-09-26 15:53:47,263 epoch=66	global_step=26000	acc=0.4375	acc_avg=0.4702	loss=1.4717	loss_avg=1.4002	lr=0.1000	|gn|=1.1118	time=2.04it/s
+2021-09-26 15:54:36,473 epoch=66	global_step=26100	acc=0.5234	acc_avg=0.4712	loss=1.3228	loss_avg=1.4000	lr=0.1000	|gn|=0.9758	time=2.05it/s
+2021-09-26 15:54:50,985 ====================Eval Epoch 66====================
+2021-09-26 15:56:22,120 epoch=66	global_step=39	acc=0.7500	acc_avg=0.7292	acc5=1.0000	acc5_avg=0.9815	loss=0.6192	loss_avg=0.8532	_acc=0.7500	_acc_avg=0.7292	pgd20=0.3750	pgd20_avg=0.4444	time=3.71it/s
+2021-09-26 15:56:22,120 Eval Loss:0.8532	Eval acc: 72.92
+2021-09-26 15:56:22,419 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 15:56:22,419 
+2021-09-26 15:56:22,419 ====================Training Epoch 67====================
+2021-09-26 15:56:57,764 epoch=67	global_step=26200	acc=0.4453	acc_avg=0.4822	loss=1.3959	loss_avg=1.3622	lr=0.1000	|gn|=1.2265	time=2.07it/s
+2021-09-26 15:57:47,080 epoch=67	global_step=26300	acc=0.5078	acc_avg=0.4788	loss=1.3584	loss_avg=1.3813	lr=0.1000	|gn|=1.2814	time=2.08it/s
+2021-09-26 15:58:36,907 epoch=67	global_step=26400	acc=0.5625	acc_avg=0.4768	loss=1.2502	loss_avg=1.3902	lr=0.1000	|gn|=1.1353	time=2.08it/s
+2021-09-26 15:59:26,258 epoch=67	global_step=26500	acc=0.4531	acc_avg=0.4750	loss=1.4504	loss_avg=1.3952	lr=0.1000	|gn|=1.1946	time=2.06it/s
+2021-09-26 15:59:35,717 ====================Eval Epoch 67====================
+2021-09-26 16:01:07,292 epoch=67	global_step=39	acc=1.0000	acc_avg=0.7282	acc5=1.0000	acc5_avg=0.9833	loss=0.5026	loss_avg=0.8074	_acc=1.0000	_acc_avg=0.7282	pgd20=0.4375	pgd20_avg=0.4294	time=3.82it/s
+2021-09-26 16:01:07,293 Eval Loss:0.8074	Eval acc: 72.82
+2021-09-26 16:01:07,630 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:01:07,630 
+2021-09-26 16:01:07,630 ====================Training Epoch 68====================
+2021-09-26 16:01:48,068 epoch=68	global_step=26600	acc=0.5000	acc_avg=0.4831	loss=1.4342	loss_avg=1.3789	lr=0.1000	|gn|=1.2340	time=2.07it/s
+2021-09-26 16:02:37,443 epoch=68	global_step=26700	acc=0.4531	acc_avg=0.4781	loss=1.4165	loss_avg=1.3890	lr=0.1000	|gn|=1.1521	time=2.01it/s
+2021-09-26 16:03:26,764 epoch=68	global_step=26800	acc=0.5000	acc_avg=0.4761	loss=1.3827	loss_avg=1.3884	lr=0.1000	|gn|=1.3233	time=2.00it/s
+2021-09-26 16:04:16,280 epoch=68	global_step=26900	acc=0.3906	acc_avg=0.4742	loss=1.5052	loss_avg=1.3917	lr=0.1000	|gn|=1.2148	time=2.08it/s
+2021-09-26 16:04:20,701 ====================Eval Epoch 68====================
+2021-09-26 16:05:51,741 epoch=68	global_step=39	acc=0.8750	acc_avg=0.7312	acc5=1.0000	acc5_avg=0.9838	loss=0.5016	loss_avg=0.8835	_acc=0.8750	_acc_avg=0.7312	pgd20=0.6875	pgd20_avg=0.4507	time=3.61it/s
+2021-09-26 16:05:51,742 Eval Loss:0.8835	Eval acc: 73.12
+2021-09-26 16:05:52,054 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:05:52,054 
+2021-09-26 16:05:52,054 ====================Training Epoch 69====================
+2021-09-26 16:06:37,263 epoch=69	global_step=27000	acc=0.5938	acc_avg=0.4816	loss=1.2655	loss_avg=1.3841	lr=0.1000	|gn|=1.2312	time=2.07it/s
+2021-09-26 16:07:26,287 epoch=69	global_step=27100	acc=0.4922	acc_avg=0.4816	loss=1.3718	loss_avg=1.3826	lr=0.1000	|gn|=1.1736	time=2.03it/s
+2021-09-26 16:08:15,454 epoch=69	global_step=27200	acc=0.4688	acc_avg=0.4789	loss=1.4206	loss_avg=1.3864	lr=0.1000	|gn|=1.1585	time=2.07it/s
+2021-09-26 16:09:03,830 ====================Eval Epoch 69====================
+2021-09-26 16:10:35,225 epoch=69	global_step=39	acc=0.9375	acc_avg=0.7163	acc5=1.0000	acc5_avg=0.9810	loss=0.5139	loss_avg=0.8606	_acc=0.9375	_acc_avg=0.7163	pgd20=0.6250	pgd20_avg=0.4314	time=3.62it/s
+2021-09-26 16:10:35,226 Eval Loss:0.8606	Eval acc: 71.63
+2021-09-26 16:10:35,544 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:10:35,544 
+2021-09-26 16:10:35,544 ====================Training Epoch 70====================
+2021-09-26 16:10:36,536 epoch=70	global_step=27300	acc=0.4922	acc_avg=0.4922	loss=1.3148	loss_avg=1.3148	lr=0.1000	|gn|=1.0306	time=2.05it/s
+2021-09-26 16:11:26,071 epoch=70	global_step=27400	acc=0.4453	acc_avg=0.4774	loss=1.3759	loss_avg=1.3718	lr=0.1000	|gn|=1.2821	time=2.05it/s
+2021-09-26 16:12:15,447 epoch=70	global_step=27500	acc=0.4375	acc_avg=0.4757	loss=1.4662	loss_avg=1.3862	lr=0.1000	|gn|=1.1719	time=2.00it/s
+2021-09-26 16:13:04,582 epoch=70	global_step=27600	acc=0.4062	acc_avg=0.4753	loss=1.5455	loss_avg=1.3912	lr=0.1000	|gn|=1.2074	time=2.02it/s
+2021-09-26 16:13:48,348 ====================Eval Epoch 70====================
+2021-09-26 16:15:19,724 epoch=70	global_step=39	acc=0.7500	acc_avg=0.6910	acc5=1.0000	acc5_avg=0.9772	loss=0.7045	loss_avg=0.9135	_acc=0.7500	_acc_avg=0.6910	pgd20=0.5000	pgd20_avg=0.4181	time=3.59it/s
+2021-09-26 16:15:19,725 Eval Loss:0.9135	Eval acc: 69.10
+2021-09-26 16:15:20,028 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:15:20,028 
+2021-09-26 16:15:20,028 ====================Training Epoch 71====================
+2021-09-26 16:15:25,880 epoch=71	global_step=27700	acc=0.4297	acc_avg=0.4943	loss=1.3795	loss_avg=1.3272	lr=0.1000	|gn|=1.1813	time=2.08it/s
+2021-09-26 16:16:15,383 epoch=71	global_step=27800	acc=0.5234	acc_avg=0.4780	loss=1.3579	loss_avg=1.3831	lr=0.1000	|gn|=1.1743	time=1.89it/s
+2021-09-26 16:17:04,850 epoch=71	global_step=27900	acc=0.4609	acc_avg=0.4760	loss=1.4982	loss_avg=1.3895	lr=0.1000	|gn|=1.2425	time=2.07it/s
+2021-09-26 16:17:54,214 epoch=71	global_step=28000	acc=0.4219	acc_avg=0.4751	loss=1.4678	loss_avg=1.3897	lr=0.1000	|gn|=1.4107	time=1.97it/s
+2021-09-26 16:18:33,273 ====================Eval Epoch 71====================
+2021-09-26 16:20:04,639 epoch=71	global_step=39	acc=0.8750	acc_avg=0.7078	acc5=1.0000	acc5_avg=0.9800	loss=0.6387	loss_avg=0.9154	_acc=0.8750	_acc_avg=0.7078	pgd20=0.5625	pgd20_avg=0.4367	time=3.84it/s
+2021-09-26 16:20:04,640 Eval Loss:0.9154	Eval acc: 70.78
+2021-09-26 16:20:05,001 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:20:05,001 
+2021-09-26 16:20:05,001 ====================Training Epoch 72====================
+2021-09-26 16:20:15,663 epoch=72	global_step=28100	acc=0.4688	acc_avg=0.4836	loss=1.3773	loss_avg=1.3780	lr=0.1000	|gn|=1.2661	time=2.07it/s
+2021-09-26 16:21:05,114 epoch=72	global_step=28200	acc=0.4375	acc_avg=0.4821	loss=1.4337	loss_avg=1.3719	lr=0.1000	|gn|=1.3029	time=1.99it/s
+2021-09-26 16:21:54,741 epoch=72	global_step=28300	acc=0.4766	acc_avg=0.4810	loss=1.3448	loss_avg=1.3796	lr=0.1000	|gn|=1.1015	time=1.97it/s
+2021-09-26 16:22:43,942 epoch=72	global_step=28400	acc=0.4297	acc_avg=0.4761	loss=1.4819	loss_avg=1.3895	lr=0.1000	|gn|=1.3946	time=1.95it/s
+2021-09-26 16:23:17,953 ====================Eval Epoch 72====================
+2021-09-26 16:24:48,869 epoch=72	global_step=39	acc=0.6250	acc_avg=0.7214	acc5=1.0000	acc5_avg=0.9794	loss=0.9153	loss_avg=0.8978	_acc=0.6250	_acc_avg=0.7214	pgd20=0.4375	pgd20_avg=0.4355	time=3.50it/s
+2021-09-26 16:24:48,870 Eval Loss:0.8978	Eval acc: 72.14
+2021-09-26 16:24:49,201 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:24:49,202 
+2021-09-26 16:24:49,202 ====================Training Epoch 73====================
+2021-09-26 16:25:04,963 epoch=73	global_step=28500	acc=0.5000	acc_avg=0.4756	loss=1.3729	loss_avg=1.3945	lr=0.1000	|gn|=1.0228	time=2.08it/s
+2021-09-26 16:25:54,371 epoch=73	global_step=28600	acc=0.5234	acc_avg=0.4783	loss=1.2757	loss_avg=1.3847	lr=0.1000	|gn|=0.9981	time=2.07it/s
+2021-09-26 16:26:43,556 epoch=73	global_step=28700	acc=0.5312	acc_avg=0.4755	loss=1.2849	loss_avg=1.3880	lr=0.1000	|gn|=1.2323	time=2.06it/s
+2021-09-26 16:27:32,647 epoch=73	global_step=28800	acc=0.5312	acc_avg=0.4764	loss=1.2034	loss_avg=1.3882	lr=0.1000	|gn|=1.0137	time=2.05it/s
+2021-09-26 16:28:01,606 ====================Eval Epoch 73====================
+2021-09-26 16:29:33,007 epoch=73	global_step=39	acc=0.8125	acc_avg=0.7100	acc5=1.0000	acc5_avg=0.9823	loss=0.5129	loss_avg=0.8804	_acc=0.8125	_acc_avg=0.7100	pgd20=0.6250	pgd20_avg=0.4225	time=3.47it/s
+2021-09-26 16:29:33,008 Eval Loss:0.8804	Eval acc: 71.00
+2021-09-26 16:29:33,358 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:29:33,359 
+2021-09-26 16:29:33,359 ====================Training Epoch 74====================
+2021-09-26 16:29:54,009 epoch=74	global_step=28900	acc=0.4844	acc_avg=0.4811	loss=1.3312	loss_avg=1.3623	lr=0.1000	|gn|=1.2871	time=2.08it/s
+2021-09-26 16:30:43,309 epoch=74	global_step=29000	acc=0.3906	acc_avg=0.4750	loss=1.5404	loss_avg=1.3918	lr=0.1000	|gn|=1.2845	time=2.07it/s
+2021-09-26 16:31:33,221 epoch=74	global_step=29100	acc=0.4922	acc_avg=0.4737	loss=1.2859	loss_avg=1.3945	lr=0.1000	|gn|=1.0816	time=1.96it/s
+2021-09-26 16:32:22,318 epoch=74	global_step=29200	acc=0.4453	acc_avg=0.4748	loss=1.3337	loss_avg=1.3919	lr=0.1000	|gn|=1.1863	time=1.95it/s
+2021-09-26 16:32:46,687 ====================Eval Epoch 74====================
+2021-09-26 16:34:18,155 epoch=74	global_step=39	acc=0.8750	acc_avg=0.7240	acc5=1.0000	acc5_avg=0.9821	loss=0.5526	loss_avg=0.8687	_acc=0.8750	_acc_avg=0.7240	pgd20=0.6250	pgd20_avg=0.4508	time=3.68it/s
+2021-09-26 16:34:18,155 Eval Loss:0.8687	Eval acc: 72.40
+2021-09-26 16:34:18,496 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:34:18,496 
+2021-09-26 16:34:18,496 ====================Training Epoch 75====================
+2021-09-26 16:34:44,390 epoch=75	global_step=29300	acc=0.5234	acc_avg=0.5101	loss=1.3107	loss_avg=1.3239	lr=0.0100	|gn|=1.1379	time=1.89it/s
+2021-09-26 16:35:33,924 epoch=75	global_step=29400	acc=0.5312	acc_avg=0.5254	loss=1.2213	loss_avg=1.2726	lr=0.0100	|gn|=1.2764	time=2.04it/s
+2021-09-26 16:36:23,728 epoch=75	global_step=29500	acc=0.6094	acc_avg=0.5275	loss=1.0513	loss_avg=1.2525	lr=0.0100	|gn|=1.0285	time=2.03it/s
+2021-09-26 16:37:13,656 epoch=75	global_step=29600	acc=0.5000	acc_avg=0.5317	loss=1.2529	loss_avg=1.2380	lr=0.0100	|gn|=1.2378	time=2.08it/s
+2021-09-26 16:37:33,063 ====================Eval Epoch 75====================
+2021-09-26 16:39:04,650 epoch=75	global_step=39	acc=0.8750	acc_avg=0.7897	acc5=1.0000	acc5_avg=0.9889	loss=0.4099	loss_avg=0.6761	_acc=0.8750	_acc_avg=0.7897	pgd20=0.7500	pgd20_avg=0.5113	time=3.73it/s
+2021-09-26 16:39:04,650 Eval Loss:0.6761	Eval acc: 78.97
+2021-09-26 16:39:04,989 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:39:04,989 
+2021-09-26 16:39:04,989 ====================Training Epoch 76====================
+2021-09-26 16:39:35,206 epoch=76	global_step=29700	acc=0.5625	acc_avg=0.5543	loss=1.2034	loss_avg=1.1677	lr=0.0100	|gn|=1.2411	time=2.02it/s
+2021-09-26 16:40:24,335 epoch=76	global_step=29800	acc=0.5547	acc_avg=0.5525	loss=1.2010	loss_avg=1.1652	lr=0.0100	|gn|=1.4172	time=2.03it/s
+2021-09-26 16:41:13,375 epoch=76	global_step=29900	acc=0.5703	acc_avg=0.5518	loss=1.0906	loss_avg=1.1685	lr=0.0100	|gn|=1.2570	time=2.08it/s
+2021-09-26 16:42:02,566 epoch=76	global_step=30000	acc=0.5469	acc_avg=0.5535	loss=1.2437	loss_avg=1.1653	lr=0.0100	|gn|=1.4271	time=2.07it/s
+2021-09-26 16:42:16,760 ====================Eval Epoch 76====================
+2021-09-26 16:43:47,996 epoch=76	global_step=39	acc=0.8750	acc_avg=0.7889	acc5=1.0000	acc5_avg=0.9886	loss=0.3920	loss_avg=0.6661	_acc=0.8750	_acc_avg=0.7889	pgd20=0.6875	pgd20_avg=0.5153	time=3.56it/s
+2021-09-26 16:43:47,998 Eval Loss:0.6661	Eval acc: 78.89
+2021-09-26 16:43:48,340 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:43:48,340 
+2021-09-26 16:43:48,341 ====================Training Epoch 77====================
+2021-09-26 16:44:23,984 epoch=77	global_step=30100	acc=0.6406	acc_avg=0.5638	loss=1.0017	loss_avg=1.1335	lr=0.0100	|gn|=1.3399	time=1.90it/s
+2021-09-26 16:45:13,115 epoch=77	global_step=30200	acc=0.5469	acc_avg=0.5634	loss=1.1361	loss_avg=1.1379	lr=0.0100	|gn|=1.6207	time=2.05it/s
+2021-09-26 16:46:02,268 epoch=77	global_step=30300	acc=0.5703	acc_avg=0.5623	loss=1.2122	loss_avg=1.1355	lr=0.0100	|gn|=1.5634	time=1.95it/s
+2021-09-26 16:46:51,476 epoch=77	global_step=30400	acc=0.5234	acc_avg=0.5630	loss=1.2118	loss_avg=1.1368	lr=0.0100	|gn|=1.4806	time=2.05it/s
+2021-09-26 16:47:00,809 ====================Eval Epoch 77====================
+2021-09-26 16:48:32,593 epoch=77	global_step=39	acc=0.8750	acc_avg=0.7981	acc5=1.0000	acc5_avg=0.9886	loss=0.3932	loss_avg=0.6507	_acc=0.8750	_acc_avg=0.7981	pgd20=0.6875	pgd20_avg=0.5218	time=3.72it/s
+2021-09-26 16:48:32,593 Eval Loss:0.6507	Eval acc: 79.81
+2021-09-26 16:48:32,929 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:48:32,930 
+2021-09-26 16:48:32,930 ====================Training Epoch 78====================
+2021-09-26 16:49:13,552 epoch=78	global_step=30500	acc=0.5625	acc_avg=0.5753	loss=0.9578	loss_avg=1.0989	lr=0.0100	|gn|=1.3701	time=1.95it/s
+2021-09-26 16:50:03,320 epoch=78	global_step=30600	acc=0.5703	acc_avg=0.5721	loss=1.1641	loss_avg=1.1084	lr=0.0100	|gn|=1.6278	time=1.90it/s
+2021-09-26 16:50:52,980 epoch=78	global_step=30700	acc=0.5469	acc_avg=0.5706	loss=1.2538	loss_avg=1.1087	lr=0.0100	|gn|=1.5853	time=1.94it/s
+2021-09-26 16:51:42,644 epoch=78	global_step=30800	acc=0.5469	acc_avg=0.5698	loss=1.1768	loss_avg=1.1133	lr=0.0100	|gn|=1.4883	time=2.00it/s
+2021-09-26 16:51:47,101 ====================Eval Epoch 78====================
+2021-09-26 16:53:18,546 epoch=78	global_step=39	acc=0.9375	acc_avg=0.8009	acc5=1.0000	acc5_avg=0.9896	loss=0.3839	loss_avg=0.6419	_acc=0.9375	_acc_avg=0.8009	pgd20=0.6875	pgd20_avg=0.5207	time=3.44it/s
+2021-09-26 16:53:18,546 Eval Loss:0.6419	Eval acc: 80.09
+2021-09-26 16:53:18,815 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:53:18,815 
+2021-09-26 16:53:18,815 ====================Training Epoch 79====================
+2021-09-26 16:54:04,373 epoch=79	global_step=30900	acc=0.6094	acc_avg=0.5727	loss=0.9758	loss_avg=1.0932	lr=0.0100	|gn|=1.4651	time=1.95it/s
+2021-09-26 16:54:54,172 epoch=79	global_step=31000	acc=0.5781	acc_avg=0.5719	loss=1.0962	loss_avg=1.0969	lr=0.0100	|gn|=1.5430	time=1.98it/s
+2021-09-26 16:55:43,722 epoch=79	global_step=31100	acc=0.5078	acc_avg=0.5742	loss=1.1222	loss_avg=1.0940	lr=0.0100	|gn|=1.7185	time=2.08it/s
+2021-09-26 16:56:32,491 ====================Eval Epoch 79====================
+2021-09-26 16:58:04,087 epoch=79	global_step=39	acc=0.8750	acc_avg=0.8026	acc5=1.0000	acc5_avg=0.9893	loss=0.3885	loss_avg=0.6375	_acc=0.8750	_acc_avg=0.8026	pgd20=0.5625	pgd20_avg=0.5187	time=3.71it/s
+2021-09-26 16:58:04,087 Eval Loss:0.6375	Eval acc: 80.26
+2021-09-26 16:58:04,437 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 16:58:04,438 
+2021-09-26 16:58:04,438 ====================Training Epoch 80====================
+2021-09-26 16:58:05,411 epoch=80	global_step=31200	acc=0.5938	acc_avg=0.5938	loss=1.0397	loss_avg=1.0397	lr=0.0100	|gn|=1.6180	time=2.05it/s
+2021-09-26 16:58:54,913 epoch=80	global_step=31300	acc=0.5547	acc_avg=0.5891	loss=1.1494	loss_avg=1.0684	lr=0.0100	|gn|=1.9312	time=2.06it/s
+2021-09-26 16:59:44,676 epoch=80	global_step=31400	acc=0.6172	acc_avg=0.5873	loss=1.0060	loss_avg=1.0713	lr=0.0100	|gn|=1.7392	time=1.91it/s
+2021-09-26 17:00:34,465 epoch=80	global_step=31500	acc=0.5078	acc_avg=0.5827	loss=1.0894	loss_avg=1.0768	lr=0.0100	|gn|=1.6034	time=1.92it/s
+2021-09-26 17:01:18,409 ====================Eval Epoch 80====================
+2021-09-26 17:02:49,891 epoch=80	global_step=39	acc=0.9375	acc_avg=0.8060	acc5=1.0000	acc5_avg=0.9900	loss=0.3412	loss_avg=0.6271	_acc=0.9375	_acc_avg=0.8060	pgd20=0.6875	pgd20_avg=0.5177	time=3.12it/s
+2021-09-26 17:02:49,893 Eval Loss:0.6271	Eval acc: 80.60
+2021-09-26 17:02:50,186 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:02:50,186 
+2021-09-26 17:02:50,187 ====================Training Epoch 81====================
+2021-09-26 17:02:56,055 epoch=81	global_step=31600	acc=0.6172	acc_avg=0.5938	loss=1.0233	loss_avg=1.0630	lr=0.0100	|gn|=1.6673	time=1.92it/s
+2021-09-26 17:03:45,758 epoch=81	global_step=31700	acc=0.6406	acc_avg=0.5923	loss=1.0122	loss_avg=1.0559	lr=0.0100	|gn|=1.7635	time=1.91it/s
+2021-09-26 17:04:34,981 epoch=81	global_step=31800	acc=0.6016	acc_avg=0.5892	loss=0.9904	loss_avg=1.0579	lr=0.0100	|gn|=1.7445	time=2.07it/s
+2021-09-26 17:05:24,472 epoch=81	global_step=31900	acc=0.5078	acc_avg=0.5877	loss=1.2412	loss_avg=1.0637	lr=0.0100	|gn|=2.2329	time=2.05it/s
+2021-09-26 17:06:03,474 ====================Eval Epoch 81====================
+2021-09-26 17:07:35,172 epoch=81	global_step=39	acc=0.9375	acc_avg=0.8050	acc5=1.0000	acc5_avg=0.9889	loss=0.3767	loss_avg=0.6274	_acc=0.9375	_acc_avg=0.8050	pgd20=0.6250	pgd20_avg=0.5226	time=3.57it/s
+2021-09-26 17:07:35,173 Eval Loss:0.6274	Eval acc: 80.50
+2021-09-26 17:07:35,484 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:07:35,485 
+2021-09-26 17:07:35,485 ====================Training Epoch 82====================
+2021-09-26 17:07:46,328 epoch=82	global_step=32000	acc=0.5234	acc_avg=0.6057	loss=1.1169	loss_avg=1.0284	lr=0.0100	|gn|=2.1378	time=2.10it/s
+2021-09-26 17:08:35,620 epoch=82	global_step=32100	acc=0.5547	acc_avg=0.5903	loss=0.9792	loss_avg=1.0482	lr=0.0100	|gn|=1.4994	time=2.06it/s
+2021-09-26 17:09:25,064 epoch=82	global_step=32200	acc=0.5781	acc_avg=0.5928	loss=1.0555	loss_avg=1.0475	lr=0.0100	|gn|=2.0275	time=1.98it/s
+2021-09-26 17:10:14,392 epoch=82	global_step=32300	acc=0.5625	acc_avg=0.5918	loss=1.0499	loss_avg=1.0488	lr=0.0100	|gn|=2.0612	time=2.04it/s
+2021-09-26 17:10:48,283 ====================Eval Epoch 82====================
+2021-09-26 17:12:19,790 epoch=82	global_step=39	acc=0.8750	acc_avg=0.8040	acc5=1.0000	acc5_avg=0.9894	loss=0.3879	loss_avg=0.6162	_acc=0.8750	_acc_avg=0.8040	pgd20=0.6875	pgd20_avg=0.5167	time=3.54it/s
+2021-09-26 17:12:19,791 Eval Loss:0.6162	Eval acc: 80.40
+2021-09-26 17:12:20,062 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:12:20,062 
+2021-09-26 17:12:20,062 ====================Training Epoch 83====================
+2021-09-26 17:12:36,022 epoch=83	global_step=32400	acc=0.5469	acc_avg=0.6003	loss=1.1306	loss_avg=1.0170	lr=0.0100	|gn|=2.0111	time=2.01it/s
+2021-09-26 17:13:25,350 epoch=83	global_step=32500	acc=0.6016	acc_avg=0.5998	loss=1.1443	loss_avg=1.0233	lr=0.0100	|gn|=2.3880	time=2.08it/s
+2021-09-26 17:14:14,919 epoch=83	global_step=32600	acc=0.6406	acc_avg=0.6001	loss=0.9693	loss_avg=1.0284	lr=0.0100	|gn|=1.8551	time=2.05it/s
+2021-09-26 17:15:04,156 epoch=83	global_step=32700	acc=0.5859	acc_avg=0.5955	loss=1.0322	loss_avg=1.0382	lr=0.0100	|gn|=2.0006	time=2.06it/s
+2021-09-26 17:15:33,377 ====================Eval Epoch 83====================
+2021-09-26 17:17:04,557 epoch=83	global_step=39	acc=0.8750	acc_avg=0.8054	acc5=1.0000	acc5_avg=0.9900	loss=0.3926	loss_avg=0.6050	_acc=0.8750	_acc_avg=0.8054	pgd20=0.6875	pgd20_avg=0.5130	time=3.79it/s
+2021-09-26 17:17:04,558 Eval Loss:0.6050	Eval acc: 80.54
+2021-09-26 17:17:04,900 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:17:04,900 
+2021-09-26 17:17:04,900 ====================Training Epoch 84====================
+2021-09-26 17:17:25,559 epoch=84	global_step=32800	acc=0.5938	acc_avg=0.6002	loss=0.9659	loss_avg=1.0098	lr=0.0100	|gn|=2.0822	time=1.93it/s
+2021-09-26 17:18:15,509 epoch=84	global_step=32900	acc=0.5312	acc_avg=0.6022	loss=1.1353	loss_avg=1.0085	lr=0.0100	|gn|=2.1623	time=2.01it/s
+2021-09-26 17:19:04,920 epoch=84	global_step=33000	acc=0.6406	acc_avg=0.6004	loss=1.0593	loss_avg=1.0153	lr=0.0100	|gn|=2.1684	time=2.02it/s
+2021-09-26 17:19:54,048 epoch=84	global_step=33100	acc=0.5547	acc_avg=0.5998	loss=1.1477	loss_avg=1.0212	lr=0.0100	|gn|=2.4340	time=1.91it/s
+2021-09-26 17:20:18,200 ====================Eval Epoch 84====================
+2021-09-26 17:21:49,501 epoch=84	global_step=39	acc=0.9375	acc_avg=0.8013	acc5=1.0000	acc5_avg=0.9898	loss=0.3984	loss_avg=0.6177	_acc=0.9375	_acc_avg=0.8013	pgd20=0.7500	pgd20_avg=0.5143	time=3.71it/s
+2021-09-26 17:21:49,502 Eval Loss:0.6177	Eval acc: 80.13
+2021-09-26 17:21:49,786 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:21:49,786 
+2021-09-26 17:21:49,786 ====================Training Epoch 85====================
+2021-09-26 17:22:15,346 epoch=85	global_step=33200	acc=0.6250	acc_avg=0.6094	loss=0.9198	loss_avg=0.9898	lr=0.0100	|gn|=2.0451	time=2.07it/s
+2021-09-26 17:23:04,412 epoch=85	global_step=33300	acc=0.6016	acc_avg=0.6062	loss=1.0371	loss_avg=1.0013	lr=0.0100	|gn|=2.2873	time=1.92it/s
+2021-09-26 17:23:53,957 epoch=85	global_step=33400	acc=0.6250	acc_avg=0.6060	loss=1.0372	loss_avg=1.0077	lr=0.0100	|gn|=2.3528	time=2.07it/s
+2021-09-26 17:24:42,934 epoch=85	global_step=33500	acc=0.5938	acc_avg=0.6026	loss=1.0999	loss_avg=1.0139	lr=0.0100	|gn|=2.1480	time=2.09it/s
+2021-09-26 17:25:02,192 ====================Eval Epoch 85====================
+2021-09-26 17:26:33,625 epoch=85	global_step=39	acc=0.9375	acc_avg=0.8140	acc5=1.0000	acc5_avg=0.9902	loss=0.3017	loss_avg=0.5968	_acc=0.9375	_acc_avg=0.8140	pgd20=0.6875	pgd20_avg=0.5104	time=3.75it/s
+2021-09-26 17:26:33,626 Eval Loss:0.5968	Eval acc: 81.40
+2021-09-26 17:26:33,981 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:26:33,981 
+2021-09-26 17:26:33,982 ====================Training Epoch 86====================
+2021-09-26 17:27:04,948 epoch=86	global_step=33600	acc=0.5391	acc_avg=0.6112	loss=1.0829	loss_avg=0.9878	lr=0.0100	|gn|=2.2635	time=2.03it/s
+2021-09-26 17:27:54,404 epoch=86	global_step=33700	acc=0.5703	acc_avg=0.6126	loss=1.0547	loss_avg=0.9897	lr=0.0100	|gn|=2.7319	time=2.08it/s
+2021-09-26 17:28:43,850 epoch=86	global_step=33800	acc=0.5469	acc_avg=0.6086	loss=1.0504	loss_avg=0.9947	lr=0.0100	|gn|=2.6652	time=2.07it/s
+2021-09-26 17:29:32,843 epoch=86	global_step=33900	acc=0.5156	acc_avg=0.6061	loss=1.2070	loss_avg=1.0026	lr=0.0100	|gn|=2.7207	time=2.01it/s
+2021-09-26 17:29:47,216 ====================Eval Epoch 86====================
+2021-09-26 17:31:18,486 epoch=86	global_step=39	acc=0.9375	acc_avg=0.8065	acc5=1.0000	acc5_avg=0.9892	loss=0.3642	loss_avg=0.6052	_acc=0.9375	_acc_avg=0.8065	pgd20=0.6875	pgd20_avg=0.5079	time=3.32it/s
+2021-09-26 17:31:18,487 Eval Loss:0.6052	Eval acc: 80.65
+2021-09-26 17:31:18,788 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:31:18,788 
+2021-09-26 17:31:18,788 ====================Training Epoch 87====================
+2021-09-26 17:31:54,353 epoch=87	global_step=34000	acc=0.6016	acc_avg=0.6174	loss=1.0165	loss_avg=0.9776	lr=0.0100	|gn|=2.5561	time=2.01it/s
+2021-09-26 17:32:43,386 epoch=87	global_step=34100	acc=0.5234	acc_avg=0.6118	loss=1.1161	loss_avg=0.9809	lr=0.0100	|gn|=2.7929	time=2.06it/s
+2021-09-26 17:33:32,654 epoch=87	global_step=34200	acc=0.6172	acc_avg=0.6109	loss=0.9719	loss_avg=0.9845	lr=0.0100	|gn|=2.2624	time=2.07it/s
+2021-09-26 17:34:21,500 epoch=87	global_step=34300	acc=0.6094	acc_avg=0.6088	loss=0.9950	loss_avg=0.9926	lr=0.0100	|gn|=2.8233	time=2.08it/s
+2021-09-26 17:34:30,960 ====================Eval Epoch 87====================
+2021-09-26 17:36:02,139 epoch=87	global_step=39	acc=0.9375	acc_avg=0.8120	acc5=1.0000	acc5_avg=0.9890	loss=0.2995	loss_avg=0.5920	_acc=0.9375	_acc_avg=0.8120	pgd20=0.7500	pgd20_avg=0.5089	time=3.64it/s
+2021-09-26 17:36:02,139 Eval Loss:0.5920	Eval acc: 81.20
+2021-09-26 17:36:02,448 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:36:02,448 
+2021-09-26 17:36:02,448 ====================Training Epoch 88====================
+2021-09-26 17:36:43,210 epoch=88	global_step=34400	acc=0.6016	acc_avg=0.6170	loss=0.9293	loss_avg=0.9571	lr=0.0100	|gn|=2.4824	time=2.00it/s
+2021-09-26 17:37:32,377 epoch=88	global_step=34500	acc=0.6172	acc_avg=0.6174	loss=0.8952	loss_avg=0.9664	lr=0.0100	|gn|=2.4587	time=2.07it/s
+2021-09-26 17:38:21,629 epoch=88	global_step=34600	acc=0.6094	acc_avg=0.6143	loss=1.0265	loss_avg=0.9753	lr=0.0100	|gn|=2.7871	time=1.92it/s
+2021-09-26 17:39:10,436 epoch=88	global_step=34700	acc=0.5938	acc_avg=0.6121	loss=0.9117	loss_avg=0.9846	lr=0.0100	|gn|=2.2558	time=1.99it/s
+2021-09-26 17:39:14,979 ====================Eval Epoch 88====================
+2021-09-26 17:40:45,855 epoch=88	global_step=39	acc=0.9375	acc_avg=0.8080	acc5=1.0000	acc5_avg=0.9888	loss=0.3449	loss_avg=0.6072	_acc=0.9375	_acc_avg=0.8080	pgd20=0.6875	pgd20_avg=0.5066	time=3.68it/s
+2021-09-26 17:40:45,856 Eval Loss:0.6072	Eval acc: 80.80
+2021-09-26 17:40:46,158 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:40:46,158 
+2021-09-26 17:40:46,159 ====================Training Epoch 89====================
+2021-09-26 17:41:31,258 epoch=89	global_step=34800	acc=0.6641	acc_avg=0.6219	loss=0.8396	loss_avg=0.9487	lr=0.0100	|gn|=2.3264	time=1.98it/s
+2021-09-26 17:42:19,927 epoch=89	global_step=34900	acc=0.6016	acc_avg=0.6187	loss=0.9339	loss_avg=0.9607	lr=0.0100	|gn|=2.5474	time=2.07it/s
+2021-09-26 17:43:09,058 epoch=89	global_step=35000	acc=0.6562	acc_avg=0.6178	loss=0.9713	loss_avg=0.9679	lr=0.0100	|gn|=2.6795	time=2.08it/s
+2021-09-26 17:43:57,992 ====================Eval Epoch 89====================
+2021-09-26 17:45:29,440 epoch=89	global_step=39	acc=0.9375	acc_avg=0.8024	acc5=1.0000	acc5_avg=0.9890	loss=0.3248	loss_avg=0.6102	_acc=0.9375	_acc_avg=0.8024	pgd20=0.6875	pgd20_avg=0.5009	time=3.43it/s
+2021-09-26 17:45:29,441 Eval Loss:0.6102	Eval acc: 80.24
+2021-09-26 17:45:29,742 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:45:29,742 
+2021-09-26 17:45:29,742 ====================Training Epoch 90====================
+2021-09-26 17:45:30,809 epoch=90	global_step=35100	acc=0.5625	acc_avg=0.5625	loss=1.0029	loss_avg=1.0029	lr=0.0010	|gn|=2.5983	time=2.03it/s
+2021-09-26 17:46:20,413 epoch=90	global_step=35200	acc=0.6719	acc_avg=0.6407	loss=0.8355	loss_avg=0.9179	lr=0.0010	|gn|=2.1388	time=2.05it/s
+2021-09-26 17:47:09,907 epoch=90	global_step=35300	acc=0.6562	acc_avg=0.6404	loss=0.8649	loss_avg=0.9143	lr=0.0010	|gn|=2.5740	time=1.94it/s
+2021-09-26 17:47:58,949 epoch=90	global_step=35400	acc=0.6797	acc_avg=0.6447	loss=0.8175	loss_avg=0.9012	lr=0.0010	|gn|=2.3946	time=2.07it/s
+2021-09-26 17:48:43,081 ====================Eval Epoch 90====================
+2021-09-26 17:50:14,385 epoch=90	global_step=39	acc=0.9375	acc_avg=0.8194	acc5=1.0000	acc5_avg=0.9909	loss=0.3061	loss_avg=0.5594	_acc=0.9375	_acc_avg=0.8194	pgd20=0.8125	pgd20_avg=0.5186	time=3.81it/s
+2021-09-26 17:50:14,385 Eval Loss:0.5594	Eval acc: 81.94
+2021-09-26 17:50:14,640 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:50:14,640 
+2021-09-26 17:50:14,640 ====================Training Epoch 91====================
+2021-09-26 17:50:20,465 epoch=91	global_step=35500	acc=0.6719	acc_avg=0.6520	loss=0.8584	loss_avg=0.9009	lr=0.0010	|gn|=2.5766	time=2.04it/s
+2021-09-26 17:51:09,732 epoch=91	global_step=35600	acc=0.6562	acc_avg=0.6549	loss=0.7834	loss_avg=0.8726	lr=0.0010	|gn|=2.1244	time=2.06it/s
+2021-09-26 17:51:58,704 epoch=91	global_step=35700	acc=0.6719	acc_avg=0.6568	loss=0.8315	loss_avg=0.8678	lr=0.0010	|gn|=2.3404	time=2.05it/s
+2021-09-26 17:52:47,838 epoch=91	global_step=35800	acc=0.6562	acc_avg=0.6581	loss=0.8889	loss_avg=0.8621	lr=0.0010	|gn|=2.6685	time=2.09it/s
+2021-09-26 17:53:26,503 ====================Eval Epoch 91====================
+2021-09-26 17:54:57,572 epoch=91	global_step=39	acc=0.9375	acc_avg=0.8226	acc5=1.0000	acc5_avg=0.9911	loss=0.2898	loss_avg=0.5535	_acc=0.9375	_acc_avg=0.8226	pgd20=0.8125	pgd20_avg=0.5156	time=3.84it/s
+2021-09-26 17:54:57,573 Eval Loss:0.5535	Eval acc: 82.26
+2021-09-26 17:54:57,854 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:54:57,854 
+2021-09-26 17:54:57,854 ====================Training Epoch 92====================
+2021-09-26 17:55:08,592 epoch=92	global_step=35900	acc=0.6797	acc_avg=0.6589	loss=0.7780	loss_avg=0.8409	lr=0.0010	|gn|=2.3794	time=2.04it/s
+2021-09-26 17:55:58,135 epoch=92	global_step=36000	acc=0.6406	acc_avg=0.6588	loss=0.9655	loss_avg=0.8505	lr=0.0010	|gn|=2.8190	time=2.01it/s
+2021-09-26 17:56:47,632 epoch=92	global_step=36100	acc=0.6641	acc_avg=0.6592	loss=0.8606	loss_avg=0.8517	lr=0.0010	|gn|=2.7049	time=2.08it/s
+2021-09-26 17:57:36,950 epoch=92	global_step=36200	acc=0.7109	acc_avg=0.6592	loss=0.7738	loss_avg=0.8515	lr=0.0010	|gn|=2.4944	time=2.08it/s
+2021-09-26 17:58:10,865 ====================Eval Epoch 92====================
+2021-09-26 17:59:41,708 epoch=92	global_step=39	acc=0.9375	acc_avg=0.8225	acc5=1.0000	acc5_avg=0.9915	loss=0.2826	loss_avg=0.5504	_acc=0.9375	_acc_avg=0.8225	pgd20=0.8125	pgd20_avg=0.5121	time=3.61it/s
+2021-09-26 17:59:41,709 Eval Loss:0.5504	Eval acc: 82.25
+2021-09-26 17:59:42,048 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 17:59:42,048 
+2021-09-26 17:59:42,048 ====================Training Epoch 93====================
+2021-09-26 17:59:57,739 epoch=93	global_step=36300	acc=0.7266	acc_avg=0.6741	loss=0.7214	loss_avg=0.8131	lr=0.0010	|gn|=2.3272	time=2.06it/s
+2021-09-26 18:00:46,978 epoch=93	global_step=36400	acc=0.5859	acc_avg=0.6676	loss=0.9933	loss_avg=0.8255	lr=0.0010	|gn|=2.8062	time=1.99it/s
+2021-09-26 18:01:36,226 epoch=93	global_step=36500	acc=0.6797	acc_avg=0.6673	loss=0.7411	loss_avg=0.8300	lr=0.0010	|gn|=2.6253	time=2.09it/s
+2021-09-26 18:02:24,864 epoch=93	global_step=36600	acc=0.7109	acc_avg=0.6653	loss=0.7343	loss_avg=0.8354	lr=0.0010	|gn|=2.2501	time=2.02it/s
+2021-09-26 18:02:54,076 ====================Eval Epoch 93====================
+2021-09-26 18:04:25,738 epoch=93	global_step=39	acc=0.9375	acc_avg=0.8230	acc5=1.0000	acc5_avg=0.9915	loss=0.2857	loss_avg=0.5413	_acc=0.9375	_acc_avg=0.8230	pgd20=0.8750	pgd20_avg=0.5119	time=3.58it/s
+2021-09-26 18:04:25,739 Eval Loss:0.5413	Eval acc: 82.30
+2021-09-26 18:04:26,034 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:04:26,034 
+2021-09-26 18:04:26,034 ====================Training Epoch 94====================
+2021-09-26 18:04:46,852 epoch=94	global_step=36700	acc=0.6562	acc_avg=0.6707	loss=0.8473	loss_avg=0.8196	lr=0.0010	|gn|=2.8405	time=2.07it/s
+2021-09-26 18:05:36,216 epoch=94	global_step=36800	acc=0.6953	acc_avg=0.6695	loss=0.7725	loss_avg=0.8252	lr=0.0010	|gn|=2.5759	time=2.06it/s
+2021-09-26 18:06:25,612 epoch=94	global_step=36900	acc=0.6484	acc_avg=0.6710	loss=0.9090	loss_avg=0.8220	lr=0.0010	|gn|=2.9346	time=1.99it/s
+2021-09-26 18:07:14,820 epoch=94	global_step=37000	acc=0.6797	acc_avg=0.6700	loss=0.8117	loss_avg=0.8234	lr=0.0010	|gn|=2.6892	time=2.07it/s
+2021-09-26 18:07:39,193 ====================Eval Epoch 94====================
+2021-09-26 18:09:10,276 epoch=94	global_step=39	acc=0.9375	acc_avg=0.8221	acc5=1.0000	acc5_avg=0.9909	loss=0.2883	loss_avg=0.5437	_acc=0.9375	_acc_avg=0.8221	pgd20=0.8750	pgd20_avg=0.5091	time=3.65it/s
+2021-09-26 18:09:10,276 Eval Loss:0.5437	Eval acc: 82.21
+2021-09-26 18:09:10,648 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:09:10,648 
+2021-09-26 18:09:10,649 ====================Training Epoch 95====================
+2021-09-26 18:09:36,519 epoch=95	global_step=37100	acc=0.6406	acc_avg=0.6749	loss=0.8114	loss_avg=0.8034	lr=0.0010	|gn|=2.4926	time=2.03it/s
+2021-09-26 18:10:25,653 epoch=95	global_step=37200	acc=0.6875	acc_avg=0.6707	loss=0.7721	loss_avg=0.8164	lr=0.0010	|gn|=2.4565	time=2.09it/s
+2021-09-26 18:11:14,891 epoch=95	global_step=37300	acc=0.6797	acc_avg=0.6687	loss=0.7694	loss_avg=0.8240	lr=0.0010	|gn|=3.0131	time=2.06it/s
+2021-09-26 18:12:04,375 epoch=95	global_step=37400	acc=0.6484	acc_avg=0.6684	loss=0.9267	loss_avg=0.8217	lr=0.0010	|gn|=2.9556	time=2.06it/s
+2021-09-26 18:12:23,800 ====================Eval Epoch 95====================
+2021-09-26 18:13:55,494 epoch=95	global_step=39	acc=0.9375	acc_avg=0.8228	acc5=1.0000	acc5_avg=0.9907	loss=0.2910	loss_avg=0.5428	_acc=0.9375	_acc_avg=0.8228	pgd20=0.7500	pgd20_avg=0.5084	time=3.82it/s
+2021-09-26 18:13:55,495 Eval Loss:0.5428	Eval acc: 82.28
+2021-09-26 18:13:55,794 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:13:55,795 
+2021-09-26 18:13:55,795 ====================Training Epoch 96====================
+2021-09-26 18:14:26,068 epoch=96	global_step=37500	acc=0.7422	acc_avg=0.6730	loss=0.6768	loss_avg=0.8105	lr=0.0010	|gn|=2.2943	time=1.99it/s
+2021-09-26 18:15:15,251 epoch=96	global_step=37600	acc=0.6875	acc_avg=0.6732	loss=0.7937	loss_avg=0.8061	lr=0.0010	|gn|=2.8863	time=1.95it/s
+2021-09-26 18:16:04,869 epoch=96	global_step=37700	acc=0.6719	acc_avg=0.6754	loss=0.8410	loss_avg=0.8071	lr=0.0010	|gn|=2.9449	time=2.08it/s
+2021-09-26 18:16:54,072 epoch=96	global_step=37800	acc=0.6641	acc_avg=0.6722	loss=0.8089	loss_avg=0.8116	lr=0.0010	|gn|=2.4737	time=1.92it/s
+2021-09-26 18:17:08,277 ====================Eval Epoch 96====================
+2021-09-26 18:18:40,175 epoch=96	global_step=39	acc=0.9375	acc_avg=0.8229	acc5=1.0000	acc5_avg=0.9903	loss=0.2791	loss_avg=0.5443	_acc=0.9375	_acc_avg=0.8229	pgd20=0.7500	pgd20_avg=0.5048	time=3.60it/s
+2021-09-26 18:18:40,175 Eval Loss:0.5443	Eval acc: 82.29
+2021-09-26 18:18:40,559 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:18:40,559 
+2021-09-26 18:18:40,559 ====================Training Epoch 97====================
+2021-09-26 18:19:15,901 epoch=97	global_step=37900	acc=0.6953	acc_avg=0.6780	loss=0.7638	loss_avg=0.7940	lr=0.0010	|gn|=2.6268	time=2.08it/s
+2021-09-26 18:20:05,130 epoch=97	global_step=38000	acc=0.7344	acc_avg=0.6768	loss=0.6526	loss_avg=0.7962	lr=0.0010	|gn|=2.4818	time=1.92it/s
+2021-09-26 18:20:54,086 epoch=97	global_step=38100	acc=0.7188	acc_avg=0.6770	loss=0.7317	loss_avg=0.7985	lr=0.0010	|gn|=3.0591	time=2.06it/s
+2021-09-26 18:21:43,337 epoch=97	global_step=38200	acc=0.6406	acc_avg=0.6753	loss=0.8945	loss_avg=0.8038	lr=0.0010	|gn|=3.0994	time=2.07it/s
+2021-09-26 18:21:52,664 ====================Eval Epoch 97====================
+2021-09-26 18:23:23,370 epoch=97	global_step=39	acc=0.9375	acc_avg=0.8193	acc5=1.0000	acc5_avg=0.9911	loss=0.2892	loss_avg=0.5488	_acc=0.9375	_acc_avg=0.8193	pgd20=0.7500	pgd20_avg=0.5061	time=3.83it/s
+2021-09-26 18:23:23,371 Eval Loss:0.5488	Eval acc: 81.93
+2021-09-26 18:23:23,731 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:23:23,731 
+2021-09-26 18:23:23,731 ====================Training Epoch 98====================
+2021-09-26 18:24:04,039 epoch=98	global_step=38300	acc=0.7188	acc_avg=0.6853	loss=0.7292	loss_avg=0.7864	lr=0.0010	|gn|=3.2053	time=2.01it/s
+2021-09-26 18:24:53,344 epoch=98	global_step=38400	acc=0.7031	acc_avg=0.6843	loss=0.8633	loss_avg=0.7887	lr=0.0010	|gn|=3.5178	time=2.04it/s
+2021-09-26 18:25:42,467 epoch=98	global_step=38500	acc=0.7109	acc_avg=0.6806	loss=0.7120	loss_avg=0.7952	lr=0.0010	|gn|=2.5279	time=1.90it/s
+2021-09-26 18:26:31,449 epoch=98	global_step=38600	acc=0.6016	acc_avg=0.6787	loss=0.8822	loss_avg=0.7993	lr=0.0010	|gn|=3.3490	time=2.07it/s
+2021-09-26 18:26:35,908 ====================Eval Epoch 98====================
+2021-09-26 18:28:06,262 epoch=98	global_step=39	acc=0.9375	acc_avg=0.8225	acc5=1.0000	acc5_avg=0.9911	loss=0.2674	loss_avg=0.5451	_acc=0.9375	_acc_avg=0.8225	pgd20=0.8125	pgd20_avg=0.5068	time=3.81it/s
+2021-09-26 18:28:06,263 Eval Loss:0.5451	Eval acc: 82.25
+2021-09-26 18:28:06,563 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:28:06,563 
+2021-09-26 18:28:06,563 ====================Training Epoch 99====================
+2021-09-26 18:28:51,478 epoch=99	global_step=38700	acc=0.7812	acc_avg=0.6857	loss=0.6479	loss_avg=0.7776	lr=0.0010	|gn|=2.4210	time=2.06it/s
+2021-09-26 18:29:40,259 epoch=99	global_step=38800	acc=0.7188	acc_avg=0.6828	loss=0.7528	loss_avg=0.7847	lr=0.0010	|gn|=2.8892	time=2.07it/s
+2021-09-26 18:30:29,018 epoch=99	global_step=38900	acc=0.6875	acc_avg=0.6815	loss=0.7953	loss_avg=0.7899	lr=0.0010	|gn|=3.2173	time=2.07it/s
+2021-09-26 18:31:17,494 ====================Eval Epoch 99====================
+2021-09-26 18:32:47,928 epoch=99	global_step=39	acc=0.9375	acc_avg=0.8224	acc5=1.0000	acc5_avg=0.9909	loss=0.2778	loss_avg=0.5442	_acc=0.9375	_acc_avg=0.8224	pgd20=0.7500	pgd20_avg=0.5033	time=3.73it/s
+2021-09-26 18:32:47,929 Eval Loss:0.5442	Eval acc: 82.24
+2021-09-26 18:32:48,224 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:32:48,224 
+2021-09-26 18:32:48,224 ====================Training Epoch 100====================
+2021-09-26 18:32:49,315 epoch=100	global_step=39000	acc=0.6953	acc_avg=0.6953	loss=0.6917	loss_avg=0.6917	lr=0.0001	|gn|=2.6000	time=2.06it/s
+2021-09-26 18:33:38,147 epoch=100	global_step=39100	acc=0.6328	acc_avg=0.6940	loss=0.8195	loss_avg=0.7675	lr=0.0001	|gn|=3.1385	time=2.10it/s
+2021-09-26 18:34:27,037 epoch=100	global_step=39200	acc=0.6719	acc_avg=0.6885	loss=0.7705	loss_avg=0.7732	lr=0.0001	|gn|=3.0826	time=2.07it/s
+2021-09-26 18:35:15,956 epoch=100	global_step=39300	acc=0.7891	acc_avg=0.6884	loss=0.6269	loss_avg=0.7750	lr=0.0001	|gn|=2.8658	time=1.90it/s
+2021-09-26 18:35:59,519 ====================Eval Epoch 100====================
+2021-09-26 18:37:29,546 epoch=100	global_step=39	acc=0.9375	acc_avg=0.8236	acc5=1.0000	acc5_avg=0.9909	loss=0.2757	loss_avg=0.5408	_acc=0.9375	_acc_avg=0.8236	pgd20=0.8125	pgd20_avg=0.5017	time=3.77it/s
+2021-09-26 18:37:29,547 Eval Loss:0.5408	Eval acc: 82.36
+2021-09-26 18:37:30,154 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:37:30,155 
+2021-09-26 18:37:30,155 ====================Training Epoch 101====================
+2021-09-26 18:37:36,053 epoch=101	global_step=39400	acc=0.7266	acc_avg=0.6939	loss=0.7556	loss_avg=0.7617	lr=0.0001	|gn|=3.1122	time=2.05it/s
+2021-09-26 18:38:25,048 epoch=101	global_step=39500	acc=0.7656	acc_avg=0.6883	loss=0.7230	loss_avg=0.7655	lr=0.0001	|gn|=2.7725	time=1.99it/s
+2021-09-26 18:39:14,147 epoch=101	global_step=39600	acc=0.6875	acc_avg=0.6855	loss=0.6831	loss_avg=0.7716	lr=0.0001	|gn|=2.6041	time=2.08it/s
+2021-09-26 18:40:02,993 epoch=101	global_step=39700	acc=0.6953	acc_avg=0.6872	loss=0.7079	loss_avg=0.7709	lr=0.0001	|gn|=2.7026	time=2.06it/s
+2021-09-26 18:40:41,644 ====================Eval Epoch 101====================
+2021-09-26 18:42:11,752 epoch=101	global_step=39	acc=0.9375	acc_avg=0.8246	acc5=1.0000	acc5_avg=0.9911	loss=0.2737	loss_avg=0.5363	_acc=0.9375	_acc_avg=0.8246	pgd20=0.8125	pgd20_avg=0.5032	time=3.68it/s
+2021-09-26 18:42:11,753 Eval Loss:0.5363	Eval acc: 82.46
+2021-09-26 18:42:12,067 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:42:12,068 
+2021-09-26 18:42:12,068 ====================Training Epoch 102====================
+2021-09-26 18:42:22,822 epoch=102	global_step=39800	acc=0.7656	acc_avg=0.7024	loss=0.5780	loss_avg=0.7511	lr=0.0001	|gn|=2.0957	time=2.04it/s
+2021-09-26 18:43:11,779 epoch=102	global_step=39900	acc=0.7344	acc_avg=0.6949	loss=0.7866	loss_avg=0.7596	lr=0.0001	|gn|=2.8210	time=2.06it/s
+2021-09-26 18:44:00,717 epoch=102	global_step=40000	acc=0.6875	acc_avg=0.6889	loss=0.7729	loss_avg=0.7690	lr=0.0001	|gn|=3.3054	time=2.08it/s
+2021-09-26 18:44:49,563 epoch=102	global_step=40100	acc=0.6875	acc_avg=0.6910	loss=0.7651	loss_avg=0.7662	lr=0.0001	|gn|=2.7571	time=2.04it/s
+2021-09-26 18:45:23,397 ====================Eval Epoch 102====================
+2021-09-26 18:46:53,525 epoch=102	global_step=39	acc=0.9375	acc_avg=0.8250	acc5=1.0000	acc5_avg=0.9917	loss=0.2750	loss_avg=0.5380	_acc=0.9375	_acc_avg=0.8250	pgd20=0.8750	pgd20_avg=0.5023	time=3.68it/s
+2021-09-26 18:46:53,526 Eval Loss:0.5380	Eval acc: 82.50
+2021-09-26 18:46:53,834 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:46:53,834 
+2021-09-26 18:46:53,834 ====================Training Epoch 103====================
+2021-09-26 18:47:09,439 epoch=103	global_step=40200	acc=0.6719	acc_avg=0.6905	loss=0.7435	loss_avg=0.7729	lr=0.0001	|gn|=2.8177	time=2.08it/s
+2021-09-26 18:47:58,520 epoch=103	global_step=40300	acc=0.7031	acc_avg=0.6911	loss=0.7756	loss_avg=0.7668	lr=0.0001	|gn|=3.0424	time=2.08it/s
+2021-09-26 18:48:47,939 epoch=103	global_step=40400	acc=0.7109	acc_avg=0.6904	loss=0.6911	loss_avg=0.7658	lr=0.0001	|gn|=2.7881	time=2.08it/s
+2021-09-26 18:49:37,042 epoch=103	global_step=40500	acc=0.6797	acc_avg=0.6892	loss=0.8380	loss_avg=0.7676	lr=0.0001	|gn|=3.4894	time=2.07it/s
+2021-09-26 18:50:05,988 ====================Eval Epoch 103====================
+2021-09-26 18:51:36,311 epoch=103	global_step=39	acc=0.9375	acc_avg=0.8245	acc5=1.0000	acc5_avg=0.9912	loss=0.2754	loss_avg=0.5376	_acc=0.9375	_acc_avg=0.8245	pgd20=0.7500	pgd20_avg=0.4999	time=3.80it/s
+2021-09-26 18:51:36,312 Eval Loss:0.5376	Eval acc: 82.45
+2021-09-26 18:51:36,591 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:51:36,592 
+2021-09-26 18:51:36,592 ====================Training Epoch 104====================
+2021-09-26 18:51:57,293 epoch=104	global_step=40600	acc=0.7500	acc_avg=0.6961	loss=0.7146	loss_avg=0.7621	lr=0.0001	|gn|=2.9247	time=2.08it/s
+2021-09-26 18:52:46,363 epoch=104	global_step=40700	acc=0.6719	acc_avg=0.6939	loss=0.8032	loss_avg=0.7580	lr=0.0001	|gn|=3.1754	time=2.07it/s
+2021-09-26 18:53:35,319 epoch=104	global_step=40800	acc=0.6406	acc_avg=0.6900	loss=0.8735	loss_avg=0.7641	lr=0.0001	|gn|=3.5567	time=2.07it/s
+2021-09-26 18:54:24,429 epoch=104	global_step=40900	acc=0.7109	acc_avg=0.6897	loss=0.7177	loss_avg=0.7667	lr=0.0001	|gn|=2.8569	time=2.08it/s
+2021-09-26 18:54:48,408 ====================Eval Epoch 104====================
+2021-09-26 18:56:18,621 epoch=104	global_step=39	acc=0.9375	acc_avg=0.8238	acc5=1.0000	acc5_avg=0.9906	loss=0.2693	loss_avg=0.5356	_acc=0.9375	_acc_avg=0.8238	pgd20=0.8125	pgd20_avg=0.4998	time=3.69it/s
+2021-09-26 18:56:18,621 Eval Loss:0.5356	Eval acc: 82.38
+2021-09-26 18:56:18,884 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 18:56:18,884 
+2021-09-26 18:56:18,884 ====================Training Epoch 105====================
+2021-09-26 18:56:44,358 epoch=105	global_step=41000	acc=0.7031	acc_avg=0.6932	loss=0.6851	loss_avg=0.7643	lr=0.0001	|gn|=2.7552	time=1.89it/s
+2021-09-26 18:57:33,453 epoch=105	global_step=41100	acc=0.7266	acc_avg=0.6902	loss=0.7651	loss_avg=0.7691	lr=0.0001	|gn|=2.9483	time=2.05it/s
+2021-09-26 18:58:22,279 epoch=105	global_step=41200	acc=0.7500	acc_avg=0.6912	loss=0.7400	loss_avg=0.7655	lr=0.0001	|gn|=3.0755	time=2.08it/s
+2021-09-26 18:59:11,293 epoch=105	global_step=41300	acc=0.6641	acc_avg=0.6896	loss=0.8208	loss_avg=0.7675	lr=0.0001	|gn|=3.0494	time=2.05it/s
+2021-09-26 18:59:30,307 ====================Eval Epoch 105====================
+2021-09-26 19:01:00,358 epoch=105	global_step=39	acc=0.9375	acc_avg=0.8240	acc5=1.0000	acc5_avg=0.9914	loss=0.2697	loss_avg=0.5388	_acc=0.9375	_acc_avg=0.8240	pgd20=0.8125	pgd20_avg=0.5026	time=3.83it/s
+2021-09-26 19:01:00,358 Eval Loss:0.5388	Eval acc: 82.40
+2021-09-26 19:01:00,620 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:01:00,621 
+2021-09-26 19:01:00,621 ====================Training Epoch 106====================
+2021-09-26 19:01:31,114 epoch=106	global_step=41400	acc=0.7031	acc_avg=0.6966	loss=0.6942	loss_avg=0.7564	lr=0.0001	|gn|=2.4559	time=2.09it/s
+2021-09-26 19:02:19,966 epoch=106	global_step=41500	acc=0.6641	acc_avg=0.6923	loss=0.8064	loss_avg=0.7615	lr=0.0001	|gn|=3.0803	time=2.05it/s
+2021-09-26 19:03:09,004 epoch=106	global_step=41600	acc=0.7188	acc_avg=0.6912	loss=0.7425	loss_avg=0.7660	lr=0.0001	|gn|=2.8756	time=2.09it/s
+2021-09-26 19:03:57,724 epoch=106	global_step=41700	acc=0.7344	acc_avg=0.6927	loss=0.6729	loss_avg=0.7647	lr=0.0001	|gn|=2.6794	time=1.88it/s
+2021-09-26 19:04:11,938 ====================Eval Epoch 106====================
+2021-09-26 19:05:42,246 epoch=106	global_step=39	acc=0.9375	acc_avg=0.8243	acc5=1.0000	acc5_avg=0.9906	loss=0.2695	loss_avg=0.5369	_acc=0.9375	_acc_avg=0.8243	pgd20=0.8750	pgd20_avg=0.5006	time=3.75it/s
+2021-09-26 19:05:42,247 Eval Loss:0.5369	Eval acc: 82.43
+2021-09-26 19:05:42,508 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:05:42,508 
+2021-09-26 19:05:42,508 ====================Training Epoch 107====================
+2021-09-26 19:06:17,943 epoch=107	global_step=41800	acc=0.6641	acc_avg=0.6952	loss=0.7710	loss_avg=0.7570	lr=0.0001	|gn|=2.7572	time=2.10it/s
+2021-09-26 19:07:06,942 epoch=107	global_step=41900	acc=0.6797	acc_avg=0.6937	loss=0.8886	loss_avg=0.7614	lr=0.0001	|gn|=3.4140	time=2.07it/s
+2021-09-26 19:07:55,963 epoch=107	global_step=42000	acc=0.7031	acc_avg=0.6914	loss=0.7485	loss_avg=0.7648	lr=0.0001	|gn|=3.0595	time=2.06it/s
+2021-09-26 19:08:45,181 epoch=107	global_step=42100	acc=0.7266	acc_avg=0.6930	loss=0.6898	loss_avg=0.7607	lr=0.0001	|gn|=2.9893	time=1.95it/s
+2021-09-26 19:08:54,474 ====================Eval Epoch 107====================
+2021-09-26 19:10:24,882 epoch=107	global_step=39	acc=0.9375	acc_avg=0.8240	acc5=1.0000	acc5_avg=0.9909	loss=0.2796	loss_avg=0.5375	_acc=0.9375	_acc_avg=0.8240	pgd20=0.8125	pgd20_avg=0.5008	time=3.76it/s
+2021-09-26 19:10:24,883 Eval Loss:0.5375	Eval acc: 82.40
+2021-09-26 19:10:25,185 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:10:25,185 
+2021-09-26 19:10:25,185 ====================Training Epoch 108====================
+2021-09-26 19:11:05,545 epoch=108	global_step=42200	acc=0.6562	acc_avg=0.6934	loss=0.7099	loss_avg=0.7571	lr=0.0001	|gn|=2.8610	time=2.09it/s
+2021-09-26 19:11:54,697 epoch=108	global_step=42300	acc=0.7109	acc_avg=0.6922	loss=0.7037	loss_avg=0.7576	lr=0.0001	|gn|=2.5792	time=1.98it/s
+2021-09-26 19:12:43,760 epoch=108	global_step=42400	acc=0.6719	acc_avg=0.6917	loss=0.7627	loss_avg=0.7609	lr=0.0001	|gn|=3.5155	time=2.09it/s
+2021-09-26 19:13:32,495 epoch=108	global_step=42500	acc=0.6953	acc_avg=0.6930	loss=0.8086	loss_avg=0.7604	lr=0.0001	|gn|=3.2822	time=2.08it/s
+2021-09-26 19:13:36,943 ====================Eval Epoch 108====================
+2021-09-26 19:15:07,145 epoch=108	global_step=39	acc=0.9375	acc_avg=0.8247	acc5=1.0000	acc5_avg=0.9911	loss=0.2719	loss_avg=0.5356	_acc=0.9375	_acc_avg=0.8247	pgd20=0.8125	pgd20_avg=0.4984	time=3.72it/s
+2021-09-26 19:15:07,146 Eval Loss:0.5356	Eval acc: 82.47
+2021-09-26 19:15:07,531 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:15:07,531 
+2021-09-26 19:15:07,531 ====================Training Epoch 109====================
+2021-09-26 19:15:52,480 epoch=109	global_step=42600	acc=0.7109	acc_avg=0.6892	loss=0.7996	loss_avg=0.7669	lr=0.0001	|gn|=3.4579	time=2.07it/s
+2021-09-26 19:16:41,009 epoch=109	global_step=42700	acc=0.6797	acc_avg=0.6899	loss=0.7223	loss_avg=0.7624	lr=0.0001	|gn|=2.9946	time=2.08it/s
+2021-09-26 19:17:29,985 epoch=109	global_step=42800	acc=0.7656	acc_avg=0.6906	loss=0.6385	loss_avg=0.7617	lr=0.0001	|gn|=2.8604	time=2.08it/s
+2021-09-26 19:18:18,167 ====================Eval Epoch 109====================
+2021-09-26 19:19:48,227 epoch=109	global_step=39	acc=0.9375	acc_avg=0.8244	acc5=1.0000	acc5_avg=0.9911	loss=0.2674	loss_avg=0.5344	_acc=0.9375	_acc_avg=0.8244	pgd20=0.8125	pgd20_avg=0.4974	time=3.55it/s
+2021-09-26 19:19:48,227 Eval Loss:0.5344	Eval acc: 82.44
+2021-09-26 19:19:48,510 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:19:48,510 
+2021-09-26 19:19:48,510 ====================Training Epoch 110====================
+2021-09-26 19:19:49,610 epoch=110	global_step=42900	acc=0.6406	acc_avg=0.6406	loss=0.8534	loss_avg=0.8534	lr=0.0001	|gn|=3.5223	time=2.05it/s
+2021-09-26 19:20:38,198 epoch=110	global_step=43000	acc=0.6484	acc_avg=0.6979	loss=0.8137	loss_avg=0.7434	lr=0.0001	|gn|=3.3961	time=2.08it/s
+2021-09-26 19:21:26,975 epoch=110	global_step=43100	acc=0.7500	acc_avg=0.6927	loss=0.6601	loss_avg=0.7559	lr=0.0001	|gn|=2.8372	time=2.08it/s
+2021-09-26 19:22:15,616 epoch=110	global_step=43200	acc=0.7188	acc_avg=0.6911	loss=0.7424	loss_avg=0.7613	lr=0.0001	|gn|=3.0553	time=2.08it/s
+2021-09-26 19:22:59,101 ====================Eval Epoch 110====================
+2021-09-26 19:24:29,173 epoch=110	global_step=39	acc=0.9375	acc_avg=0.8233	acc5=1.0000	acc5_avg=0.9908	loss=0.2783	loss_avg=0.5408	_acc=0.9375	_acc_avg=0.8233	pgd20=0.7500	pgd20_avg=0.5013	time=3.78it/s
+2021-09-26 19:24:29,174 Eval Loss:0.5408	Eval acc: 82.33
+2021-09-26 19:24:29,544 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:24:29,544 
+2021-09-26 19:24:29,544 ====================Training Epoch 111====================
+2021-09-26 19:24:35,366 epoch=111	global_step=43300	acc=0.6484	acc_avg=0.6974	loss=0.8705	loss_avg=0.7582	lr=0.0001	|gn|=3.5939	time=2.06it/s
+2021-09-26 19:25:24,381 epoch=111	global_step=43400	acc=0.6719	acc_avg=0.6928	loss=0.8041	loss_avg=0.7528	lr=0.0001	|gn|=2.8733	time=2.04it/s
+2021-09-26 19:26:13,722 epoch=111	global_step=43500	acc=0.7656	acc_avg=0.6942	loss=0.6238	loss_avg=0.7548	lr=0.0001	|gn|=2.7641	time=2.03it/s
+2021-09-26 19:27:02,602 epoch=111	global_step=43600	acc=0.6953	acc_avg=0.6949	loss=0.7925	loss_avg=0.7557	lr=0.0001	|gn|=2.9318	time=2.07it/s
+2021-09-26 19:27:41,403 ====================Eval Epoch 111====================
+2021-09-26 19:29:11,724 epoch=111	global_step=39	acc=0.9375	acc_avg=0.8254	acc5=1.0000	acc5_avg=0.9908	loss=0.2651	loss_avg=0.5347	_acc=0.9375	_acc_avg=0.8254	pgd20=0.8125	pgd20_avg=0.4971	time=3.57it/s
+2021-09-26 19:29:11,725 Eval Loss:0.5347	Eval acc: 82.54
+2021-09-26 19:29:12,088 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:29:12,088 
+2021-09-26 19:29:12,088 ====================Training Epoch 112====================
+2021-09-26 19:29:22,866 epoch=112	global_step=43700	acc=0.6797	acc_avg=0.6882	loss=0.8118	loss_avg=0.7544	lr=0.0001	|gn|=3.3038	time=2.08it/s
+2021-09-26 19:30:11,526 epoch=112	global_step=43800	acc=0.7188	acc_avg=0.6879	loss=0.7114	loss_avg=0.7632	lr=0.0001	|gn|=3.0727	time=2.08it/s
+2021-09-26 19:31:00,392 epoch=112	global_step=43900	acc=0.6328	acc_avg=0.6867	loss=0.8651	loss_avg=0.7648	lr=0.0001	|gn|=3.3519	time=2.06it/s
+2021-09-26 19:31:49,253 epoch=112	global_step=44000	acc=0.6250	acc_avg=0.6898	loss=0.8832	loss_avg=0.7612	lr=0.0001	|gn|=3.4263	time=2.09it/s
+2021-09-26 19:32:23,013 ====================Eval Epoch 112====================
+2021-09-26 19:33:53,062 epoch=112	global_step=39	acc=0.9375	acc_avg=0.8242	acc5=1.0000	acc5_avg=0.9913	loss=0.2837	loss_avg=0.5387	_acc=0.9375	_acc_avg=0.8242	pgd20=0.7500	pgd20_avg=0.4989	time=3.73it/s
+2021-09-26 19:33:53,062 Eval Loss:0.5387	Eval acc: 82.42
+2021-09-26 19:33:53,357 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:33:53,357 
+2021-09-26 19:33:53,357 ====================Training Epoch 113====================
+2021-09-26 19:34:09,058 epoch=113	global_step=44100	acc=0.6406	acc_avg=0.6847	loss=0.8404	loss_avg=0.7739	lr=0.0001	|gn|=3.4756	time=2.07it/s
+2021-09-26 19:34:57,947 epoch=113	global_step=44200	acc=0.7109	acc_avg=0.6914	loss=0.7249	loss_avg=0.7613	lr=0.0001	|gn|=3.1844	time=2.07it/s
+2021-09-26 19:35:46,700 epoch=113	global_step=44300	acc=0.6641	acc_avg=0.6941	loss=0.7760	loss_avg=0.7564	lr=0.0001	|gn|=3.0942	time=1.97it/s
+2021-09-26 19:36:35,486 epoch=113	global_step=44400	acc=0.6328	acc_avg=0.6934	loss=0.8280	loss_avg=0.7578	lr=0.0001	|gn|=3.4898	time=2.08it/s
+2021-09-26 19:37:04,150 ====================Eval Epoch 113====================
+2021-09-26 19:38:34,207 epoch=113	global_step=39	acc=0.9375	acc_avg=0.8254	acc5=1.0000	acc5_avg=0.9914	loss=0.2737	loss_avg=0.5327	_acc=0.9375	_acc_avg=0.8254	pgd20=0.8125	pgd20_avg=0.4984	time=3.79it/s
+2021-09-26 19:38:34,208 Eval Loss:0.5327	Eval acc: 82.54
+2021-09-26 19:38:34,576 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:38:34,576 
+2021-09-26 19:38:34,576 ====================Training Epoch 114====================
+2021-09-26 19:38:55,177 epoch=114	global_step=44500	acc=0.7188	acc_avg=0.6862	loss=0.7389	loss_avg=0.7570	lr=0.0001	|gn|=3.1893	time=2.09it/s
+2021-09-26 19:39:44,442 epoch=114	global_step=44600	acc=0.6875	acc_avg=0.6936	loss=0.6878	loss_avg=0.7545	lr=0.0001	|gn|=2.6423	time=1.94it/s
+2021-09-26 19:40:33,405 epoch=114	global_step=44700	acc=0.7266	acc_avg=0.6925	loss=0.6660	loss_avg=0.7555	lr=0.0001	|gn|=2.6379	time=2.08it/s
+2021-09-26 19:41:22,355 epoch=114	global_step=44800	acc=0.6406	acc_avg=0.6921	loss=0.8437	loss_avg=0.7580	lr=0.0001	|gn|=3.5124	time=2.08it/s
+2021-09-26 19:41:46,392 ====================Eval Epoch 114====================
+2021-09-26 19:43:16,557 epoch=114	global_step=39	acc=0.9375	acc_avg=0.8232	acc5=1.0000	acc5_avg=0.9909	loss=0.2668	loss_avg=0.5361	_acc=0.9375	_acc_avg=0.8232	pgd20=0.8125	pgd20_avg=0.4970	time=3.75it/s
+2021-09-26 19:43:16,558 Eval Loss:0.5361	Eval acc: 82.32
+2021-09-26 19:43:16,870 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:43:16,870 
+2021-09-26 19:43:16,871 ====================Training Epoch 115====================
+2021-09-26 19:43:42,328 epoch=115	global_step=44900	acc=0.6875	acc_avg=0.6919	loss=0.7564	loss_avg=0.7593	lr=0.0001	|gn|=2.5554	time=2.10it/s
+2021-09-26 19:44:30,992 epoch=115	global_step=45000	acc=0.6484	acc_avg=0.6894	loss=0.8328	loss_avg=0.7583	lr=0.0001	|gn|=3.4793	time=2.07it/s
+2021-09-26 19:45:19,854 epoch=115	global_step=45100	acc=0.7031	acc_avg=0.6921	loss=0.6736	loss_avg=0.7551	lr=0.0001	|gn|=2.9477	time=1.95it/s
+2021-09-26 19:46:08,591 epoch=115	global_step=45200	acc=0.7500	acc_avg=0.6921	loss=0.7179	loss_avg=0.7558	lr=0.0001	|gn|=3.2951	time=1.96it/s
+2021-09-26 19:46:27,765 ====================Eval Epoch 115====================
+2021-09-26 19:47:58,088 epoch=115	global_step=39	acc=0.9375	acc_avg=0.8240	acc5=1.0000	acc5_avg=0.9912	loss=0.2712	loss_avg=0.5361	_acc=0.9375	_acc_avg=0.8240	pgd20=0.8125	pgd20_avg=0.4985	time=3.73it/s
+2021-09-26 19:47:58,089 Eval Loss:0.5361	Eval acc: 82.40
+2021-09-26 19:47:58,443 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:47:58,443 
+2021-09-26 19:47:58,443 ====================Training Epoch 116====================
+2021-09-26 19:48:28,765 epoch=116	global_step=45300	acc=0.7656	acc_avg=0.6889	loss=0.6923	loss_avg=0.7674	lr=0.0001	|gn|=3.0713	time=2.10it/s
+2021-09-26 19:49:17,587 epoch=116	global_step=45400	acc=0.6797	acc_avg=0.6888	loss=0.8250	loss_avg=0.7635	lr=0.0001	|gn|=3.2497	time=2.09it/s
+2021-09-26 19:50:06,500 epoch=116	global_step=45500	acc=0.6641	acc_avg=0.6918	loss=0.7883	loss_avg=0.7592	lr=0.0001	|gn|=3.3690	time=2.07it/s
+2021-09-26 19:50:55,269 epoch=116	global_step=45600	acc=0.7031	acc_avg=0.6916	loss=0.7932	loss_avg=0.7577	lr=0.0001	|gn|=3.5458	time=2.08it/s
+2021-09-26 19:51:09,379 ====================Eval Epoch 116====================
+2021-09-26 19:52:39,512 epoch=116	global_step=39	acc=0.9375	acc_avg=0.8236	acc5=1.0000	acc5_avg=0.9903	loss=0.2699	loss_avg=0.5371	_acc=0.9375	_acc_avg=0.8236	pgd20=0.8125	pgd20_avg=0.4997	time=3.76it/s
+2021-09-26 19:52:39,513 Eval Loss:0.5371	Eval acc: 82.36
+2021-09-26 19:52:39,855 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:52:39,855 
+2021-09-26 19:52:39,855 ====================Training Epoch 117====================
+2021-09-26 19:53:15,218 epoch=117	global_step=45700	acc=0.7109	acc_avg=0.6843	loss=0.7561	loss_avg=0.7686	lr=0.0001	|gn|=2.8857	time=2.06it/s
+2021-09-26 19:54:04,075 epoch=117	global_step=45800	acc=0.7031	acc_avg=0.6933	loss=0.7339	loss_avg=0.7563	lr=0.0001	|gn|=3.2163	time=1.90it/s
+2021-09-26 19:54:53,020 epoch=117	global_step=45900	acc=0.6875	acc_avg=0.6912	loss=0.7776	loss_avg=0.7584	lr=0.0001	|gn|=3.0721	time=2.07it/s
+2021-09-26 19:55:41,909 epoch=117	global_step=46000	acc=0.6953	acc_avg=0.6927	loss=0.7390	loss_avg=0.7545	lr=0.0001	|gn|=3.0617	time=2.08it/s
+2021-09-26 19:55:51,393 ====================Eval Epoch 117====================
+2021-09-26 19:57:21,341 epoch=117	global_step=39	acc=0.9375	acc_avg=0.8238	acc5=1.0000	acc5_avg=0.9915	loss=0.2724	loss_avg=0.5360	_acc=0.9375	_acc_avg=0.8238	pgd20=0.8125	pgd20_avg=0.4998	time=3.83it/s
+2021-09-26 19:57:21,342 Eval Loss:0.5360	Eval acc: 82.38
+2021-09-26 19:57:21,740 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 19:57:21,741 
+2021-09-26 19:57:21,741 ====================Training Epoch 118====================
+2021-09-26 19:58:01,919 epoch=118	global_step=46100	acc=0.7109	acc_avg=0.6899	loss=0.7313	loss_avg=0.7584	lr=0.0001	|gn|=2.9427	time=2.01it/s
+2021-09-26 19:58:50,787 epoch=118	global_step=46200	acc=0.7656	acc_avg=0.6937	loss=0.6735	loss_avg=0.7522	lr=0.0001	|gn|=3.0181	time=2.06it/s
+2021-09-26 19:59:39,411 epoch=118	global_step=46300	acc=0.7500	acc_avg=0.6930	loss=0.6503	loss_avg=0.7513	lr=0.0001	|gn|=3.0066	time=2.07it/s
+2021-09-26 20:00:28,213 epoch=118	global_step=46400	acc=0.6797	acc_avg=0.6932	loss=0.6814	loss_avg=0.7521	lr=0.0001	|gn|=2.7980	time=2.06it/s
+2021-09-26 20:00:32,687 ====================Eval Epoch 118====================
+2021-09-26 20:02:02,857 epoch=118	global_step=39	acc=0.9375	acc_avg=0.8251	acc5=1.0000	acc5_avg=0.9913	loss=0.2656	loss_avg=0.5328	_acc=0.9375	_acc_avg=0.8251	pgd20=0.8125	pgd20_avg=0.4983	time=3.80it/s
+2021-09-26 20:02:02,858 Eval Loss:0.5328	Eval acc: 82.51
+2021-09-26 20:02:03,213 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 20:02:03,213 
+2021-09-26 20:02:03,213 ====================Training Epoch 119====================
+2021-09-26 20:02:48,103 epoch=119	global_step=46500	acc=0.7422	acc_avg=0.6922	loss=0.6191	loss_avg=0.7527	lr=0.0001	|gn|=2.6136	time=2.05it/s
+2021-09-26 20:03:37,162 epoch=119	global_step=46600	acc=0.6172	acc_avg=0.6906	loss=0.8127	loss_avg=0.7538	lr=0.0001	|gn|=4.0973	time=2.03it/s
+2021-09-26 20:04:26,343 epoch=119	global_step=46700	acc=0.6719	acc_avg=0.6941	loss=0.7940	loss_avg=0.7536	lr=0.0001	|gn|=3.4363	time=2.08it/s
+2021-09-26 20:05:14,811 ====================Eval Epoch 119====================
+2021-09-26 20:06:45,172 epoch=119	global_step=39	acc=0.9375	acc_avg=0.8241	acc5=1.0000	acc5_avg=0.9905	loss=0.2774	loss_avg=0.5390	_acc=0.9375	_acc_avg=0.8241	pgd20=0.8125	pgd20_avg=0.4985	time=3.39it/s
+2021-09-26 20:06:45,173 Eval Loss:0.5390	Eval acc: 82.41
+2021-09-26 20:06:45,564 Model Saved at ../experiments/mada/samplewise/cifar10/std_pretrain_epsilon32_plus_one_stepsize2/main/resnet18_madrys/checkpoints/resnet18_madrys
+2021-09-26 20:06:45,629 Running Cost 0.39 Days 
+

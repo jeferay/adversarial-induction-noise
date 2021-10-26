@@ -1,0 +1,46 @@
+2021-09-26 21:10:17,097 PyTorch Version: 1.7.1
+2021-09-26 21:10:17,111 GPU List: ['GeForce RTX 3090', 'GeForce RTX 3090', 'GeForce RTX 3090', 'GeForce RTX 3090', 'GeForce RTX 3090', 'GeForce RTX 3090', 'GeForce RTX 3090', 'GeForce RTX 3090']
+2021-09-26 21:10:17,116 num_classes: 10
+2021-09-26 21:10:17,116 epochs: 60
+2021-09-26 21:10:17,116 grad_clip: 5.0
+2021-09-26 21:10:17,116 log_frequency: 100
+2021-09-26 21:10:17,116 model: {'name': 'ResNet18', 'num_classes': 10}
+2021-09-26 21:10:17,116 criterion: {'name': 'CrossEntropyLoss'}
+2021-09-26 21:10:17,116 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2021-09-26 21:10:17,116 scheduler: {'name': 'CosineAnnealingLR', 'T_max': 60, 'eta_min': 0.0}
+2021-09-26 21:10:17,116 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2021-09-26 21:10:20,025 tensor([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], device='cuda:4')
+2021-09-26 21:10:20,028 seed: 0
+2021-09-26 21:10:20,028 version: resnet18
+2021-09-26 21:10:20,028 exp_name: test_exp
+2021-09-26 21:10:20,028 config_path: ../configs/cifar10
+2021-09-26 21:10:20,028 load_model: False
+2021-09-26 21:10:20,028 data_parallel: False
+2021-09-26 21:10:20,028 pretrain: False
+2021-09-26 21:10:20,028 train_batch_size: 128
+2021-09-26 21:10:20,028 eval_batch_size: 512
+2021-09-26 21:10:20,028 num_of_workers: 8
+2021-09-26 21:10:20,028 train_data_type: CIFAR10
+2021-09-26 21:10:20,028 train_data_path: ../datasets
+2021-09-26 21:10:20,029 test_data_type: CIFAR10
+2021-09-26 21:10:20,029 test_data_path: ../datasets
+2021-09-26 21:10:20,029 pretrain_epochs: 100
+2021-09-26 21:10:20,029 universal_train_portion: 0.2
+2021-09-26 21:10:20,029 universal_stop_error: 0.5
+2021-09-26 21:10:20,029 universal_train_target: train_subset
+2021-09-26 21:10:20,029 train_step: 10
+2021-09-26 21:10:20,029 use_subset: False
+2021-09-26 21:10:20,029 attack_type: min-min
+2021-09-26 21:10:20,029 perturb_type: classwise
+2021-09-26 21:10:20,029 patch_location: center
+2021-09-26 21:10:20,029 epsilon: 0.03137254901960784
+2021-09-26 21:10:20,030 num_steps: 1
+2021-09-26 21:10:20,030 step_size: 0.0031372549019607846
+2021-09-26 21:10:20,030 random_start: False
+2021-09-26 21:10:20,030 label_assign: simiar_swap
+2021-09-26 21:10:20,030 noise_shape: [10, 3, 32, 32]
+2021-09-26 21:10:20,030 label_noise: False
+2021-09-26 21:10:20,030 iteration_step: 0
+2021-09-26 21:10:20,030 device: 4
+2021-09-26 21:10:22,216 param size = 11.173962MB
+2021-09-26 21:10:24,670 ====================Searching Universal Perturbation====================
